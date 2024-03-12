@@ -3,7 +3,11 @@ import plugin from "tailwindcss/plugin"
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
 	theme: {
-		extend: {},
+		extend: {
+			animation: {
+				'spin-slow': 'spin 12s linear infinite',
+			}
+		},
 	},
 	plugins: [
 		plugin(function astroComponentsPlugin({ addComponents, theme }) {

@@ -2,11 +2,42 @@
 import Section from '../components/Section.astro'
 import NextJS from './ui/NextJS.astro'
 import ReactJS from './ui/ReactJS.astro'
+import TitleSection from "./ui/TitleSection.astro"
+import { techstack } from '../const'
+import ViewMore from './ui/ViewMore.astro'
+const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile"]
 ---
 <Section border=''>
-    <h1>The React Framework for the Web</h1>
-    <div class="flex items-center gap-3">
+    <div class="mb-6 ">
+        <h1 class="text-4xl text-center mb-3">The React Framework for the Web</h1>
+    <ul class="flex items-center justify-center flex-wrap gap-3">
+        {skilldev.map((items) =>(
+            <li class="flex items-center justify-center px-3 py-2 rounded-md bg-zinc-950 border border-zinc-900">
+                <span class="text-lime-400">#</span>
+                <span class="text-zinc-400">{items}</span>
+            </li>
+        ))}
+    </ul>
+    </div>
+    <div class="flex items-center gap-3 max-sm:flex-col">
         <NextJS />
         <ReactJS />
+    </div>
+    <div class="">
+        <TitleSection title='Tech Stack' icon='react.svg'/>
+        <div class="grid grid-cols-3 gap-4 w-full">
+            {techstack.map((list)=>(
+                <a href={list.href} class="flex itemsc-center justify-between bg-zinc-950 border border-zinc-900 rounded-md px-5 py-3 group">
+                    <span class="flex items-center gap-3">
+                        <span class="bg-zinc-900 rounded-md border border-zinc-800 p-2">
+                            <img class=" h-6 w-6" src={list.icon} alt={list.title} />
+                        </span>
+                        <span>{list.title}</span>
+                    </span>
+                    <img class="fill-white group-hover:rotate-[-45deg] transition-transform ease-in-out duration-150" src="/arrow-right.svg" alt="arrow-right" />
+                </a>
+            ))}
+        </div>
+        <ViewMore href='/stack' />
     </div>
 </Section>
