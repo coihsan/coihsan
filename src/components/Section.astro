@@ -5,8 +5,8 @@ interface Props {
 const { border } = Astro.props
 ---
 
-<section class={`container ${border} py-12 lg:py-16 xl:py-20 border-x-[1px] border-zinc-900 max-w-screen-lg px-6`}>
-      <main class="max-w-screen-md mx-auto">
+<section class={`w-full max-w-screen-lg mx-auto py-12 lg:py-16 xl:py-20 ${border} border-x-[1px] border-zinc-900`}>
+      <main class="max-w-screen-md mx-auto w-full">
         <slot />
       </main>
     </section>

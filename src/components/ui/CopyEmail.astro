@@ -1,16 +1,21 @@
 ---
 const isCopied = false
 ---
-<script>
-    const copyEmail = "co.ihsan@gmail.com"
-    function handleCopy(){
-        navigator.clipboard.writeText(copyEmail)
-    }
-    document.getElementById('buttonCopy')?.addEventListener('copy', handleCopy)
-</script>
-
 <button type="button" id="buttonCopy" class="bg-zinc-950 border border-zinc-900  flex items-center justify-center gap-3 px-4 py-3 rounded-md hover:bg-zinc-900 transition-colors ease-linear duration-300">
     <img src="/copy-alt.svg" alt="copy">
     <span>{isCopied ? "Copied!" : "E-Mail"}</span>
 </button>
+
+<!-- <script>
+    const copyEmail = "co.ihsan@gmail.com"
+    function handleCopy = () => {
+    navigator.clipboard.writeText(copyEmail).then(() => {
+        isCopied(true);
+      setTimeout(() => {
+        isCopied(false);
+      }, 1000);
+    });
+  };
+    document.getElementById('buttonCopy')?.addEventListener('copy', handleCopy)
+</script> -->
 

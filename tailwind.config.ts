@@ -9,7 +9,7 @@ export default {
 		plugin(function astroComponentsPlugin({ addComponents, theme }) {
 			addComponents({
 				".container": {
-					"@apply w-full max-w-screen-md mx-auto px-6 md:px-8 border border-zinc-900 my-12": {},
+					"@apply max-w-[1024px] mx-auto px-5 md:px-10 lg:px-16 xl:max-w-[87.5rem]": {},
 				},
 			})
 		}),
