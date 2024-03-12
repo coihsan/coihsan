@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import reactjs from '@assets/react.svg'
 
 ---
 <a 
@@ -8,7 +9,7 @@ import { Image } from 'astro:assets';
   rel="noopener noreferrer" 
   class="flex flex-col items-center justify-center drop-shadow-xl max-w-[412px] w-full h-60 bg-gradient-to-b from-zinc-950 to-sky-500/10 border border-zinc-900 rounded-lg p-5 group mx-auto group">
     <div class="flex items-center justify-center w-full">
-      <Image height={80} width={80} class="group-hover:animate-spin-slow" src="/src/assets/react.svg" alt="react.js" />
+      <Image src={reactjs} width={80} height={80} class="group-hover:animate-spin-slow" alt="react.js" />
     </div>
     <span
       class="flex items-end justify-between mt-6"
