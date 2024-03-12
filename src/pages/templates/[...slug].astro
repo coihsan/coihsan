@@ -1,0 +1,14 @@
+---
+import {getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const templates = await getCollection('templates');
+  return templates.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+// const { Content, headings, remarkPluginFrontmatter } = await post.render();
+---
