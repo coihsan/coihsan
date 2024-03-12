@@ -1,5 +1,6 @@
 ---
 import DotLight from "./DotLight.astro"
+import { Image } from 'astro:assets';
 ---
 <div class="drop-shadow-xl max-w-[412px] w-full h-60 bg-zinc-950 border border-zinc-900 rounded-lg p-5 group mx-auto">
     <DotLight />
@@ -16,7 +17,7 @@ import DotLight from "./DotLight.astro"
         </p>
       </div>
       <div class="flex items-center justify-center p-2 rounded-full bg-zinc-800 group-hover:bg-zinc-600 transition-all ease-linear duration-300">
-        <img src="/arrow-right.svg" alt="arrow right">
+        <Image width={24} height={24} src="/src/arrow-right.svg" alt="arrow right">
       </div>
     </a>
 </div>

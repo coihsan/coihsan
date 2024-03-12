@@ -5,14 +5,17 @@ import LinkExt from "./ui/LinkExt.astro";
 import CopyEmail from "./ui/CopyEmail.astro";
 import GoogleLink from "./ui/GoogleLink.astro";
 import InfiniteScroll from "./ui/InfiniteScroll.astro";
+import { Image } from 'astro:assets';
 ---
 
 <Section border="border-t-[1px] border-b-[1px]">
     <div>
       <div class="flex max-sm:flex-col items-center gap-9">
-        <img
+        <Image
           class="rounded-md"
-          src={"/gue.png"}
+          width={300}
+          height={200}
+          src="/src/assets/gue.png"
           alt="gue"
         />
         <div class="flex flex-col gap-5">

@@ -1,5 +1,6 @@
 ---
 import TitleSection from "./ui/TitleSection.astro"
+import { Image } from 'astro:assets';
 import Section from "./Section.astro"
 import Telegram from "./ui/Telegram.astro"
 import CopyEmail from "./ui/CopyEmail.astro"
@@ -46,7 +47,7 @@ const month = [
             <div class="grid grid-cols-4 gap-3 w-full">
                 {sociallink.map((social) =>(
                     <a class="p-3 flex items-center justify-center rounded-md bg-zinc-950 border border-zinc-900" href={social.href}>
-                        <img class="w-6 h-6" src={social.icon} alt={social.alt} />
+                        <Image height={24} width={24} src={social.icon} alt={social.alt} />
                     </a>
                 ))}
             </div>
