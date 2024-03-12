@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer components{
-    .container{
-        @apply max-w-screen-md mx-auto px-6
+.infiniteScroll {
+    animation: scroll infinite 3s ease step-start;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
     }
-} */
+  
+    100% {
+      transform: translateX(-100%);
+    }
+  }
