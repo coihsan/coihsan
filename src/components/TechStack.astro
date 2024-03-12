@@ -6,8 +6,6 @@ import TitleSection from "./ui/TitleSection.astro"
 import { techstack } from '../const'
 import ViewMore from './ui/ViewMore.astro'
 const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile"]
-import { Image } from 'astro:assets';
-import arrowright from "@assets/arrow-right.svg"
 ---
 <Section border=''>
     <div class="mb-6 ">
@@ -26,17 +24,17 @@ import arrowright from "@assets/arrow-right.svg"
         <ReactJS />
     </div>
     <div class="">
-        <TitleSection title='Tech Stack' icon='react.svg'/>
+        <TitleSection title='Tech Stack' icon='/react.svg'/>
         <div class="grid grid-cols-3 gap-4 w-full">
             {techstack.map((list)=>(
                 <a href={list.href} class="flex itemsc-center justify-between bg-zinc-950 border border-zinc-900 rounded-md px-5 py-3 group">
                     <span class="flex items-center gap-3">
                         <span class="bg-zinc-900 rounded-md border border-zinc-800 p-2">
-                            <Image width={24} height={24} src={list.icon} alt={list.title} />
+                            <img width={24} height={24} src={list.icon} alt={list.title} />
                         </span>
                         <span>{list.title}</span>
                     </span>
-                    <Image height={24} width={24} class="fill-white group-hover:rotate-[-45deg] transition-transform ease-in-out duration-150" src={arrowright} alt="arrow-right" />
+                    <img height={24} width={24} class="fill-white group-hover:rotate-[-45deg] transition-transform ease-in-out duration-150" src="/arrow-right.svg" alt="arrow-right" />
                 </a>
             ))}
         </div>

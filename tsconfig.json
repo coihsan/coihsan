@@ -5,7 +5,7 @@
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"]
     },
-    "extends": "astro/tsconfigs/base"
-  }
+  },
+  "extends": "astro/tsconfigs/base",
 }
 
