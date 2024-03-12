@@ -1,0 +1,19 @@
+---
+const text = [
+  "Web Development",
+  "Javascript",
+  "SEM",
+  "SEO",
+  "Landing Page Creation",
+];
+---
+
+<div class="bg-gradient-to-r from-[#000000] via-transparent to-[#000000] mt-12 h-14 w-full z-10 overflow-hidden">
+    <div class="flex items-center gap-5 justify-center flex-1 w-full flex-nowrap">
+      {text.map((items) => (
+        <span class="infiniteScroll `flex-1` z-1 w-full">
+          {items}
+        </span>
+      ))}
+    </div>
+  </div>

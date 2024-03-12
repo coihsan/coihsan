@@ -1,0 +1,12 @@
+---
+interface Props {
+  border: string;
+}
+const { border } = Astro.props
+---
+
+<section class={`container ${border} py-12 lg:py-16 xl:py-20 border-x-[1px] border-zinc-900 max-w-screen-lg px-6`}>
+      <main class="max-w-screen-md mx-auto">
+        <slot />
+      </main>
+    </section>
