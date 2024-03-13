@@ -2,8 +2,8 @@
 import {getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const templates = await getCollection('templates');
-  return templates.map(post => ({
+  const themes = await getCollection('themes');
+  return themes.map(post => ({
     params: {slug : post.slug},
     props: { post },
   }));
