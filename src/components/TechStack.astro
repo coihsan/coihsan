@@ -3,7 +3,8 @@ import Section from '../components/Section.astro'
 import NextJS from './ui/NextJS.astro'
 import ReactJS from './ui/ReactJS.astro'
 import TitleSection from "./ui/TitleSection.astro"
-import { techstack } from '../const'
+import { techstack } from 'src/const'
+import Card from './Card.astro'
 import ViewMore from './ui/ViewMore.astro'
 const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile"]
 ---
@@ -25,19 +26,7 @@ const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile"]
     </div>
     <div class="">
         <TitleSection title='Tech Stack' icon='/react.svg'/>
-        <div class="grid grid-cols-3 gap-4 w-full">
-            {techstack.map((list)=>(
-                <a href={list.href} class="flex itemsc-center justify-between bg-zinc-950 border border-zinc-900 rounded-md px-5 py-3 group">
-                    <span class="flex items-center gap-3">
-                        <span class="bg-zinc-900 rounded-md border border-zinc-800 p-2">
-                            <img width={24} height={24} src={list.icon} alt={list.title} />
-                        </span>
-                        <span>{list.title}</span>
-                    </span>
-                    <img height={24} width={24} class="fill-white group-hover:rotate-[-45deg] transition-transform ease-in-out duration-150" src="/arrow-right.svg" alt="arrow-right" />
-                </a>
-            ))}
-        </div>
+        <Card index={techstack}/>
         <ViewMore href='/stack' />
     </div>
 </Section>

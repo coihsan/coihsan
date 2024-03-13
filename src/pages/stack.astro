@@ -1,10 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Section from '../components/Section.astro'
+import Card from '@components/Card.astro'
+import { otherstack, techstack } from 'src/const'
 ---
 
 <Layout title="My Tech Stack">
 	<Section border=''>
-        <h1>Stack</h1>
+        <h1>My Stack</h1>
+        <Card index={techstack} />
+        <h3>Other Stack</h3>
+        <Card index={otherstack} />
     </Section>
 </Layout>

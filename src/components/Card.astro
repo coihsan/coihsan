@@ -1,20 +1,25 @@
 ---
-interface Props {
+interface Propss {
 	title: string;
-	body: string;
+	icon: string;
 	href: string;
 }
-const { href, title, body } = Astro.props;
+interface stack{
+	index: Propss[];
+}
+const { index } = Astro.props
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
+<div class="grid grid-cols-3 gap-4 w-full">
+    {index.map((list)=>(
+        <a href={list.href} class="flex items-center justify-between componentStyle rounded-md px-5 py-3 group">
+            <span class="flex items-center gap-3">
+                <span class="bg-zinc-900 rounded-md border border-zinc-800 p-2">
+                    <img width={24} height={24} src={list.icon} alt={list.title} />
+                </span>
+                <span>{list.title}</span>
+            </span>
+            <img height={24} width={24} class="fill-white group-hover:rotate-[-45deg] transition-transform ease-in-out duration-150" src="/arrow-right.svg" alt="arrow-right" />
+        </a>
+    ))}
+</div>

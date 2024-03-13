@@ -3,7 +3,6 @@ export const navlink = [
     { key: 0, href: "/", text: "Home" },
     { key: 1, href: "/source", text: "Source" },
     { key: 2, href: "/stack", text: "Stack" },
-    { key: 3, href: "/contact", text: "Contact" },
     { key: 3, href: "/grandpa", text: "YourGrandpa" },
   ];
   export const sociallink = [
