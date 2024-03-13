@@ -7,9 +7,9 @@ export const navlink = [
   ];
   export const sociallink = [
     {key: 0, icon: "/x-twitter.svg", href: "#", alt: "twitter"},
-    {key: 1, icon: "/instagram.svg", href: "#", alt: "instagram"},
-    {key: 2, icon: "/github.svg", href: "#", alt: "github"},
-    {key: 3, icon: "/codepen.svg", href: "#", alt: "codepen"},
+    {key: 1, icon: "/instagram.svg", href: "https://www.instagram.com/co.ihsan/", alt: "instagram"},
+    {key: 2, icon: "/github.svg", href: "https://github.com/coihsan", alt: "github"},
+    {key: 3, icon: "/codepen.svg", href: "https://codepen.io/coihsan", alt: "codepen"},
   ]
   export const nextjs = ["Landing Page", "Blog", "Portfolios", "Company Profile"];
   export const techstack = [

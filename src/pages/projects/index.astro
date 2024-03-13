@@ -1,7 +1,7 @@
 ---
+import PostLayout from '../../layouts/PostLayout.astro'
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-import PostLayout from '../../layouts/PostLayout.astro'
 const posts = (await getCollection("blog")).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );

@@ -1,15 +1,24 @@
-import { defineCollection, z } from "astro:content";
-
-const blogCollection = defineCollection({
-  schema: ({ image }) => z.object({
+import { defineCollection, reference, z } from "astro:content";
+import { rssSchema } from "@astrojs/rss";
+const FrontmatterSchema = z.object({
+  estReadingTime: z.any(),
+});
+const blog = defineCollection({
+  type: "content",
+  schema: z.object({
     title: z.string(),
-    cover: image().refine((img) => img.width >= 1080, {
-      message: "Cover image must be at least 1080 pixels wide!",
-    }),
-    coverAlt: z.string(),
+    updatedDate: z.coerce.date().optional(),
+    heroImage: z
+      .object({
+        src: z.string().optional().default(""),
+        alt: z.string().optional().default(""),
+      })
+      .optional(),
+    category: z.string(),
+    keyword: z.array(z.string()),
+    frontmatter: FrontmatterSchema.optional(),
+    canonicalURL: z.string().url().optional(),
   }),
 });
 
-export const collections = {
-  blog: blogCollection,
-};
+export const collections = { blog };
