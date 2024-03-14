@@ -1,4 +1,5 @@
-
+export const SITE_TITLE = "Ihsan";
+export const SITE_DESCRIPTION = 'Welcome to my website!';
 export const navlink = [
     { key: 0, href: "/", text: "Home" },
     { key: 1, href: "/stack", text: "Stack" },

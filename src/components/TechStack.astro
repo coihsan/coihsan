@@ -4,7 +4,7 @@ import NextJS from './ui/NextJS.astro'
 import ReactJS from './ui/ReactJS.astro'
 import TitleSection from "./ui/TitleSection.astro"
 import { techstack } from 'src/const'
-import Card from './Card.astro'
+import WrapperList from './WrapperList.astro'
 import ViewMore from './ui/ViewMore.astro'
 const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile"]
 ---
@@ -26,7 +26,7 @@ const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile"]
     </div>
     <div class="">
         <TitleSection title='Tech Stack' icon='/react.svg'/>
-        <Card index={techstack}/>
+        <WrapperList index={techstack}/>
         <ViewMore href='/stack' />
     </div>
 </Section>
