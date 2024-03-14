@@ -2,10 +2,11 @@
 const posts = await Astro.glob('../content/themes/*.md');
 import Section from "../components/Section.astro"
 import TitleSection from "../components/ui/TitleSection.astro"
+import ViewMore from "./ui/ViewMore.astro";
 ---
 
 <Section border="border-b-[1px]">
-    <TitleSection title="Themes" icon="/react.svg"/>
+    <TitleSection title="Themes" icon="/layout.svg"/>
     <div>
         {posts.slice(0, 4).map((post) =>(
             <article>
@@ -15,4 +16,5 @@ import TitleSection from "../components/ui/TitleSection.astro"
             </article>
         ))}
     </div>
+    <ViewMore href="/themes" />
 </Section>

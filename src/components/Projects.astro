@@ -1,11 +1,12 @@
 ---
-const posts = await Astro.glob('../content/themes/*.md');
+const posts = await Astro.glob('../content/projects/*.md');
 import Section from "../components/Section.astro"
 import TitleSection from "../components/ui/TitleSection.astro"
+import ViewMore from "./ui/ViewMore.astro";
 ---
 
 <Section border="border-b-[1px]">
-    <TitleSection title="Projects" icon="/react.svg"/>
+    <TitleSection title="Projects" icon="/terminal.svg"/>
     <div>
         {posts.slice(0, 4).map((post) =>(
             <article>
@@ -15,4 +16,5 @@ import TitleSection from "../components/ui/TitleSection.astro"
             </article>
         ))}
     </div>
+    <ViewMore href="/projects" />
 </Section>

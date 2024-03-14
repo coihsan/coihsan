@@ -1,5 +1,5 @@
 ---
-title: 'SEO vs PPC! A Battle for Traffic and Leads'
+title: 'Task Manager'
 description: 'Which of the two is superior and suitable for you considering the greater value of your investment?'
 pubDate: 'Dec 08 2022'
 heroImage: 

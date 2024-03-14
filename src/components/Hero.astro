@@ -1,44 +1,29 @@
 ---
-import Telegram from "../components/ui/Telegram.astro"
 import Section from "./Section.astro";
 import LinkExt from "./ui/LinkExt.astro";
-import CopyEmail from "./ui/CopyEmail.astro";
-import GoogleLink from "./ui/GoogleLink.astro";
+import SubHero from "./SubHero.astro"
 import InfiniteScroll from "./ui/InfiniteScroll.astro";
 ---
 
 <Section border="border-t-[1px] border-b-[1px]">
-  <div class="flex max-sm:flex-col items-center gap-9">
-    <img
-      class="rounded-md max-sm:w-16 max-sm:h-16"
+  <div class="flex max-md:flex-col items-center gap-9">
+    <div class="flex items-center gap-9">
+      <img
+      class="rounded-md max-sm:w-20 max-sm:h-20"
       width={300}
       height={200}
       src="/public/gue.webp"
       alt="gue"
     />
-    <div class="flex flex-col gap-5">
-      <div>
-        <span>👋🏻</span>
-        <span>Hello I Am</span>
-      </div>
+    <div class="flex flex-col gap-4">
       <h3 class="font-bold text-4xl">˗ˏˋIhsanˎˊ</h3>
       <span>
         I'm Frontend Developer <LinkExt href="/">@Kaisar.id</LinkExt>
       </span>
-      <div class="flex flex-col items-center gap-9">
-        <p class="text-zinc-400">
-          I'm a digital marketing and frontend developer especially with
-          a primary focus on SEM, SEO and Landing page creation using
-          javascript framework.
-        </p>
-        <div class="grid grid-cols-3 gap-3 max-sm:grid-cols-1 w-full">
-          <Telegram />
-          <CopyEmail />
-          <GoogleLink />
-        </div>
-      </div>
+      <SubHero className="hidden md:hidden lg:flex" />
     </div>
   </div>
+    <SubHero className="flex lg:hidden" />
+  </div>
   <InfiniteScroll />
-  
   </Section>

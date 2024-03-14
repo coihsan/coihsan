@@ -1,0 +1,22 @@
+---
+interface Props{
+    className: string
+}
+import Telegram from "../components/ui/Telegram.astro"
+import CopyEmail from "./ui/CopyEmail.astro";
+import GoogleLink from "./ui/GoogleLink.astro";
+const {className} = Astro.props
+---
+
+<div class={`flex flex-col items-center gap-9 ${className}`}>
+    <p class="text-zinc-400">
+      I'm a digital marketing and frontend developer especially with
+      a primary focus on SEM, SEO and Landing page creation using
+      javascript framework.
+    </p>
+    <div class="grid grid-cols-3 gap-3 max-sm:grid-cols-1 w-full">
+      <Telegram />
+      <CopyEmail />
+      <GoogleLink />
+    </div>
+  </div>
