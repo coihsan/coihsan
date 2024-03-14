@@ -4,16 +4,17 @@ const text = [
   "Javascript",
   "SEM",
   "SEO",
-  "Landing Page Creation",
+  "Landing Page",
 ];
 ---
 
-<div class="bg-gradient-to-r from-[#000000] via-transparent to-[#000000] mt-12 h-14 w-full z-10 overflow-hidden">
-    <div class="flex items-center gap-5 justify-center w-full flex-nowrap">
+<div class="mt-12 overflow-hidden flex items-center justify-evenly w-full bg-gradient-to-r from-black via-transparent to-black h-12 z-10">
+    <ul class="flex items-center justify-between flex-nowrap gap-5 w-full px-4">
       {text.map((items) => (
-        <span class="text-nowrap flex-1 infiniteScroll z-1 w-full">
+        <li class="z-[-1]">
           {items}
-        </span>
+        </li>
       ))}
-    </div>
+    </ul>
   </div>
+  
