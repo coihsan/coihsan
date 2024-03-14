@@ -1,12 +1,14 @@
 ---
-title: 'Bhadrika Cipta Resume'
+title: 'Karsa Mahasura'
 description: 'Which of the two is superior and suitable for you considering the greater value of your investment?'
 pubDate: 'Dec 08 2022'
 heroImage: 
-    src: 'src/assets/bhadrikacipta.webp'
-    alt: 'Bhadrika Cipta.'
+    src: 'src/assets/karsamahasura.webp'
+    alt: 'Zinc Design'
 tags: 
     - "Portfolios"
-techstack: "Vite.js"
+techstack: "HTML Static"
 category: "Portfolios"
 ---
+
+## Jhon Doe Resume

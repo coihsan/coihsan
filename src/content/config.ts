@@ -16,6 +16,7 @@ const blog = defineCollection({
       .optional(),
     category: z.string(),
     techstack: z.string(),
+    pathname: z.string(),
     frontmatter: FrontmatterSchema.optional(),
     canonicalURL: z.string().url().optional(),
   }),

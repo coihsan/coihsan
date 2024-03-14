@@ -3,9 +3,11 @@ import Layout from '../layouts/Layout.astro'
 import Section from '../components/Section.astro'
 import WrapperList from '@components/WrapperList.astro'
 import { otherstack, techstack } from 'src/const'
+import HeadingPages from '@components/HeadingPages.astro'
 ---
 
 <Layout title="My Tech Stack">
+    <HeadingPages title='My Love Tech Stacks' description="It's all stack i use when i work must everything"/>
 	<Section border=''>
         <h1 class="mb-6">My Stack</h1>
         <WrapperList index={techstack} />

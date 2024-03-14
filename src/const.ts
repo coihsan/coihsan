@@ -36,13 +36,27 @@ export const navlink = [
   ]
   export const projects = [
     {
-      key: 0,
-      image: "/",
-      title: "Tama App",
+      image: "/tiditodo.webp",
+      logo: "/",
+      title: "tiditodo App",
       description:
         "Free task manager for a personal or team projects such as funnelling, daily task, note documentation, board and more.",
       useCase: "Web App",
-      linkDemo: "tama.app",
+      techstack: "Next.js",
+      linkDemo: "https://tiditodo.app/",
+      pathname: "tiditodo.app",
+      pathURL: "/tiditodo.md",
+    },
+    {
+      image: "/tiditodo.webp",
+      logo: "/",
+      title: "MangoLabs Agency",
+      description:
+        "Free task manager for a personal or team projects such as funnelling, daily task, note documentation, board and more.",
+      useCase: "Web App",
+      linkDemo: "/mangolabs.app",
+      pathname: "mangolabs.app",
+      pathURL: "/mangolabs.md",
     },
   ];
   

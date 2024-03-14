@@ -1,12 +1,12 @@
 ---
-title: 'Bhadrika Cipta Resume'
+title: 'Jhon Smith'
 description: 'Which of the two is superior and suitable for you considering the greater value of your investment?'
 pubDate: 'Dec 08 2022'
 heroImage: 
-    src: 'src/assets/bhadrikacipta.webp'
-    alt: 'Bhadrika Cipta.'
+    src: 'src/assets/jhonsmith.webp'
+    alt: 'jhonsmith.'
 tags: 
     - "Portfolios"
-techstack: "Vite.js"
+techstack: "HTML Static"
 category: "Portfolios"
 ---

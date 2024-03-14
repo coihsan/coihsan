@@ -5,13 +5,13 @@ import SubHero from "./SubHero.astro"
 import InfiniteScroll from "./ui/InfiniteScroll.astro";
 ---
 
-<Section border="border-t-[1px] border-b-[1px]">
-  <div class="flex max-md:flex-col items-center gap-9">
+<Section border="border-b-[1px]">
+  <div class="lg:flex md:flex-col items-center gap-9">
     <div class="flex items-center gap-9">
       <img
-      class="rounded-md max-sm:w-20 max-sm:h-20"
+      class="rounded-md w-auto max-md:h-[174px]"
       width={300}
-      height={200}
+      height={274}
       src="/public/gue.webp"
       alt="gue"
     />
@@ -23,7 +23,7 @@ import InfiniteScroll from "./ui/InfiniteScroll.astro";
       <SubHero className="hidden md:hidden lg:flex" />
     </div>
   </div>
-    <SubHero className="flex lg:hidden" />
+    <SubHero className="flex pt-12 lg:pt-0 lg:hidden" />
   </div>
   <InfiniteScroll />
   </Section>
