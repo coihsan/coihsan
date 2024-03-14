@@ -6,7 +6,7 @@ interface Props {
 	description: string;
 	image?: string;
 }
-const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+// const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 const {
 	title,
@@ -23,7 +23,7 @@ const {
 
 
 <!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
+<!-- <link rel="canonical" href={canonicalURL} /> -->
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
