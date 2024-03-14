@@ -8,32 +8,37 @@ import InfiniteScroll from "./ui/InfiniteScroll.astro";
 ---
 
 <Section border="border-t-[1px] border-b-[1px]">
-    <div>
-      <div class="flex max-sm:flex-col items-center gap-9">
-        <img
-          class="rounded-md"
-          width={300}
-          height={200}
-          src="/public/gue.webp"
-          alt="gue"
-        />
-        <div class="flex flex-col gap-5">
-          <h3 class="font-bold text-4xl">˗ˏˋIhsanˎˊ</h3>
-          <span>
-            I'm Frontend Developer <LinkExt href="/">@Kaisar.id</LinkExt>
-          </span>
-          <p class="text-zinc-400">
-            I'm a digital marketing and frontend developer especially with
-            a primary focus on SEM, SEO and Landing page creation using
-            javascript framework.
-          </p>
-          <div class="grid grid-cols-3 gap-3 max-sm:grid-cols-1 w-full">
-            <Telegram />
-            <CopyEmail />
-            <GoogleLink />
-          </div>
+  <div class="flex max-sm:flex-col items-center gap-9">
+    <img
+      class="rounded-md max-sm:w-16 max-sm:h-16"
+      width={300}
+      height={200}
+      src="/public/gue.webp"
+      alt="gue"
+    />
+    <div class="flex flex-col gap-5">
+      <div>
+        <span>👋🏻</span>
+        <span>Hello I Am</span>
+      </div>
+      <h3 class="font-bold text-4xl">˗ˏˋIhsanˎˊ</h3>
+      <span>
+        I'm Frontend Developer <LinkExt href="/">@Kaisar.id</LinkExt>
+      </span>
+      <div class="flex flex-col items-center gap-9">
+        <p class="text-zinc-400">
+          I'm a digital marketing and frontend developer especially with
+          a primary focus on SEM, SEO and Landing page creation using
+          javascript framework.
+        </p>
+        <div class="grid grid-cols-3 gap-3 max-sm:grid-cols-1 w-full">
+          <Telegram />
+          <CopyEmail />
+          <GoogleLink />
         </div>
       </div>
-      <InfiniteScroll />
     </div>
+  </div>
+  <InfiniteScroll />
+  
   </Section>

@@ -2,18 +2,18 @@
 import Pulse from "./ui/Pulse.astro"
 import { navlink } from "../const"
 ---
-    <header class="w-full max-w-screen-lg mx-auto border border-zinc-900 py-4">
-        <div class="flex items-center justify-between max-w-screen-md mx-auto w-full px-5 md:px-10">
+    <header class="w-full max-w-screen-lg mx-auto border-x-[1px] border-zinc-900 py-4">
+        <div class="flex items-center justify-between max-w-screen-md mx-auto w-full px-5">
             <Pulse />
             <div class="flex items-center">
-                <nav id="navbar" class="hidden lg:flex items-center gap-6">
+                <nav id="navbar" class="hidden md:flex lg:flex items-center gap-6">
                     {navlink.map((link)=>(
                         <a class="text-zinc-400 hover:text-lime-400 transition-all duration-300 ease-linear" href={link.href}>{link.text}</a>
                     ))}
                 </nav>
-                <div class="relative flex items-center justify-center lg:hidden">
-                    <input class="h-7 w-7 opacity-1 z-10 cursor-pointer" type="checkbox" name="" id="">
-                    <span id="hamburger" class="flex flex-col justify-between absolute border border-zinc-50/20 h-4 w-7">
+                <div class="relative flex items-center justify-center md:hidden lg:hidden border border-zinc-50/20 p-1 rounded-md">
+                    <input class="h-7 w-7 opacity-0 z-10 cursor-pointer" type="checkbox" name="" id="">
+                    <span id="hamburger" class="flex flex-col justify-between absolute h-4 w-7">
                         <span class="line line1 "></span>
                         <span class="line line1"></span>
                         <span class="line line1"></span>
