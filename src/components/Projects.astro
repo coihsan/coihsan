@@ -7,13 +7,24 @@ import ViewMore from "./ui/ViewMore.astro";
 
 <Section border="border-b-[1px]">
     <TitleSection title="Projects" icon="/terminal.svg"/>
-    <div>
-        {posts.slice(0, 4).map((post) =>(
-            <article>
-                <h2>{post.frontmatter.title}</h2>
-                <p>{post.frontmatter.description}</p>
-                <a href={post.url}>Read more</a>
-            </article>
+    <div class="grid gap-3">
+        {posts.slice(0, 2).map((post) =>(
+            <a href={post.url} class="componentStyle rounded-lg cursor-pointer flex items-center max-md:flex-col gap-9 w-full h-auto lg:min-h-32 p-5 group">
+                <div class="w-full lg:max-w-[350px]">
+                    <img class="rounded-lg w-auto" src={post.frontmatter.heroImage.src} alt={post.frontmatter.heroImage.alt} />
+                </div>
+                <div class="relative h-full w-full">
+                    <h2 class="mb-6 font-bold text-2xl">{post.frontmatter.title}</h2>
+                    <p class="text-zinc-400">{post.frontmatter.description}</p>
+                    <div class="relative lg:absolute left-0 bottom-0 flex items-center justify-between w-full">
+                        <span>{post.frontmatter.usecase}</span>
+                        <span class="flex items-center gap-3 bg-zinc-900 group-hover:bg-zinc-800 rounded-md border border-zinc-800 group-hover:border-zinc-700 px-3 py-1">
+                            <img width={16} height={16} src="/boxlink.svg" alt="boxlink" />
+                            <span>{post.frontmatter.pathname}</span>
+                        </span>
+                    </div>
+                </div>
+            </a>
         ))}
     </div>
     <ViewMore href="/projects" />

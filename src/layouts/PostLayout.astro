@@ -1,17 +1,15 @@
 ---
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
 import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro";
 import Contact from "../components/Contact.astro";
 import { ViewTransitions } from "astro:transitions";
-import { getCollection } from "astro:content";
+import type { CollectionEntry, getCollection } from "astro:content";
+type Props = CollectionEntry<"themes">["data"];
 import { Image } from "astro:assets";
 import Section from "@components/Section.astro";
 import Breadcrumbs from "@components/ui/Breadcrumbs.astro";
+const { title, description, pubDate, updatedDate, heroImage, frontmatter } =
+	Astro.props;
 ---
 
 <!doctype html>
@@ -31,7 +29,7 @@ import Breadcrumbs from "@components/ui/Breadcrumbs.astro";
 		<body>
 			<Breadcrumbs />
 			<main>
-				<!-- <Image src={heroImage.src} alt={heroImage.alt}/> -->
+				<Image src={heroImage.src} alt={heroImage.alt}/>
 				<slot />
 			</main>
 		</body>

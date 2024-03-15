@@ -3,17 +3,22 @@ const posts = await Astro.glob('../content/themes/*.md');
 import Section from "../components/Section.astro"
 import TitleSection from "../components/ui/TitleSection.astro"
 import ViewMore from "./ui/ViewMore.astro";
+import { Image } from "astro:assets";
 ---
 
 <Section border="border-b-[1px]">
     <TitleSection title="Themes" icon="/layout.svg"/>
-    <div>
-        {posts.slice(0, 4).map((post) =>(
-            <article>
-                <h2>{post.frontmatter.title}</h2>
-                <p>{post.frontmatter.description}</p>
-                <a href={post.url}>Read more</a>
-            </article>
+    <div class="grid grid-cols-2 gap-3">
+        {posts.slice(0, 2).map((post) =>(
+            <a href={post.url} class="componentStyle rounded-lg cursor-pointer">
+                <div class="h-[200px]">
+                    <img class="rounded-t-lg object-cover" src={post.frontmatter.heroImage.src} alt={post.frontmatter.heroImage.alt} /></div>
+                <div class="p-5">
+                    <h2>{post.frontmatter.title}</h2>
+                    <p>{post.frontmatter.techstack}</p>
+                    <span>Read more</span>
+                </div>
+            </a>
         ))}
     </div>
     <ViewMore href="/themes" />

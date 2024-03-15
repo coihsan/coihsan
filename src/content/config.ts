@@ -7,16 +7,16 @@ const blog = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    updatedDate: z.coerce.date().optional(),
+    pubDate: z.coerce.date().optional(),
     heroImage: z
       .object({
         src: z.string().default(""),
         alt: z.string().default(""),
       })
       .optional(),
-    category: z.string(),
     techstack: z.string(),
-    pathname: z.string(),
+    pathname: z.string().optional(),
+    usecase: z.string().optional(),
     frontmatter: FrontmatterSchema.optional(),
     canonicalURL: z.string().url().optional(),
   }),
