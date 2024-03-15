@@ -4,16 +4,13 @@ const FrontmatterSchema = z.object({
   estReadingTime: z.any(),
 });
 const blog = defineCollection({
-  type: "content",
-  schema: z.object({
+  // type: "content",
+  schema: ({ image }) => z.object({
     title: z.string(),
+    logo: z.string().optional(),
     pubDate: z.coerce.date().optional(),
-    heroImage: z
-      .object({
-        src: z.string().default(""),
-        alt: z.string().default(""),
-      })
-      .optional(),
+    heroImage: image().refine(img),
+    heroImageAlt: z.string(),
     techstack: z.string(),
     pathname: z.string().optional(),
     usecase: z.string().optional(),

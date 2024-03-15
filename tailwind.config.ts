@@ -25,7 +25,7 @@ export default {
 					"@apply flex items-center justify-center": {},
 				},
 				".componentStyle": {
-					"@apply bg-zinc-950 border border-zinc-900 hover:bg-zinc-900 hover:border-zinc-800 transition-all duration-300 ease-linear":{},
+					"@apply bg-zinc-950 border border-zinc-900 hover:bg-zinc-900 hover:border-zinc-300 transition-all duration-300 ease-linear":{},
 				}
 			})
 		}),

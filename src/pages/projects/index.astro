@@ -1,8 +1,8 @@
 ---
 import ProjectsLayout from '../../layouts/ProjectsLayout.astro'
+import Section from '@components/Section.astro';
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-import Section from '@components/Section.astro';
 const posts = (await getCollection("projects")).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
@@ -12,32 +12,31 @@ import HeadingPages from "@components/HeadingPages.astro"
 <ProjectsLayout title='Projects Collections'>
 	<HeadingPages title="Project Experiences" description="It's my collections themes with variant frameworks javascript"/>
 	<Section border=''>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+		<div class="grid gap-4">
 			{
 				posts.map((post) => (
 					<div class="componentStyle rounded-lg">
 						<a
-							class="relative"
+							class="relative flex gap-4 p-5 max-md:flex-col"
 							href={`/projects/${post.slug}/`}
 						>
-							<img
-								class="rounded-lg"
-								width={720}
-								height={360}
-								src={post.data.heroImage?.src}
-								alt={post.data.heroImage?.alt}
+							<Image
+								class="rounded-lg w-full md:max-w-[290px] lg:max-w-[350px]"
+								src={post.data.heroImage}
+								alt={post.data.heroImageAlt}
 							/>
 							<div class="p-5">
-								<div class="pb-2 flex items-center justify-between">
+								<div class="pt-3">
+									<div class="flex items-center gap-3">
+										<img class="w-8 h-8 rounded-lg" src={post.data.logo} alt={post.data.heroImageAlt} />
+										<h4 class="text-[1.2rem] leading-6">{post.data.title}</h4>
+									</div>
+									<p class="text-zinc-400 pt-3 text-sm">{post.data.description}</p>
+								</div>
+								<div class="pt-2 flex items-center justify-between">
 									<span class="text-[14px] text-zinc-400 leading-none">
 										{post.data.usecase}
 									</span>
-								</div>
-								<div class="pt-3">
-									<h4 class="text-[1.2rem] leading-6">
-										{post.data.title}
-									</h4>
-									<p class="text-zinc-400 pt-2">{post.data.description}</p>
 								</div>
 							</div>
 						</a>
