@@ -16,10 +16,10 @@ import ViewMore from "./ui/ViewMore.astro";
                 <div class="relative h-full w-full">
                     <h2 class="mb-6 font-bold text-2xl">{post.frontmatter.title}</h2>
                     <p class="text-zinc-400">{post.frontmatter.description}</p>
-                    <div class="relative lg:absolute left-0 bottom-0 flex items-center justify-between w-full">
+                    <div class="relative lg:absolute pt-6 lg:pt-0 left-0 bottom-0 flex items-center justify-between w-full">
                         <span>{post.frontmatter.usecase}</span>
-                        <span class="flex items-center gap-3 bg-zinc-900 group-hover:bg-zinc-800 rounded-md border border-zinc-800 group-hover:border-zinc-700 px-3 py-1">
-                            <img width={16} height={16} src="/boxlink.svg" alt="boxlink" />
+                        <span class="flex items-center gap-2 bg-zinc-900 group-hover:bg-zinc-800 rounded-md border border-zinc-800 group-hover:border-zinc-700 px-3 py-1">
+                            <img class="fill-zinc-400" width={14} height={14} src="/boxlink.svg" alt="boxlink" />
                             <span>{post.frontmatter.pathname}</span>
                         </span>
                     </div>

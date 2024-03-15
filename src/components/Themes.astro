@@ -8,7 +8,7 @@ import { Image } from "astro:assets";
 
 <Section border="border-b-[1px]">
     <TitleSection title="Themes" icon="/layout.svg"/>
-    <div class="grid grid-cols-2 gap-3">
+    <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3">
         {posts.slice(0, 2).map((post) =>(
             <a href={post.url} class="componentStyle rounded-lg cursor-pointer">
                 <div class="h-[200px]">
