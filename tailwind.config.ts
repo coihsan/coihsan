@@ -24,6 +24,9 @@ export default {
 				".flexJustifyCenter" :{
 					"@apply flex items-center justify-center": {},
 				},
+				".buttonLink" :{
+					"@apply flex items-center gap-2 bg-zinc-900 group-hover:bg-zinc-800 rounded-md border border-zinc-800 group-hover:border-zinc-700 px-3 py-1": {},
+				},
 				".componentStyle": {
 					"@apply bg-zinc-950 border border-zinc-900 hover:bg-zinc-900 hover:border-zinc-300 transition-all duration-300 ease-linear":{},
 				}

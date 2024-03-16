@@ -6,6 +6,7 @@ const posts = (await getCollection("themes")).sort(
 import ThemesLayout from '../../layouts/ThemesLayout.astro'
 import Section from "@components/Section.astro";
 import HeadingPages from "@components/HeadingPages.astro"
+import ButtonLink from "@components/ui/ButtonLink.astro";
 ---
 
 <ThemesLayout title='Theme Collections'>
@@ -27,7 +28,12 @@ import HeadingPages from "@components/HeadingPages.astro"
 								alt={post.data.heroImageAlt}
 							/>
 							<div class="p-5">
-								<div class="flex items-center justify-between border-b-[1px] border-zinc-900 pb-3">
+								<div class="pt-3">
+									<h4 class="text-[1.2rem] leading-6">
+										{post.data.title}
+									</h4>
+								</div>
+								<div class="flex items-center justify-between border-t-[1px] border-zinc-900 pt-3">
 									<span class="text-[14px] text-zinc-400 leading-none border border-zinc-900 px-2 py-1 rounded-md">
 										{post.data.techstack}
 									</span>
@@ -35,11 +41,7 @@ import HeadingPages from "@components/HeadingPages.astro"
 										{post.data.category}
 									</span>
 								</div>
-								<div class="pt-3">
-									<h4 class="text-[1.2rem] leading-6">
-										{post.data.title}
-									</h4>
-								</div>
+								<ButtonLink clasName="pt-3" source="" preview="" />
 							</div>
 						</a>
 					</div>
