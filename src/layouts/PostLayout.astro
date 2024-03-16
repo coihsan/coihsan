@@ -5,7 +5,6 @@ import Contact from "../components/Contact.astro";
 import { ViewTransitions } from "astro:transitions";
 import type { CollectionEntry, getCollection } from "astro:content";
 type Props = CollectionEntry<"themes">["data"];
-import { Image } from "astro:assets";
 import Section from "@components/Section.astro";
 import Breadcrumbs from "@components/ui/Breadcrumbs.astro";
 const { title, description, pubDate, updatedDate, heroImage, frontmatter } =
