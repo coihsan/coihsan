@@ -2,7 +2,6 @@
 import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro";
 import Contact from "../components/Contact.astro";
-import { ViewTransitions } from "astro:transitions";
 import type { CollectionEntry, getCollection } from "astro:content";
 type Props = CollectionEntry<"themes">["data"];
 import Section from "@components/Section.astro";
@@ -21,7 +20,6 @@ const { title, description, pubDate, updatedDate, heroImage, frontmatter } =
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<link rel="stylesheet" href="/src/styles/global.css">
-		<ViewTransitions />
 	</head>
 	<Navbar />
 	<Section border="">

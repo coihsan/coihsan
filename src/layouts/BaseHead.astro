@@ -7,7 +7,7 @@ interface Props {
 	image?: string;
 }
 // const canonicalURL = new URL(Astro.url.pathname, Astro.site)
-
+import { ViewTransitions } from "astro:transitions";
 const {
 	title,
 	description,
@@ -20,7 +20,7 @@ const {
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
-
+<ViewTransitions />
 
 <!-- Canonical URL -->
 <!-- <link rel="canonical" href={canonicalURL} /> -->
