@@ -1,0 +1,40 @@
+---
+interface Props{
+    href: any;
+    src: any;
+    alt: any;
+    title: any;
+    techstack: any;
+    category: any;
+    source: any;
+    preview: any;
+}
+const {href, src, alt, title, techstack, category} = Astro.props
+import ButtonLink from "../components/ui/ButtonLink.astro"
+---
+<div class="componentStyle rounded-lg">
+    <a
+        class="relative"
+        href={`/themes/${href}/`}
+    >
+        <img
+            class="rounded-t-lg object-cover h-[200px]"
+            width={720}
+            height={360}
+            src={src}
+            alt={alt}
+        />
+        <div class="p-5">
+            <h4 class="text-[1.2rem] leading-6 py-3">{title}</h4>
+            <div class="flex items-center justify-between border-y-[1px] border-zinc-900 py-3">
+                <span class="text-[14px] text-zinc-400 leading-none border border-zinc-900 px-3 py-2 rounded-md">
+                    {techstack}
+                </span>
+                <span class="text-[14px] text-zinc-400 leading-none">
+                    {category}
+                </span>
+            </div>
+            <ButtonLink clasName="pt-3" source="" preview="" />
+        </div>
+    </a>
+</div>

@@ -2,23 +2,23 @@
 import Pulse from "./ui/Pulse.astro"
 import { navlink } from "../const"
 ---
-    <header class="w-full max-w-screen-lg mx-auto border-x-[1px] border-b-[1px] border-zinc-900 py-4">
+    <header class="w-full max-w-screen-lg mx-auto border-x-[1px] border-b-[1px] border-zinc-900 py-4 max-sm:fixed top-0 left-0 z-50 bg-zinc-950/20 backdrop-blur-lg">
         <div class="flex items-center justify-between max-w-screen-md mx-auto w-full px-5">
             <Pulse />
             <div class="flex items-center">
-                <nav id="navbar" class="hidden md:flex lg:flex items-center gap-6">
+                <nav id="navbar" class="flex lg:flex items-center gap-2">
                     {navlink.map((link)=>(
-                        <a class="hover:text-lime-400 transition-all duration-300 ease-linear" href={link.href}>{link.text}</a>
+                        <a class="hover:text-lime-400 transition-all duration-300 ease-linear px-4 py-2 bg-zinc-900 rounded-md border-zinc-900" href={link.href}>{link.text}</a>
                     ))}
                 </nav>
-                <div class="relative flex items-center justify-center md:hidden lg:hidden border border-zinc-50/20 bg-zinc-950 p-1 rounded-md">
+                <!-- <div class="relative flex items-center justify-center md:hidden lg:hidden border border-zinc-50/20 bg-zinc-950 p-1 rounded-md">
                     <input class="h-7 w-7 opacity-0 z-10 cursor-pointer" type="checkbox" name="" id="">
                     <span id="hamburger" class="flex flex-col justify-between absolute h-3 w-5">
                         <span class="line line1 "></span>
                         <span class="line line1"></span>
                         <span class="line line1"></span>
                     </span>
-                </div>
+                </div> -->
             </div>
         </div>
     </header>

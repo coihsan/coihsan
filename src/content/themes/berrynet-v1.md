@@ -7,7 +7,7 @@ heroImageAlt: 'berrynet v1'
 tags: 
     - "Company Profile"
 techstack: "Next.js"
-category: "Web"
+category: "Landing Page"
 ---
 
 ## Jhon Doe Resume

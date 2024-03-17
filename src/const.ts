@@ -31,7 +31,7 @@ export const navlink = [
     { key: 0, title: "Google Ads", icon: "/googleAds.svg", href: "https://ads.google.com/" },
     { key: 1, title: "SEMRush", icon: "/semrush.svg", href: "https://www.semrush.com/" },
     { key: 1, title: "Search Console", icon: "/search-console.svg", href: "https://search.google.com/" },
-    { key: 1, title: "Google Analytics", icon: "/semrush.svg", href: "https://analytics.google.com/" },
+    { key: 1, title: "Google Analytics", icon: "/analytics.svg", href: "https://analytics.google.com/" },
     { key: 1, title: "Tag Manager", icon: "/tagmanager.svg", href: "https://tagmanager.google.com/" },
   ]
   export const projects = [

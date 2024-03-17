@@ -6,7 +6,7 @@ const posts = (await getCollection("themes")).sort(
 import ThemesLayout from '../../layouts/ThemesLayout.astro'
 import Section from "@components/Section.astro";
 import HeadingPages from "@components/HeadingPages.astro"
-import ButtonLink from "@components/ui/ButtonLink.astro";
+import CardThemes from "@components/CardThemes.astro";
 ---
 
 <ThemesLayout title='Theme Collections'>
@@ -15,36 +15,7 @@ import ButtonLink from "@components/ui/ButtonLink.astro";
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
 			{
 				posts.map((post) => (
-					<div class="componentStyle rounded-lg">
-						<a
-							class="relative"
-							href={`/themes/${post.slug}/`}
-						>
-							<img
-								class="rounded-t-lg object-cover h-[200px]"
-								width={720}
-								height={360}
-								src={post.data.heroImage}
-								alt={post.data.heroImageAlt}
-							/>
-							<div class="p-5">
-								<div class="pt-3">
-									<h4 class="text-[1.2rem] leading-6">
-										{post.data.title}
-									</h4>
-								</div>
-								<div class="flex items-center justify-between border-t-[1px] border-zinc-900 pt-3">
-									<span class="text-[14px] text-zinc-400 leading-none border border-zinc-900 px-2 py-1 rounded-md">
-										{post.data.techstack}
-									</span>
-									<span class="text-[14px] text-zinc-400 leading-none">
-										{post.data.category}
-									</span>
-								</div>
-								<ButtonLink clasName="pt-3" source="" preview="" />
-							</div>
-						</a>
-					</div>
+				<CardThemes href={post.slug} src={post.data.heroImage} alt={post.data.heroImageAlt} title={post.data.title} techstack={post.data.techstack} category={post.data.category} source={post.data.category} preview={post.data.category}/>
 				))
 			}
 		</div>

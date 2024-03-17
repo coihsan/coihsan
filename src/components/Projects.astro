@@ -3,31 +3,24 @@ const posts = await Astro.glob('../content/projects/*.md');
 import Section from "../components/Section.astro"
 import TitleSection from "../components/ui/TitleSection.astro"
 import ViewMore from "./ui/ViewMore.astro";
+import CardProjects from "../components/CardProjects.astro"
 ---
 
 <Section border="border-b-[1px]">
     <TitleSection title="Projects" icon="/terminal.svg"/>
     <div class="grid gap-3">
         {posts.slice(0, 2).map((post) =>(
-            <a href={post.url} class="componentStyle rounded-lg cursor-pointer flex items-center max-sm:flex-col gap-9 w-full h-auto lg:min-h-32 p-5 group">
-                <div class="w-full lg:max-w-[350px]">
-                    <img class="rounded-lg w-auto" src={post.frontmatter.heroImage} alt={post.frontmatter.heroImageAlt} />
-                </div>
-                <div class="relative h-full w-full">
-                    <div class="flex items-center gap-3 mb-3 lg:mb-6 max-sm:flex-col max-sm:items-start">
-                        <img class="rounded-lg w-auto bg-zinc-950 border border-zinc-900 p-1 w-10 h-10" src={post.frontmatter.logo} alt={post.frontmatter.heroImageAlt} />
-                        <h2 class="font-bold text-[1.2rem]">{post.frontmatter.title}</h2>
-                    </div>
-                    <p class="text-zinc-400 text-sm">{post.frontmatter.description}</p>
-                    <div class="relative lg:absolute pt-6 lg:pt-0 left-0 bottom-0 flex items-center justify-between w-full">
-                        <span>{post.frontmatter.usecase}</span>
-                        <span class="buttonLink">
-                            <img class="fill-zinc-400" width={14} height={14} src="/boxlink.svg" alt="boxlink" />
-                            <span>{post.frontmatter.pathname}</span>
-                        </span>
-                    </div>
-                </div>
-            </a>
+            <CardProjects 
+            href={post.url} 
+            src={post.frontmatter.heroImage} 
+            alt={post.frontmatter.heroImageAlt} 
+            logo={post.frontmatter.logo} 
+            logoAlt={post.frontmatter.heroImageAlt} 
+            title={post.frontmatter.title} 
+            description={post.frontmatter.description} 
+            usecase={post.frontmatter.usecase} 
+            pathname={post.frontmatter.pathname}
+            />
         ))}
     </div>
     <ViewMore href="/projects" />
