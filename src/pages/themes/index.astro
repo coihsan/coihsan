@@ -15,7 +15,15 @@ import CardThemes from "@components/CardThemes.astro";
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
 			{
 				posts.map((post) => (
-				<CardThemes href={post.slug} src={post.data.heroImage} alt={post.data.heroImageAlt} title={post.data.title} techstack={post.data.techstack} category={post.data.category} source={post.data.category} preview={post.data.category}/>
+				<CardThemes 
+				href={post.slug} 
+				src={post.data.heroImage} 
+				alt={post.data.heroImageAlt} 
+				title={post.data.title} 
+				techstack={post.data.techstack} 
+				category={post.data.techstack} 
+				source={post.data.techstack} 
+				preview={post.data.techstack}/>
 				))
 			}
 		</div>

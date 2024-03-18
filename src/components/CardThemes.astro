@@ -11,16 +11,17 @@ interface Props{
 }
 const {href, src, alt, title, techstack, category} = Astro.props
 import ButtonLink from "../components/ui/ButtonLink.astro"
+import { Image } from 'astro:assets'
 ---
 <div class="componentStyle rounded-lg">
     <a
         class="relative"
         href={`/themes/${href}/`}
     >
-        <img
-            class="rounded-t-lg object-cover h-[200px]"
-            width={720}
-            height={360}
+        <Image
+            class="rounded-t-lg object-cover"
+            width={330}
+            height={200}
             src={src}
             alt={alt}
         />
