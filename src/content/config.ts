@@ -1,8 +1,5 @@
 import { defineCollection, reference, z } from "astro:content";
 import { rssSchema } from "@astrojs/rss";
-const FrontmatterSchema = z.object({
-  estReadingTime: z.any(),
-});
 const Projects = defineCollection({
   type: "content",
   schema: ({ image }) => z.object({
@@ -15,10 +12,9 @@ const Projects = defineCollection({
     techstack: z.string(),
     pathname: z.string().optional(),
     usecase: z.string().optional(),
-    frontmatter: FrontmatterSchema.optional(),
     canonicalURL: z.string().url().optional(),
-    source: z.string().optional(),
-    preview: z.string().optional(),
+    source: z.string().url().optional(),
+    preview: z.string().url().optional(),
   }),
 });
 const Themes = defineCollection({
@@ -26,19 +22,20 @@ const Themes = defineCollection({
   schema: ({ image }) => z.object({
     title: z.string(),
     pubDate: z.coerce.date().optional(),
+    description: z.string().optional(),
     heroImage: image().refine(),
     heroImageAlt: z.string(),
     techstack: z.string(),
     pathname: z.string().optional(),
     usecase: z.string().optional(),
-    frontmatter: FrontmatterSchema.optional(),
+    category: z.string().optional(),
     canonicalURL: z.string().url().optional(),
-    source: z.string().optional(),
-    preview: z.string().optional(),
+    source: z.string().url().optional(),
+    preview: z.string().url().optional(),
   }),
 });
 
 export const collections = { 
-  'projects': Projects,
-  'themes': Themes,
+  Projects,
+  Themes,
  };

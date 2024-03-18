@@ -9,7 +9,7 @@ interface Props{
     source: any;
     preview: any;
 }
-const {href, src, alt, title, techstack, category} = Astro.props
+const {href, src, alt, title, techstack, category, source, preview} = Astro.props
 import ButtonLink from "../components/ui/ButtonLink.astro"
 import { Image } from 'astro:assets'
 ---
@@ -19,9 +19,11 @@ import { Image } from 'astro:assets'
         href={`/themes/${href}/`}
     >
         <Image
-            class="rounded-t-lg object-cover"
-            width={330}
+            class="rounded-t-lg w-full object-cover"
+            width={370}
             height={200}
+            format="webp" 
+            quality={'high'}
             src={src}
             alt={alt}
         />
@@ -35,7 +37,7 @@ import { Image } from 'astro:assets'
                     {category}
                 </span>
             </div>
-            <ButtonLink clasName="pt-3" source="" preview="" />
+            <ButtonLink clasName="pt-3" source={source} preview={preview} />
         </div>
     </a>
 </div>

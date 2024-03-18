@@ -5,9 +5,10 @@ import Contact from "../components/Contact.astro";
 import type { CollectionEntry, getEntries } from "astro:content";
 type Props = CollectionEntry<"projects">["data"];
 import Section from "@components/Section.astro";
+import { Image } from "astro:assets";
 import Breadcrumbs from "@components/ui/Breadcrumbs.astro";
 import "astro-breadcrumbs/breadcrumbs.css";
-const { title, description, pubDate, updatedDate, heroImage, frontmatter } =
+const { title, pubDate, heroImage } =
 	Astro.props;
 ---
 
@@ -44,7 +45,7 @@ const { title, description, pubDate, updatedDate, heroImage, frontmatter } =
 				</Breadcrumbs>
 			</div>
 			<main class="pt-6">
-				<!-- <Image src={heroImage.src} alt={heroImage.alt}/> -->
+				<Image width={700} height={400} src={heroImage.src} alt={heroImage.alt}/>
 				<slot />
 			</main>
 		</body>

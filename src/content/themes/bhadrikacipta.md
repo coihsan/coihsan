@@ -2,10 +2,12 @@
 title: 'Bhadrika Cipta Resume'
 description: 'Which of the two is superior and suitable for you considering the greater value of your investment?'
 pubDate: 'Dec 08 2022'
-heroImage: '/src/assets/bhadrikacipta.webp'
+heroImage: '/public/assets/bhadrikacipta.webp'
 heroImageAlt: 'Bhadrika Cipta.'
 tags: 
     - "Portfolios"
 techstack: "Vite.js"
 category: "Portfolios"
+source: '/'
+preview: '/'
 ---
