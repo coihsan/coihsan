@@ -12,6 +12,15 @@
 				"isDefault": true
 			},
 			"label": "tsc: build - tsconfig.json"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"problemMatcher": [
+				"$eslint-compact"
+			],
+			"label": "npm: start",
+			"detail": "astro dev"
 		}
 	]
 }
