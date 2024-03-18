@@ -1,14 +1,14 @@
 ---
 interface Props{
-    link: any;
-    src: any;
-    alt: any;
-    title: any;
-    description?: any;
-    usecase: any;
-    pathname: any;
-    logo: any;
-    logoAlt: any;
+    link: string;
+    src: string;
+    alt: string;
+    title: string;
+    description?: string;
+    usecase: string;
+    pathname: string;
+    logo: string;
+    logoAlt: string;
 }
 const {link, src, alt, title, description, usecase, pathname, logo,logoAlt } = Astro.props;
 import { Image } from 'astro:assets'

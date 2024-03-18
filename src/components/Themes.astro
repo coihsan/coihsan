@@ -17,8 +17,8 @@ import CardThemes from "../components/CardThemes.astro"
             title={post.frontmatter.title} 
             techstack={post.frontmatter.techstack} 
             category={post.frontmatter.category} 
-            source={post.frontmatter.category} 
-            preview={post.frontmatter.category}/>
+            source={post.frontmatter.source} 
+            preview={post.frontmatter.preview}/>
         ))}
     </div>
     <ViewMore href="/themes" />
