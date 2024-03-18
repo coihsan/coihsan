@@ -1,9 +1,9 @@
 ---
-import PostLayout from 'src/layouts/PostLayout.astro';
+import ThemesLayout from 'src/layouts/ThemesLayout.astro';
 import {getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const themes = await getCollection('themes');
+  const themes = await getCollection("Themes");
   return themes.map(post => ({
     params: { slug: post.slug },
     props: { post },
@@ -14,7 +14,7 @@ const { post } = Astro.props;
 const { Content, headings, remarkPluginFrontmatter } = await post.render();
 ---
 
-<PostLayout {...post.data}>
+<ThemesLayout {...post.data}>
   <p>{remarkPluginFrontmatter.minutesRead}</p>
 	<Content />
-</PostLayout>
+</ThemesLayout>

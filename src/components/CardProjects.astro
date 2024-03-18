@@ -1,6 +1,6 @@
 ---
 interface Props{
-    href: any;
+    link: any;
     src: any;
     alt: any;
     title: any;
@@ -10,9 +10,9 @@ interface Props{
     logo: any;
     logoAlt: any;
 }
-const {href, src, alt, title, description, usecase, pathname, logo,logoAlt } = Astro.props;
+const {link, src, alt, title, description, usecase, pathname, logo,logoAlt } = Astro.props;
 ---
-<a href={href} class="componentStyle rounded-lg cursor-pointer flex items-center max-sm:flex-col gap-9 w-full h-auto lg:min-h-32 p-5 group">
+<a href={link} class="componentStyle rounded-lg cursor-pointer flex items-center max-sm:flex-col gap-9 w-full h-auto lg:min-h-32 p-5 group">
     <div class="w-full lg:max-w-[350px]">
         <img class="rounded-lg w-auto" src={src} alt={alt} />
     </div>

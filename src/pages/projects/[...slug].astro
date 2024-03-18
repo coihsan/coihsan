@@ -1,9 +1,9 @@
 ---
-import PostLayout from 'src/layouts/PostLayout.astro';
+import ProjectsLayout from 'src/layouts/ProjectsLayout.astro';
 import {getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const projects = await getCollection('projects');
+  const projects = await getCollection('Projects');
   return projects.map(post => ({
     params: { slug: post.slug },
     props: { post },
@@ -14,7 +14,7 @@ const { post } = Astro.props;
 const { Content, headings, remarkPluginFrontmatter } = await post.render();
 ---
 
-<PostLayout {...post.data}>
-  <p>{remarkPluginFrontmatter.minutesRead}</p>
+<ProjectsLayout {...post.data}>
+  <!-- <p>{remarkPluginFrontmatter.minutesRead}</p> -->
 	<Content />
-</PostLayout>
+</ProjectsLayout>

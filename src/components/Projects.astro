@@ -1,5 +1,5 @@
 ---
-const posts = await Astro.glob('../content/projects/*.md');
+const posts = await Astro.glob('../content/Projects/*.md');
 import Section from "../components/Section.astro"
 import TitleSection from "../components/ui/TitleSection.astro"
 import ViewMore from "./ui/ViewMore.astro";
@@ -11,7 +11,7 @@ import CardProjects from "../components/CardProjects.astro"
     <div class="grid gap-3">
         {posts.slice(0, 2).map((post) =>(
             <CardProjects 
-            href={post.url} 
+            link={post.url}
             src={post.frontmatter.heroImage} 
             alt={post.frontmatter.heroImageAlt} 
             logo={post.frontmatter.logo} 

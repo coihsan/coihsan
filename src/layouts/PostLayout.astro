@@ -2,10 +2,11 @@
 import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro";
 import Contact from "../components/Contact.astro";
-import type { CollectionEntry, getCollection } from "astro:content";
-type Props = CollectionEntry<"themes">["data"];
+import type { CollectionEntry, getEntries } from "astro:content";
+type Props = CollectionEntry<"Projects">["data"];
 import Section from "@components/Section.astro";
 import Breadcrumbs from "@components/ui/Breadcrumbs.astro";
+import "astro-breadcrumbs/breadcrumbs.css";
 const { title, description, pubDate, updatedDate, heroImage, frontmatter } =
 	Astro.props;
 ---
@@ -24,7 +25,7 @@ const { title, description, pubDate, updatedDate, heroImage, frontmatter } =
 	<Navbar />
 	<Section border="">
 		<body>
-			<div class="w-full">
+			<div class="pb-6 border-b-[1px] border-zinc-900 w-full">
 				<Breadcrumbs>
 					<svg
 						slot="separator"
@@ -42,7 +43,7 @@ const { title, description, pubDate, updatedDate, heroImage, frontmatter } =
 					</svg>
 				</Breadcrumbs>
 			</div>
-			<main>
+			<main class="pt-6">
 				<!-- <Image src={heroImage.src} alt={heroImage.alt}/> -->
 				<slot />
 			</main>

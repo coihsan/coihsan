@@ -1,22 +1,22 @@
 ---
-import ProjectsLayout from '../../layouts/ProjectsLayout.astro'
+import Layout from '../../layouts/Layout.astro'
 import Section from '@components/Section.astro';
 import { getCollection } from "astro:content";
-const posts = (await getCollection("projects")).sort(
+const posts = (await getCollection("Projects")).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
 import HeadingPages from "@components/HeadingPages.astro"
 import CardProjects from '@components/CardProjects.astro';
 ---
 
-<ProjectsLayout title='Projects Collections'>
+<Layout title='Projects Collections'>
 	<HeadingPages title="Project Experiences" description="It's my collections themes with variant frameworks javascript"/>
 	<Section border=''>
 		<div class="grid gap-4">
 			{
 				posts.map((post) => (
 				<CardProjects 
-					href={post.slug} 
+					link={`/Projects/${post.slug}/`} 
 					src={post.data.heroImage} 
 					alt={post.data.heroImageAlt} 
 					logo={post.data.logo} 
@@ -30,4 +30,4 @@ import CardProjects from '@components/CardProjects.astro';
 			}
 		</div>
 	</Section>
-</ProjectsLayout>
+</Layout>

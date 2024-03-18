@@ -1,9 +1,8 @@
 ---
-const posts = await Astro.glob('../content/themes/*.md');
+const posts = await Astro.glob('../content/Themes/*.md');
 import Section from "../components/Section.astro"
 import TitleSection from "../components/ui/TitleSection.astro"
 import ViewMore from "./ui/ViewMore.astro";
-import ButtonLink from "./ui/ButtonLink.astro"
 import CardThemes from "../components/CardThemes.astro"
 ---
 
@@ -11,19 +10,15 @@ import CardThemes from "../components/CardThemes.astro"
     <TitleSection title="Themes" icon="/layout.svg"/>
     <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3">
         {posts.slice(0, 2).map((post) =>(
-            <CardThemes href={post.url} src={post.frontmatter.heroImage} alt={post.frontmatter.heroImageAlt} title={post.frontmatter.title} techstack={post.frontmatter.techstack} category={post.frontmatter.category} source={post.frontmatter.category} preview={post.frontmatter.category}/>
-            // <div class="componentStyle rounded-lg cursor-pointer ">
-            //     <a href={post.url} class="flex flex-col">
-            //     <div class="h-[200px]">
-            //         <img class="rounded-t-lg object-cover" width="auto" height={200} src={post.frontmatter.heroImage} alt={post.frontmatter.heroImageAlt} />
-            //     </div>
-            //     <div class="p-5 flex flex-col">
-            //         <h2 class="font-bold text-[1.2rem]">{post.frontmatter.title}</h2>
-            //         <p>{post.frontmatter.techstack}</p>
-            //         <ButtonLink clasName="pt-2 pr-0" preview="#" source="#" />
-            //     </div>
-            // </a>
-            // </div>
+            <CardThemes 
+            href={post.url} 
+            src={post.frontmatter.heroImage} 
+            alt={post.frontmatter.heroImageAlt} 
+            title={post.frontmatter.title} 
+            techstack={post.frontmatter.techstack} 
+            category={post.frontmatter.category} 
+            source={post.frontmatter.category} 
+            preview={post.frontmatter.category}/>
         ))}
     </div>
     <ViewMore href="/themes" />

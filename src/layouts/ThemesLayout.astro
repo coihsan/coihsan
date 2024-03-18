@@ -1,28 +1,56 @@
 ---
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
 import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro";
 import Contact from "../components/Contact.astro";
-import BaseHead from "./BaseHead.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../const"
+import type { CollectionEntry } from "astro:content";
+type Props = CollectionEntry<"Themes">["data"];
+import Section from "@components/Section.astro";
+import Breadcrumbs from "@components/ui/Breadcrumbs.astro";
+import "astro-breadcrumbs/breadcrumbs.css";
+const { title, description, pubDate, updatedDate, heroImage, frontmatter } =
+	Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="stylesheet" href="/src/styles/global.css">
 	</head>
-	<body>
-		<Navbar />
-		<main class="">
-			<slot />
-		</main>
-		<Contact />
-		<Footer />
-	</body>
+	<Navbar />
+	<Section border="">
+		<body>
+			<div class="pb-6 border-b-[1px] border-zinc-900 w-full">
+				<Breadcrumbs>
+					<svg
+						slot="separator"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						><polyline points="9 18 15 12 9 6"
+						></polyline>
+					</svg>
+				</Breadcrumbs>
+			</div>
+			<main class="pt-6">
+				<!-- <Image src={heroImage.src} alt={heroImage.alt}/> -->
+				<slot />
+			</main>
+		</body>
+	</Section>
+	<Contact />
+	<Footer />
+	
 </html>
 
