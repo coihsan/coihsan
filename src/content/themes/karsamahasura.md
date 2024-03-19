@@ -8,8 +8,6 @@ tags:
     - "Portfolios"
 techstack: "HTML Static"
 category: "Portfolios"
-source: '/'
-preview: '/'
+source: 'https://github.com/coihsan/karsa-mahasura-template/archive/refs/heads/main.zip'
+preview: 'https://coihsan.github.io/karsa-mahasura-template/'
 ---
-
-## Jhon Doe Resume

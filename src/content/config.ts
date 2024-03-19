@@ -1,5 +1,4 @@
-import { defineCollection, reference, z } from "astro:content";
-import { rssSchema } from "@astrojs/rss";
+import { defineCollection, z } from "astro:content";
 const Projects = defineCollection({
   type: "content",
   schema: ({ image }) => z.object({
@@ -7,10 +6,10 @@ const Projects = defineCollection({
     logo: z.string().optional(),
     logoAlt: z.string().optional(),
     pubDate: z.coerce.date().optional(),
-    heroImage: image().refine(),
+    heroImage: image(),
     heroImageAlt: z.string(),
     techstack: z.string(),
-    pathname: z.string().optional(),
+    domainName: z.string().optional(),
     usecase: z.string().optional(),
     canonicalURL: z.string().url().optional(),
     source: z.string().url().optional(),
@@ -23,10 +22,9 @@ const Themes = defineCollection({
     title: z.string(),
     pubDate: z.coerce.date().optional(),
     description: z.string().optional(),
-    heroImage: image().refine(),
+    heroImage: image(),
     heroImageAlt: z.string(),
     techstack: z.string(),
-    pathname: z.string().optional(),
     usecase: z.string().optional(),
     category: z.string().optional(),
     canonicalURL: z.string().url().optional(),

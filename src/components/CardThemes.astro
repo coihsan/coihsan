@@ -1,6 +1,6 @@
 ---
 interface Props {
-    href: string;
+    link: string;
     src: string;
     alt: string;
     title: string;
@@ -9,14 +9,14 @@ interface Props {
     source: string;
     preview: string;
 }
-const {href, src, alt, title, techstack, category, source, preview} = Astro.props
+const {link, src, alt, title, techstack, category, source, preview} = Astro.props
 import ButtonLink from "../components/ui/ButtonLink.astro"
 import { Image } from 'astro:assets'
 ---
 <div class="componentStyle rounded-lg">
     <a
         class="relative"
-        href={href}
+        href={link}
     >
         <Image
             class="rounded-t-lg w-full object-cover"
@@ -24,6 +24,7 @@ import { Image } from 'astro:assets'
             height={200}
             format="webp" 
             quality={'high'}
+            loading="eager"
             src={src}
             alt={alt}
         />

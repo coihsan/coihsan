@@ -11,7 +11,7 @@ import CardThemes from "../components/CardThemes.astro"
     <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3">
         {posts.slice(0, 2).map((post) =>(
             <CardThemes 
-            href={post.url} 
+            link={post.url}
             src={post.frontmatter.heroImage} 
             alt={post.frontmatter.heroImageAlt} 
             title={post.frontmatter.title} 

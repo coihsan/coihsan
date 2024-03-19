@@ -7,7 +7,7 @@ export const navlink = [
     { key: 3, href: "/themes", text: "Themes" },
 ];
   export const sociallink = [
-    {key: 0, icon: "/x-twitter.svg", href: "#", alt: "twitter"},
+    {key: 0, icon: "/x-twitter.svg", href: "/", alt: "twitter"},
     {key: 1, icon: "/instagram.svg", href: "https://www.instagram.com/co.ihsan/", alt: "instagram"},
     {key: 2, icon: "/github.svg", href: "https://github.com/coihsan", alt: "github"},
     {key: 3, icon: "/codepen.svg", href: "https://codepen.io/coihsan", alt: "codepen"},
@@ -15,7 +15,7 @@ export const navlink = [
   export const nextjs = ["Landing Page", "Blog", "Portfolios", "Company Profile"];
   export const techstack = [
     { key: 0, title: "HTML 5", icon: "/html.svg", href: "https://html.com/html5/" },
-    { key: 1, title: "CSS 3", icon: "/css.svg", href: "#" },
+    { key: 1, title: "CSS 3", icon: "/css.svg", href: "/" },
     { key: 2, title: "JavaScript", icon: "/js.svg", href: "https://www.javascript.com/" },
     { key: 3, title: "TypeScript", icon: "/ts.svg", href: "https://www.typescriptlang.org/" },
     { key: 4, title: "React.js", icon: "/react.svg", href: "https://react.dev/" },

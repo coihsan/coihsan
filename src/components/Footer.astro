@@ -1,7 +1,11 @@
 ---
 import Section from "../components/Section.astro"
+import LinkExt from "./ui/LinkExt.astro"
 const thisYear = new Date().getFullYear()
 ---
 <Section border="">
-    <footer class="w-full mx-auto text-center text-zinc-400">{thisYear} Development by coihsan</footer>
+    <footer class="w-full mx-auto text-center text-zinc-400">
+        <span>©{thisYear} Development by coihsan</span>
+        <p>Built with <LinkExt href="https://astro.build">{Astro.generator}</LinkExt></p>
+    </footer>
 </Section>

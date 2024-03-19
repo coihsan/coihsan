@@ -6,11 +6,11 @@ interface Props{
     title: string;
     description?: string;
     usecase: string;
-    pathname: string;
+    domainName: string;
     logo: string;
     logoAlt: string;
 }
-const {link, src, alt, title, description, usecase, pathname, logo,logoAlt } = Astro.props;
+const {link, src, alt, title, description, usecase, domainName, logo,logoAlt } = Astro.props;
 import { Image } from 'astro:assets'
 ---
 <a href={link} class="componentStyle rounded-lg cursor-pointer flex items-center max-sm:flex-col gap-9 w-full h-auto lg:min-h-32 p-5 group">
@@ -25,7 +25,7 @@ import { Image } from 'astro:assets'
         alt={alt} />
     </div>
     <div class="relative h-full w-full">
-        <div class="flex items-center gap-3 mb-3 lg:mb-6 max-sm:flex-col max-sm:items-start">
+        <div class="flex items-center gap-3 mb-3 lg:mb-6">
             <Image class="rounded-lg w-auto bg-zinc-950 border border-zinc-900 p-1 h-10 w-10" loading='eager' width={22} height={22} src={logo} alt={logoAlt} />
             <h2 class="font-bold text-[1.2rem]">{title}</h2>
         </div>
@@ -33,7 +33,7 @@ import { Image } from 'astro:assets'
         <div class="relative lg:absolute pt-6 lg:pt-0 left-0 bottom-0 flex items-center justify-between w-full">
             <span>{usecase}</span>
             <span class="buttonLink">
-                <span>{pathname}</span>
+                <span>{domainName}</span>
                 <Image class="fill-zinc-400" width={14} height={14} src="/boxlink.svg" alt="boxlink" />
             </span>
         </div>

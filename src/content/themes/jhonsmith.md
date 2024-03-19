@@ -9,5 +9,5 @@ tags:
 techstack: "HTML Static"
 category: "Portfolios"
 source: '/'
-preview: '/'
+preview: 'https://macksmith-template.stackblitz.io/'
 ---

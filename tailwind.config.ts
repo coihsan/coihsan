@@ -27,8 +27,14 @@ export default {
 				".buttonLink" :{
 					"@apply flex items-center gap-2 bg-zinc-900 group-hover:bg-zinc-800 rounded-md border border-zinc-800 group-hover:border-zinc-700 px-3 py-1": {},
 				},
+				".buttonUtils" :{
+					"@apply border flex items-center justify-center gap-3 px-4 py-3 rounded-md transition-colors ease-linear duration-150": {},
+				},
 				".componentStyle": {
-					"@apply bg-zinc-950 border border-zinc-900 hover:border-zinc-300 transition-all duration-300 ease-linear":{},
+					"@apply bg-zinc-950 hover:bg-lime-950 border border-zinc-900 hover:border-lime-500 transition-all duration-150 ease-in-out":{},
+				},
+				".transitionAll": {
+					"@apply transition-all duration-150 ease-in-out":{},
 				}
 			})
 		}),

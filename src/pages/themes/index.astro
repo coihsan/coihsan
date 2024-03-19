@@ -16,7 +16,7 @@ import CardThemes from "@components/CardThemes.astro";
 			{
 				posts.map((post) => (
 				<CardThemes 
-				href={`/themes/${post.slug}/`} 
+				link={`/themes/${post.slug}/`} 
 				src={post.data.heroImage} 
 				alt={post.data.heroImageAlt} 
 				title={post.data.title} 

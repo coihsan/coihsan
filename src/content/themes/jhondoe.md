@@ -8,8 +8,6 @@ tags:
     - "Portfolios"
 techstack: "HTML Static"
 category: "Portfolios"
-source: '/'
-preview: '/'
+source: 'https://github.com/coihsan/jhon-doe-template-pure-html/archive/refs/heads/main.zip'
+preview: 'https://coihsan.github.io/jhon-doe-template-pure-html/'
 ---
-
-## Jhon Doe Resume

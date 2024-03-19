@@ -8,8 +8,6 @@ tags:
     - "Portfolios"
 techstack: "Next.js"
 category: "Landing Page"
-source: '/'
-preview: '/'
+source: 'https://github.com/coihsan/zinc-starters-rgkhtp/archive/refs/heads/main.zip'
+preview: 'https://zinc-starter.vercel.app/'
 ---
-
-## Jhon Doe Resume

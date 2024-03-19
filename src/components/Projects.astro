@@ -11,7 +11,7 @@ import CardProjects from "../components/CardProjects.astro"
     <div class="grid gap-3">
         {posts.slice(0, 2).map((post) =>(
             <CardProjects 
-            link={post.url}
+            link={post.url} 
             src={post.frontmatter.heroImage} 
             alt={post.frontmatter.heroImageAlt} 
             logo={post.frontmatter.logo} 
@@ -19,7 +19,7 @@ import CardProjects from "../components/CardProjects.astro"
             title={post.frontmatter.title} 
             description={post.frontmatter.description} 
             usecase={post.frontmatter.usecase} 
-            pathname={post.frontmatter.pathname}
+            domainName={post.frontmatter.domainName}
             />
         ))}
     </div>

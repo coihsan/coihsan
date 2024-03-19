@@ -8,8 +8,6 @@ tags:
     - "Company Profile"
 techstack: "Next.js"
 category: "Landing Page"
-source: '/'
-preview: '/'
+source: 'https://github.com/coihsan/berrynet-starters-rgkhtp/archive/refs/heads/main.zip'
+preview: 'https://berrynet-starter.vercel.app/'
 ---
-
-## Jhon Doe Resume

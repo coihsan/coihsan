@@ -8,50 +8,54 @@ import Section from "@components/Section.astro";
 import { Image } from "astro:assets";
 import Breadcrumbs from "@components/ui/Breadcrumbs.astro";
 import "astro-breadcrumbs/breadcrumbs.css";
-const { title, pubDate, heroImage } =
+import BaseHead from "./BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "src/const";
+const {pubDate, heroImage, heroImageAlt, title, description, source, preview } =
 	Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<link rel="stylesheet" href="/src/styles/global.css">
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
+	<body>
 	<Navbar />
-	<Section border="">
-		<body>
-			<div class="pb-6 border-b-[1px] border-zinc-900 w-full">
-				<Breadcrumbs>
-					<svg
-						slot="separator"
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						><polyline points="9 18 15 12 9 6"
-						></polyline>
-					</svg>
-				</Breadcrumbs>
+	<Section border="" className="max-sm:mt-16">
+		<div class="pb-6 border-b-[1px] border-zinc-900 w-full">
+			<Breadcrumbs>
+				<svg
+					slot="separator"
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					><polyline points="9 18 15 12 9 6"
+					></polyline>
+				</svg>
+			</Breadcrumbs>
+		</div>
+		<div class="py-6 flex flex-col items-center">
+			<Image class="rounded-lg" width={768} height={400} src={heroImage} alt={heroImageAlt}/>
+			<div class="pt-3 flex flex-col items-center justify-center">
+				<h1 class="font-bold text-4xl sm:text-2xl pb-3 text-center">{title}</h1>
+				<p class="text-center mx-auto"></p>{description}</p>
 			</div>
-			<main class="pt-6">
-				<Image width={700} height={400} src={heroImage.src} alt={heroImage.alt}/>
-				<slot />
-			</main>
-		</body>
-	</Section>
+			<div class="grid grid-cols-2 gap-3 lg:max-w-[390px] w-full pt-3">
+				<a class="bg-zinc-100 hover:bg-zinc-200 border text-zinc-950 buttonUtils w-full" href={preview} target="_blank" rel="noopener noreferrer">Preview</a>
+				<a class="bg-zinc-950 border-zinc-900 buttonUtils w-full hover:bg-zinc-900 hover:border-zinc-800" href={source} target="_blank" rel="noopener noreferrer">Source</a>
+			</div>
+		</div>
+		<slot />
+		</Section>
 	<Contact />
 	<Footer />
+</body>
 	
 </html>
 
