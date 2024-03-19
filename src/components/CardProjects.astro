@@ -13,7 +13,7 @@ interface Props{
 const {link, src, alt, title, description, usecase, domainName, logo,logoAlt } = Astro.props;
 import { Image } from 'astro:assets'
 ---
-<a href={link} class="componentStyle rounded-lg cursor-pointer flex items-center max-sm:flex-col gap-9 w-full h-auto lg:min-h-32 p-5 group">
+<a href={link} class="componentStyle rounded-lg cursor-pointer flex items-center max-sm:flex-col gap-6 w-full h-auto lg:min-h-32 p-5 group">
     <div class="w-full lg:max-w-[350px]">
         <Image 
         width={300}
@@ -29,7 +29,7 @@ import { Image } from 'astro:assets'
             <Image class="rounded-lg w-auto bg-zinc-950 border border-zinc-900 p-1 h-10 w-10" loading='eager' width={22} height={22} src={logo} alt={logoAlt} />
             <h2 class="font-bold text-[1.2rem]">{title}</h2>
         </div>
-        <p class="text-zinc-400 text-sm">{description}</p>
+        <p class="text-zinc-400 text-sm line-clamp-3">{description}</p>
         <div class="relative lg:absolute pt-6 lg:pt-0 left-0 bottom-0 flex items-center justify-between w-full">
             <span>{usecase}</span>
             <span class="buttonLink">

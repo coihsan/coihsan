@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
 import Breadcrumbs from "@components/ui/Breadcrumbs.astro";
 import "astro-breadcrumbs/breadcrumbs.css";
 import BaseHead from "./BaseHead.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "src/const";
+import { SITE_TITLE } from "src/const";
 const {pubDate, heroImage, heroImageAlt, title, description, source, preview } =
 	Astro.props;
 ---
@@ -17,7 +17,7 @@ const {pubDate, heroImage, heroImageAlt, title, description, source, preview } =
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={title} description={description} image={heroImage} />
 	</head>
 	<body>
 	<Navbar />
@@ -42,6 +42,7 @@ const {pubDate, heroImage, heroImageAlt, title, description, source, preview } =
 		</div>
 		<div class="py-6 flex flex-col items-center">
 			<Image class="rounded-lg" width={768} height={400} src={heroImage} alt={heroImageAlt}/>
+			<span>{pubDate}</span>
 			<div class="pt-3 flex flex-col items-center justify-center">
 				<h1 class="font-bold text-4xl sm:text-2xl pb-3 text-center">{title}</h1>
 				<p class="text-center mx-auto"></p>{description}</p>

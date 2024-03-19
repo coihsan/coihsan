@@ -1,5 +1,5 @@
 export const SITE_TITLE = "˗ˏˋIhsanˎˊ";
-export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const SITE_DESCRIPTION = 'Frontend developer and digital marketing enthusiast | This is my personal web';
 export const navlink = [
     { key: 0, href: "/", text: "Home" },
     { key: 1, href: "/stack", text: "Stack" },

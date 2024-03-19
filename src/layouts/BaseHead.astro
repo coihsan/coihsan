@@ -3,16 +3,19 @@ import "src/styles/global.css";
 
 interface Props {
 	title: string;
+	thisSite: string;
 	description: string;
 	image?: string;
 }
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-import { ViewTransitions } from "astro:transitions";
 const {
 	title,
 	description,
-	image = "/blog-placeholder-1.jpg",
+	image = "/public/gue.webp",
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+import { ViewTransitions } from "astro:transitions";
+const currentPage = Astro.url.pathname.slice(1);
 ---
 
 <meta charset="utf-8" />
