@@ -25,7 +25,7 @@ export default {
 					"@apply flex items-center justify-center": {},
 				},
 				".buttonLink" :{
-					"@apply flex items-center gap-2 bg-zinc-900 group-hover:bg-zinc-800 rounded-md border border-zinc-800 group-hover:border-zinc-700 px-3 py-1": {},
+					"@apply flex items-center gap-2 bg-zinc-900 group-hover:bg-lime-800 rounded-md border border-zinc-800 group-hover:border-lime-600 px-3 py-1": {},
 				},
 				".buttonUtils" :{
 					"@apply border flex items-center justify-center gap-3 px-4 py-3 rounded-md transition-colors ease-linear duration-150": {},

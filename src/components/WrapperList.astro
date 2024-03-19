@@ -15,7 +15,7 @@ import { Image } from "astro:assets";
     {index.map((list)=>(
         <a href={list.href} class="flex items-center justify-between componentStyle rounded-md px-5 py-3 group">
             <span class="flex items-center gap-3">
-                <span class="bg-zinc-900 group-hover:bg-lime-900 rounded-md border border-zinc-800 p-2 w-10 h-10 flex items-center justify-between transitionAll">
+                <span class="bg-zinc-900 group-hover:bg-lime-900 group-hover:border-lime-700 rounded-md border border-zinc-800 p-2 w-10 h-10 flex items-center justify-between transitionAll">
                     <Image width={24} height={24} src={list.icon} alt={list.title} />
                 </span>
                 <span class="text-sm">{list.title}</span>

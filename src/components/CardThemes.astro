@@ -10,10 +10,9 @@ interface Props {
     preview: string;
 }
 const {link, src, alt, title, techstack, category, source, preview} = Astro.props
-import ButtonLink from "../components/ui/ButtonLink.astro"
 import { Image } from 'astro:assets'
 ---
-<div class="componentStyle rounded-lg">
+<div class="componentStyle rounded-lg group">
     <a
         class="relative"
         href={link}
@@ -28,17 +27,26 @@ import { Image } from 'astro:assets'
             src={src}
             alt={alt}
         />
-        <div class="p-5">
-            <h4 class="text-[1.2rem] leading-6 py-3">{title}</h4>
-            <div class="flex items-center justify-between border-y-[1px] border-zinc-900 py-3">
-                <span class="text-[14px] text-zinc-400 leading-none border border-zinc-900 px-3 py-2 rounded-md">
+        <div class="p-5 ">
+            <h4 class="text-[1.2rem] leading-6 pb-3">{title}</h4>
+            <div class="flex items-center justify-between border-y-[1px] border-zinc-900 py-3 group-hover:border-lime-800 transitionAll">
+                <span class="text-[14px] leading-none border border-zinc-700 group-hover:text-lime-500 group-hover:border-lime-600 transitionAll px-3 py-2 rounded-md">
                     {techstack}
                 </span>
                 <span class="text-[14px] text-zinc-400 leading-none">
                     {category}
                 </span>
             </div>
-            <ButtonLink clasName="pt-3" source={source} preview={preview} />
+            <div class="flex items-center pt-3">
+                <a class="buttonLink transitionAll" href={preview} target="_blank" rel="noopener noreferrer" aria-label="View project preview">
+                    <span>Preview</span>
+                    <Image width={14} height={14} src="/boxlink.svg" alt="icon link">
+                </a>
+                <a class="buttonLink ml-3 transitionAll" href={source} target="_blank" rel="noopener noreferrer" aria-label="View project source code">
+                    <span>Source</span>
+                    <Image width={14} height={14} src="/boxlink.svg" alt="icon link">
+                </a>
+            </div>
         </div>
     </a>
 </div>
