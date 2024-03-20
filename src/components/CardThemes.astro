@@ -1,7 +1,7 @@
 ---
 interface Props {
     link: string;
-    src: string;
+    src: any;
     alt: string;
     title: string;
     techstack: string;
@@ -15,7 +15,7 @@ import { Image } from 'astro:assets'
 <div class="componentStyle rounded-lg group">
     <a
         class="relative"
-        href={link}
+        href={`${link}`}
     >
         <Image
             class="rounded-t-lg w-full object-cover"

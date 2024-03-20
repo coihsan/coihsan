@@ -1,9 +1,12 @@
 ---
-const posts = await Astro.glob('../content/projects/*.md');
 import Section from "../components/Section.astro"
 import TitleSection from "../components/ui/TitleSection.astro"
 import ViewMore from "./ui/ViewMore.astro";
 import CardProjects from "../components/CardProjects.astro"
+import { getCollection } from "astro:content";
+const posts = (await getCollection("projects")).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+);
 ---
 
 <Section border="border-b-[1px]">
@@ -11,15 +14,15 @@ import CardProjects from "../components/CardProjects.astro"
     <div class="grid gap-3">
         {posts.slice(0, 2).map((post) =>(
             <CardProjects 
-            link={post.url} 
-            src={post.frontmatter.heroImage} 
-            alt={post.frontmatter.heroImageAlt} 
-            logo={post.frontmatter.logo} 
-            logoAlt={post.frontmatter.heroImageAlt} 
-            title={post.frontmatter.title} 
-            description={post.frontmatter.description} 
-            usecase={post.frontmatter.usecase} 
-            domainName={post.frontmatter.domainName}
+            link={`/projects/${post.slug}/`}
+            src={`${post.data.heroImage}`} 
+            alt={post.data.heroImageAlt} 
+            logo={post.data.logo} 
+            logoAlt={post.data.heroImageAlt} 
+            title={post.data.title} 
+            description={post.data.description} 
+            usecase={post.data.usecase} 
+            domainName={post.data.domainName}
             />
         ))}
     </div>

@@ -20,7 +20,7 @@ import CardProjects from '@components/CardProjects.astro';
 				posts.map((post) => (
 				<CardProjects 
 					link={`/projects/${post.slug}/`} 
-					src={post.data.heroImage} 
+					src={`${post.data.heroImage}`} 
 					alt={post.data.heroImageAlt} 
 					logo={post.data.logo} 
 					logoAlt={post.data.heroImageAlt} 

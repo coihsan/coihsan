@@ -6,7 +6,10 @@ const Projects = defineCollection({
     logo: z.string().optional(),
     logoAlt: z.string().optional(),
     pubDate: z.coerce.date().optional(),
-    heroImage: image(),
+    heroImage: image().refine((img) => img.width >= 1080, {
+      message: "Cover image must be at least 1080 pixels wide!",
+    }),
+    // heroImage: image(),
     heroImageAlt: z.string(),
     techstack: z.string(),
     domainName: z.string().optional(),

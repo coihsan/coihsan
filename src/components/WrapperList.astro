@@ -1,21 +1,23 @@
 ---
+import type { JSX } from "astro/jsx-runtime";
 import { Image } from "astro:assets";
+import { techstack, otherstack } from "src/const";
+
 interface Propss {
-	title: string;
-	icon: string;
-	href: string;
+    title: string;
+    icon: string;
+    href: string;
 }
 interface stack{
-	index: Propss[];
+    index: typeof techstack ; otherstack;
     x: number;
     y: number;
 }
-const { index, x = 0, y = 0 } = Astro.props;
-const slicedIndex = index.slice(x, y);
+const {index , x= 0, y} = Astro.props as stack
 ---
 
 <div class="grid grid-cols-3 max-sm:grid-cols-2 gap-4 w-full">
-    {slicedIndex.map((list)=>(
+    {index.slice(x, y).map((list)=>(
         <a href={list.href} class="flex items-center justify-between componentStyle rounded-md px-5 py-3 group">
             <span class="flex items-center gap-3">
                 <span class="bg-zinc-900 group-hover:bg-lime-900 group-hover:border-lime-700 rounded-md border border-zinc-800 p-2 w-10 h-10 flex items-center justify-between transitionAll">
