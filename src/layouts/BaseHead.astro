@@ -1,6 +1,6 @@
 ---
 import "src/styles/global.css";
-
+import { SITE_TITLE, SITE_DESCRIPTION } from "src/const";
 interface Props {
 	title: string;
 	thisSite: string;
@@ -10,6 +10,7 @@ interface Props {
 const {
 	title,
 	description,
+	thisSite,
 	image = "/public/gue.webp",
 } = Astro.props;
 
@@ -26,8 +27,11 @@ const currentPage = Astro.url.pathname.slice(1);
 <ViewTransitions />
 
 <link rel="canonical" href={canonicalURL} />
-
-<title>{title}</title>
+<title>
+	{currentPage === ""
+	  ? `${SITE_TITLE} | ${thisSite}`
+	  : `${currentPage.replace(/-/g, " ")}`}
+  </title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
