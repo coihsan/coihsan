@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 interface Propss {
 	title: string;
 	icon: string;
@@ -6,21 +7,23 @@ interface Propss {
 }
 interface stack{
 	index: Propss[];
+    x: number;
+    y: number;
 }
-const { index } = Astro.props
-import { Image } from "astro:assets";
+const { index, x = 0, y = 0 } = Astro.props;
+const slicedIndex = index.slice(x, y);
 ---
 
 <div class="grid grid-cols-3 max-sm:grid-cols-2 gap-4 w-full">
-    {index.map((list)=>(
+    {slicedIndex.map((list)=>(
         <a href={list.href} class="flex items-center justify-between componentStyle rounded-md px-5 py-3 group">
             <span class="flex items-center gap-3">
                 <span class="bg-zinc-900 group-hover:bg-lime-900 group-hover:border-lime-700 rounded-md border border-zinc-800 p-2 w-10 h-10 flex items-center justify-between transitionAll">
-                    <Image width={24} height={24} src={list.icon} alt={list.title} />
+                    <Image width={24} height={24} src={list.icon} alt={list.title} loading="eager" />
                 </span>
                 <span class="text-sm">{list.title}</span>
             </span>
-            <Image height={24} width={24} class="hidden lg:flex fill-white group-hover:rotate-[-45deg] transitionAll" src="/arrow-right.svg" alt="arrow-right" />
+            <Image height={24} width={24} loading="eager" class="hidden lg:flex fill-white group-hover:rotate-[-45deg] transitionAll" src="/arrow-right.svg" alt="arrow-right" />
         </a>
     ))}
 </div>

@@ -1,29 +1,39 @@
 ---
 import Section from "./Section.astro";
 import LinkExt from "./ui/LinkExt.astro";
-import SubHero from "./SubHero.astro"
 import InfiniteScroll from "./ui/InfiniteScroll.astro";
+import Telegram from "./ui/Telegram.astro";
+import CopyEmail from "./ui/CopyEmail.astro";
+import GoogleLink from "./ui/GoogleLink.astro";
+import {Image} from "astro:assets"
 ---
 
 <Section border="border-b-[1px]">
-  <div class="lg:flex md:flex-col items-center gap-9">
-    <div class="flex items-center gap-4 lg:gap-9">
-      <img
-      class="rounded-md w-auto max-md:h-[174px] max-sm:h-[114px]"
+  <div class="flex items-center max-sm:flex-col max-sm:items-start gap-9  will-change-auto">
+    <Image
+    loading="eager"
+      class="hidden md:flex lg:flex rounded-md w-auto max-md:h-[174px] max-sm:h-[114px]"
       width={300}
       height={274}
       src="/gue.webp"
       alt="gue"
     />
-    <div class="flex flex-col gap-4">
-      <h3 class="font-bold text-4xl">˗ˏˋIhsanˎˊ</h3>
-      <span>
-        I'm Frontend Developer <LinkExt href="/">@Kaisar.id</LinkExt>
-      </span>
-      <SubHero className="hidden md:hidden lg:flex" />
+  <div class={`flex flex-col gap-3`}>
+    <h3 class="font-bold text-4xl">˗ˏˋIhsanˎˊ</h3>
+    <span>
+      I'm Frontend Developer <LinkExt href="/">@Kaisar.id</LinkExt>
+    </span>
+    <span class="text-zinc-400">
+      I'm a frontend developer and digital marketing enthusiast especially with
+      a primary focus on SEM, SEO and Landing page creation using
+      JavaScript framework.
+    </span>
+    <div class="grid grid-cols-3 gap-3 max-sm:grid-cols-1 w-full">
+      <Telegram />
+      <CopyEmail />
+      <GoogleLink />
     </div>
   </div>
-    <SubHero className="flex pt-12 lg:pt-0 lg:hidden" />
   </div>
   <InfiniteScroll />
   </Section>
