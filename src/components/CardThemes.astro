@@ -10,20 +10,16 @@ interface Props {
     preview: string;
 }
 const {link, src, alt, title, techstack, category, source, preview} = Astro.props
-import { Image } from 'astro:assets'
 ---
 <div class="componentStyle rounded-lg group">
     <a
         class="relative"
         href={`${link}`}
     >
-        <Image
+        <img
             class="rounded-t-lg w-full object-cover"
             width={370}
             height={200}
-            format="webp" 
-            quality={'high'}
-            loading="eager"
             src={src}
             alt={alt}
         />
@@ -40,11 +36,11 @@ import { Image } from 'astro:assets'
             <div class="flex items-center pt-3">
                 <a class="buttonLink transitionAll" href={preview} target="_blank" rel="noopener noreferrer" aria-label="View project preview">
                     <span>Preview</span>
-                    <Image width={14} height={14} src="/boxlink.svg" alt="icon link">
+                    <img width={14} height={14} src="/boxlink.svg" alt="icon link">
                 </a>
                 <a class="buttonLink ml-3 transitionAll" href={source} target="_blank" rel="noopener noreferrer" aria-label="View project source code">
                     <span>Source</span>
-                    <Image width={14} height={14} src="/boxlink.svg" alt="icon link">
+                    <img width={14} height={14} src="/boxlink.svg" alt="icon link">
                 </a>
             </div>
         </div>

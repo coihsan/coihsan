@@ -1,5 +1,4 @@
 ---
-import ThemesLayout from 'src/layouts/ThemesLayout.astro';
 import {getCollection } from 'astro:content';
 import PostLayout from 'src/layouts/PostLayout.astro';
 
@@ -12,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content, headings } = await post.render();
+const { Content } = await post.render();
 ---
 
 <PostLayout {...post.data}>
