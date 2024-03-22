@@ -14,7 +14,7 @@ export const navlink = [
   ]
   export const nextjs = ["Landing Page", "Blog", "Portfolios", "Company Profile"];
   export const techstack = [
-    { title: "HTML 5", icon: "/html.svg", href: "https://html.com/html5/" },
+    { title: "HTML 5", icon: "/html.svg" , href: "https://html.com/html5/" },
     { title: "CSS 3", icon: "/css.svg", href: "/" },
     { title: "JavaScript", icon: "/js.svg", href: "https://www.javascript.com/" },
     { title: "TypeScript", icon: "/ts.svg", href: "https://www.typescriptlang.org/" },

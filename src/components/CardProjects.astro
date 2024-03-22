@@ -1,5 +1,4 @@
 ---
-import { Icon } from 'astro-icon/components'
 interface Props{
     link: string;
     src: any;
@@ -32,7 +31,7 @@ const {link, src, alt, title, description, usecase, logo,logoAlt } = Astro.props
             <span>{usecase}</span>
             <span class="buttonLink">
                 <span>Visit</span>
-                <Icon name="fe:codepen" />
+                <img width={14} height={14} src="/boxlink.svg" alt="icon link">
             </span>
         </div>
     </div>
