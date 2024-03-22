@@ -2,7 +2,7 @@
 import TitleSection from "./ui/TitleSection.astro"
 import Section from "./Section.astro"
 import Telegram from "./ui/Telegram.astro"
-import CopyEmail from "./ui/CopyEmail.astro"
+import ButtonCopy from "./ui/ButtonCopy"
 import { sociallink } from "../const"
 const today = new Date();
 const thisDate = today.getDate();
@@ -41,7 +41,7 @@ const month = [
         <div class="w-full max-w-[350px] mx-auto flex flex-col items-center gap-3">
             <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3 w-full">
                 <Telegram />
-                <CopyEmail />
+                <ButtonCopy />
             </div>
             <div class="grid grid-cols-4 gap-3 w-full">
                 {sociallink.map((social) =>(

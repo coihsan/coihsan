@@ -3,7 +3,7 @@ import Section from "./Section.astro";
 import LinkExt from "./ui/LinkExt.astro";
 import InfiniteScroll from "./ui/InfiniteScroll.astro";
 import Telegram from "./ui/Telegram.astro";
-import CopyEmail from "./ui/CopyEmail.astro";
+import ButtonCopy from "./ui/ButtonCopy.tsx";
 import GoogleLink from "./ui/GoogleLink.astro";
 import {Image} from "astro:assets"
 ---
@@ -30,7 +30,7 @@ import {Image} from "astro:assets"
     </span>
     <div class="grid grid-cols-3 gap-3 max-sm:grid-cols-1 w-full pt-6 md:pt-3 lg:pt-0">
       <Telegram />
-      <CopyEmail />
+      <ButtonCopy />
       <GoogleLink />
     </div>
   </div>
