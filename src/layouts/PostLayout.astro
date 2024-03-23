@@ -5,9 +5,10 @@ import Contact from "../components/Contact.astro";
 import type { CollectionEntry } from "astro:content";
 type Props = CollectionEntry<"projects">["data"];
 import Section from "@components/Section.astro";
-import Breadcrumbs from "@components/ui/Breadcrumbs.astro";
+import {Breadcrumbs} from "astro-breadcrumbs"
 import "astro-breadcrumbs/breadcrumbs.css";
 import BaseHead from "./BaseHead.astro";
+import "../styles/astro-breadcrumbs-config.scss";
 const {pubDate, heroImage, heroImageAlt, title, description, source, preview } =
 	Astro.props;
 ---
