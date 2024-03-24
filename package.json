@@ -16,6 +16,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.5.8",
     "astro-breadcrumbs": "^2.2.0",
+    "clsx": "^2.1.0",
     "preact": "^10.20.0",
     "tailwindcss": "^3.4.1"
   },

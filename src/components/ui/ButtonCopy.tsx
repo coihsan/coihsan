@@ -8,6 +8,8 @@ export default function ButtonCopy() {
     const handleCopy = () => {
       navigator.clipboard.writeText(copyEmail).then(() => {
         setIsCopied(true);
+        {isCopied ? "Success!" : "Failed!"}
+        console.log(isCopied)
         setTimeout(() => {
           setIsCopied(false);
         }, 1000);

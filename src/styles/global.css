@@ -1,11 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
+:root {
+  --font-family-boring: "Space Grotesk", sans-serif;
+  --font-family-eighties: "Press Start 2P", system-ui;
+}
 body{
     background-color: #000000;
     color: #ffffff;
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 500;
+    font-family: var(--font-family-boring);
+    font-weight: 400;
+}
+.boring-mode {
+  font-family: var(--font-family-boring);
 }
 
+.eighties-mode {
+  font-family: var(--font-family-eighties);
+}
 .sora{
     font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
