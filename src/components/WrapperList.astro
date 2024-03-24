@@ -19,12 +19,12 @@ const {index , x= 0, y} = Astro.props as stack
     {index.slice(x, y).map((list)=>(
         <a href={list.href} class="flex items-center justify-between componentStyle rounded-md px-5 py-3 group relative">
             <span class="flex items-center gap-3">
-                <span class="bg-zinc-900 group-hover:bg-lime-900 group-hover:border-lime-700 rounded-md border border-zinc-800 p-2 w-10 h-10 flex items-center justify-between transitionAll">
-                    <Image width={24} height={24} src={list.icon} alt={list.title} loading="eager" />
+                <span class="bg-zinc-900 group-hover:bg-zinc-800 group-hover:border-zinc-700 rounded-md border border-zinc-800 p-2 w-10 h-10 flex items-center justify-between transitionAll">
+                    <Image width={24} height={24} src={list.icon} alt={list.alt} loading="eager" />
                 </span>
                 <span class="text-sm">{list.title}</span>
             </span>
-            <Image height={24} width={24} loading="eager" class="hidden absolute top-1 right-1 lg:flex fill-zinc-700 rotate-[-45deg] transitionAll" src="/arrow-right.svg" alt="arrow-right" />
+            <Image height={24} width={24} loading="eager" class="hidden lg:flex fill-zinc-700 rotate-[-45deg] transitionAll" src="/arrow-right.svg" alt="arrow-right" />
         </a>
     ))}
 </div>
