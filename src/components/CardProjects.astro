@@ -1,14 +1,4 @@
 ---
-interface Props{
-    link: string;
-    src: any;
-    alt: any;
-    title: string;
-    description?: string;
-    usecase: string;
-    logo: string;
-    logoAlt: string;
-}
 const {link, src, alt, title, description, usecase, logo,logoAlt } = Astro.props;
 ---
 <a href={link} class="componentStyle rounded-lg cursor-pointer flex items-center max-sm:flex-col gap-6 w-full h-auto lg:min-h-32 p-5 group">

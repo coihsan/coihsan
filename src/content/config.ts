@@ -1,15 +1,13 @@
 import { defineCollection, z } from "astro:content";
-const Projects = defineCollection({
+const projects = defineCollection({
   type: "content",
   schema: ({ image }) => z.object({
     title: z.string(),
+    description: z.string(),
     logo: z.string().optional(),
     logoAlt: z.string().optional(),
     pubDate: z.coerce.date().optional(),
-    heroImage: image().refine((img) => img.width >= 1080, {
-      message: "Cover image must be at least 1080 pixels wide!",
-    }),
-    // heroImage: image(),
+    heroImage: z.string(),
     heroImageAlt: z.string(),
     techstack: z.string(),
     domainName: z.string().optional(),
@@ -19,13 +17,13 @@ const Projects = defineCollection({
     preview: z.string().url().optional(),
   }),
 });
-const Themes = defineCollection({
+const themes = defineCollection({
   type: "content",
   schema: ({ image }) => z.object({
     title: z.string(),
     pubDate: z.coerce.date().optional(),
     description: z.string().optional(),
-    heroImage: image(),
+    heroImage: z.string(),
     heroImageAlt: z.string(),
     techstack: z.string(),
     usecase: z.string().optional(),
@@ -37,6 +35,6 @@ const Themes = defineCollection({
 });
 
 export const collections = { 
-  Projects,
-  Themes,
+  projects,
+  themes,
  };
