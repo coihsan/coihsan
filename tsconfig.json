@@ -1,4 +1,5 @@
 {
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
     "baseUrl": "/home/coihsan/coihsan",
@@ -13,5 +14,4 @@
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   },
-  "extends": "astro/tsconfigs/base"
 }
