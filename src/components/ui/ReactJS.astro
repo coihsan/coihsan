@@ -1,6 +1,5 @@
 ---
-import { Image } from "astro:assets"
-import  reactjssvg  from '../../assets/icons/react.svg'
+import { Icon } from 'astro-icon/components'
 ---
 <a 
   href="https://react.dev/"
@@ -8,7 +7,7 @@ import  reactjssvg  from '../../assets/icons/react.svg'
   rel="noopener noreferrer" 
   class="flex flex-col items-center justify-center drop-shadow-xl max-w-[412px] w-full h-60 bg-gradient-to-b from-zinc-950 to-sky-500/10 border border-zinc-900 rounded-lg p-5 group mx-auto group">
     <div class="flex items-center justify-center w-full">
-      <Image src={reactjssvg} width={56} height={56} class="group-hover:animate-spin-slow" alt="reactjs" />
+      <Icon name="react" width={56} height={56} class="group-hover:animate-spin-slow" />
     </div>
     <span
       class="flex items-end justify-between mt-6"
