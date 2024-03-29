@@ -1,16 +1,13 @@
 ---
-import {getCollection } from 'astro:content';
+import {getCollection, type CollectionEntry } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
 
-export async function getStaticPaths() {
-  const themes = await getCollection("themes");
-  return themes.map(post => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
-}
+const posts = await getCollection('themes');
+type Props = CollectionEntry<'themes'>;
 
-const { post } = Astro.props;
+const { slug } = Astro.params;
+const post = posts.find((page) => page.slug === slug);
+if (!post) return Astro.redirect("/404");
 const { Content } = await post.render();
 ---
 

@@ -6,6 +6,11 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
+  // vite: {
+  //   ssr: {
+  //     external: ["github-slugger"]
+  //     }
+  //  },
   site: "https://coihsan.vercel.app/",
   image: {
     service: passthroughImageService(),
