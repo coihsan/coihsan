@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 const {link, src, alt, title, techstack, category, source, preview} = Astro.props
 ---
 <div class="componentStyle rounded-lg group">
@@ -27,11 +28,11 @@ const {link, src, alt, title, techstack, category, source, preview} = Astro.prop
             <div class="flex items-center pt-3">
                 <a class="buttonLink transitionAll" href={preview} target="_blank" rel="noopener noreferrer" aria-label="View project preview">
                     <span>Preview</span>
-                    <img width={14} height={14} src="/boxlink.svg" alt="icon link">
+                    <Icon width={14} height={14} name="boxlink">
                 </a>
                 <a class="buttonLink ml-3 transitionAll" href={source} target="_blank" rel="noopener noreferrer" aria-label="View project source code">
                     <span>Source</span>
-                    <img width={14} height={14} src="/boxlink.svg" alt="icon link">
+                    <Icon width={14} height={14} name="boxlink">
                 </a>
             </div>
         </div>

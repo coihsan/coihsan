@@ -10,7 +10,7 @@ const posts = (await getCollection("projects")).sort(
 ---
 
 <Section border="border-b-[1px]">
-    <TitleSection title="Projects" icon="/terminal.svg"/>
+    <TitleSection title="Projects" icon="terminal"/>
     <div class="grid gap-3">
         {posts.slice(0, 2).map((post) =>(
             <CardProjects 

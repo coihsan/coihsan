@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { techstack, otherstack } from "../const";
-
+import { Icon } from 'astro-icon/components';
 interface Propss {
     title: string;
     icon: string;
@@ -20,7 +20,7 @@ const {index , x= 0, y} = Astro.props as stack
         <a href={list.href} class="flex items-center justify-between componentStyle rounded-md px-5 py-3 group relative">
             <span class="flex items-center gap-3">
                 <span class="bg-zinc-900 group-hover:bg-zinc-800 group-hover:border-zinc-700 rounded-md border border-zinc-800 p-2 w-10 h-10 flex items-center justify-between transitionAll">
-                    <Image width={24} height={24} src={list.icon} alt={list.alt} loading="eager" />
+                    <Icon name={list.icon} width={24} height={24} />
                 </span>
                 <span class="text-sm">{list.title}</span>
             </span>

@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 const {link, src, alt, title, description, usecase, logo,logoAlt } = Astro.props;
 ---
 <a href={link} class="componentStyle rounded-lg cursor-pointer flex items-center max-sm:flex-col gap-6 w-full h-auto lg:min-h-32 p-5 group">
@@ -21,7 +22,7 @@ const {link, src, alt, title, description, usecase, logo,logoAlt } = Astro.props
             <span>{usecase}</span>
             <span class="buttonLink">
                 <span>Visit</span>
-                <img width={14} height={14} src="/boxlink.svg" alt="icon link">
+                <Icon width={14} height={14} name="boxlink">
             </span>
         </div>
     </div>
