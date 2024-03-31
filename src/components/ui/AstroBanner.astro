@@ -1,0 +1,14 @@
+---
+import {Image} from 'astro:assets'
+import houston from '@assets/houston.webp'
+import {Icon} from "astro-icon/components"
+interface Props{
+    gridClass: string;
+}
+const { gridClass } = Astro.props as Props
+---
+<div class={`${gridClass} w-full h-60 flex flex-col items-center justify-center p-5`}>
+    <Icon name="astrologo" width={200} />
+    <p>Start building with Astro today</p>
+    <Image src={houston} width={100} height="auto" alt="houston logo" />
+</div>

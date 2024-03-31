@@ -16,7 +16,10 @@ export default defineConfig({
       applyBaseStyles: true,
       nesting: true
     }),
-  preact(), 
+  preact({ 
+    include: ['**/preact/*'],
+    compat: true,
+  }), 
   icon({
     iconDir: "src/assets/icons",
   }),

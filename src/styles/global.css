@@ -8,6 +8,7 @@ body{
     color: #ffffff;
     font-family: var(--font-family-boring);
     font-weight: 400;
+    overflow-x: hidden;
 }
 .boring-mode {
   font-family: var(--font-family-boring);

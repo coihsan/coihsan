@@ -6,6 +6,7 @@ import TitleSection from "./ui/TitleSection.astro"
 import { techstack } from '../const'
 import WrapperList from './WrapperList.astro'
 import ViewMore from './ui/ViewMore.astro'
+import AstroBanner from './ui/AstroBanner.astro'
 const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile"]
 ---
 <Section border=''>
@@ -20,9 +21,10 @@ const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile"]
         ))}
     </ul>
     </div>
-    <div class="flex items-center gap-3 max-sm:flex-col">
-        <NextJS />
-        <ReactJS />
+    <div class="grid grid-rows-3 grid-flow-col gap-4">
+        <ReactJS gridClass='row-span-3' />
+        <NextJS gridClass='col-span-2' />
+        <AstroBanner gridClass='row-span-2 col-span-2' />
     </div>
     <div class="">
         <TitleSection title='Tech Stack' icon='gear' className="mt-12"/>

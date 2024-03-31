@@ -5,7 +5,7 @@ export default function FontMode(){
     const [isEighties, setIsEighties] = useState(false)
 
     const handleClick(){
-        setIsBoring(isBoring = false);
+        setIsBoring(false)
     }
 
     return(
