@@ -7,8 +7,9 @@ interface Props{
 }
 const { gridClass } = Astro.props as Props
 ---
-<div class={`${gridClass} w-full h-60 flex flex-col items-center justify-center p-5`}>
-    <Icon name="astrologo" width={200} />
-    <p>Start building with Astro today</p>
-    <Image src={houston} width={100} height="auto" alt="houston logo" />
-</div>
+<a href="https://astro.build/" target="_blank" class={`${gridClass} relative w-full max-w-[432px] flex flex-col items-center justify-center h-60 lg:h-auto py-5 px-9 border border-zinc-900 rounded-lg`}>
+    <div class="absolute rounded-lg inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+    <Icon name="astrologo" width={150} height={100} />
+    <p class="font-semibold text-2xl text-center">Start building with Astro today</p>
+    <Image src={houston} width={70} height="auto" alt="houston logo" />
+</a>
