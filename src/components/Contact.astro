@@ -3,6 +3,7 @@ import TitleSection from "./ui/TitleSection.astro"
 import { Icon } from 'astro-icon/components';
 import Section from "./Section.astro"
 import Telegram from "./ui/Telegram.astro"
+import GoogleLink from "./ui/GoogleLink.astro";
 import ButtonCopy from "./preact/ButtonCopy"
 import { sociallink } from "../const"
 const today = new Date();
@@ -41,12 +42,13 @@ const month = [
             <TitleSection className="flex-col" title="I love to here for you" icon="kontak"/>
             <span class="text-center mx-auto text-zinc-400">Connect with me today! Let's create something amazing together.</span>
         </div>
-        <div class="w-full max-w-[350px] mx-auto flex flex-col items-center gap-3">
-            <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3 w-full">
+        <div class="w-full lg:max-w-[550px] mx-auto flex flex-col items-center gap-3">
+            <div class="grid grid-cols-3 max-sm:grid-cols-1 gap-3 w-full">
                 <Telegram />
-                <ButtonCopy />
+                <ButtonCopy client:visible />
+                <GoogleLink />
             </div>
-            <div class="grid grid-cols-4 gap-3 w-full">
+            <div class="grid grid-cols-4 gap-3 w-full md:max-w-[350px] lg:max-w-[350px]">
                 {sociallink.map((social) =>(
                     <a class="p-3 flexJustifyCenter rounded-md componentStyle aspect-square" href={social.href}>
                         <Icon height={24} width={24} name={social.icon} />

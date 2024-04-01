@@ -7,7 +7,7 @@ import { techstack } from '../const'
 import WrapperList from './WrapperList.astro'
 import ViewMore from './ui/ViewMore.astro'
 import AstroBanner from './ui/AstroBanner.astro'
-const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile"]
+const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile", "Web Apps"]
 ---
 <Section border=''>
     <div class="mb-6 ">
@@ -16,15 +16,15 @@ const skilldev = ["Landing Page", "Portfolios", "Blog", "Company Profile"]
         {skilldev.map((items) =>(
             <li class="flex items-center justify-center px-3 py-2 rounded-md bg-zinc-950 border border-zinc-900">
                 <span class="text-lime-400">#</span>
-                <span class="text-zinc-400">{items}</span>
+                <span class="text-zinc-300">{items}</span>
             </li>
         ))}
     </ul>
     </div>
     <div class="grid gap-3 md:grid-flow-col md:grid-rows-2 lg:grid-flow-col h-auto md: lg:h-[500px]">
         <ReactJS gridClass='row-auto md:row-span-1 md:col-span-2 lg:row-span-2' />
-        <NextJS gridClass='' />
-        <AstroBanner gridClass='' />
+        <NextJS />
+        <AstroBanner />
     </div>
     <div class="">
         <TitleSection title='Tech Stack' icon='gear' className="mt-12"/>

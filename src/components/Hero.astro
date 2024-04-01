@@ -7,6 +7,7 @@ import ButtonCopy from "./preact/ButtonCopy";
 import GoogleLink from "./ui/GoogleLink.astro";
 import {Image} from "astro:assets"
 import gue from "../assets/gue.webp"
+import FontMode from "./preact/FontMode";
 ---
 
 <Section border="border-b-[1px]">
@@ -27,11 +28,12 @@ import gue from "../assets/gue.webp"
     <span class="text-zinc-400">
       I'm a frontend developer and digital marketing enthusiast especially with a primary focus on SEM, SEO and Web Development using JavaScript framework.
     </span>
-    <div class="grid grid-cols-3 gap-3 max-sm:grid-cols-1 w-full pt-6 md:pt-3 lg:pt-2">
+    <FontMode client:visible />
+    <!-- <div class="grid grid-cols-3 gap-3 max-sm:grid-cols-1 w-full pt-6 md:pt-3 lg:pt-2">
       <Telegram />
-      <ButtonCopy />
+      <ButtonCopy client:visible />
       <GoogleLink />
-    </div>
+    </div> -->
   </div>
   </div>
   <InfiniteScroll />
