@@ -1,0 +1,10 @@
+:root {
+    --font-family-boring: "Space Grotesk", sans-serif;
+    --font-family-eighties: "Press Start 2P", system-ui;
+  }
+  body{
+      background-color: #000000;
+      color: #ffffff;
+      font-family: var(--font-family-eighties);
+      overflow-x: hidden;
+  }

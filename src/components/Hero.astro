@@ -2,12 +2,9 @@
 import Section from "./Section.astro";
 import LinkExt from "./ui/LinkExt.astro";
 import InfiniteScroll from "./ui/InfiniteScroll.astro";
-import Telegram from "./ui/Telegram.astro";
-import ButtonCopy from "./preact/ButtonCopy";
-import GoogleLink from "./ui/GoogleLink.astro";
+import { BoringMode, EghtiesMode } from "./preact/FontMode";
 import {Image} from "astro:assets"
 import gue from "../assets/gue.webp"
-import FontMode from "./preact/FontMode";
 ---
 
 <Section border="border-b-[1px]">
@@ -28,7 +25,8 @@ import FontMode from "./preact/FontMode";
     <span class="text-zinc-400">
       I'm a frontend developer and digital marketing enthusiast especially with a primary focus on SEM, SEO and Web Development using JavaScript framework.
     </span>
-    <FontMode client:visible />
+    <BoringMode client:visible />
+    <EghtiesMode client:visible />
     <!-- <div class="grid grid-cols-3 gap-3 max-sm:grid-cols-1 w-full pt-6 md:pt-3 lg:pt-2">
       <Telegram />
       <ButtonCopy client:visible />

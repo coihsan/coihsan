@@ -1,6 +1,7 @@
 ---
-import "src/styles/global.css";
-import { SITE_TITLE } from "src/const";
+<link id="theme" rel="stylesheet" href="src/styles/global.css" />
+
+import { SITE_TITLE } from "../const";
 interface Props {
 	title: string;
 	thisSite?: string;
@@ -13,7 +14,6 @@ const {
 	thisSite,
 	image = "/public/gue.webp",
 } = Astro.props;
-
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 import { ViewTransitions } from "astro:transitions";
 const currentPage = Astro.url.pathname.slice(1);
