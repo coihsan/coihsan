@@ -1,10 +1,10 @@
 ---
-<link id="theme" rel="stylesheet" href="src/styles/global.css" />
-
+import "../styles/global.css"
 import { SITE_TITLE } from "../const";
 interface Props {
 	title: string;
 	thisSite?: string;
+	theme: string;
 	description: string;
 	image?: string;
 }
@@ -12,12 +12,14 @@ const {
 	title,
 	description,
 	thisSite,
+	theme,
 	image = "/public/gue.webp",
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 import { ViewTransitions } from "astro:transitions";
 const currentPage = Astro.url.pathname.slice(1);
 ---
+<link rel="stylesheet" href={`src/styles/${theme}`} />
 <meta charset="utf-8" />
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width,initial-scale=1" />

@@ -2,6 +2,7 @@
   --font-family-boring: "Space Grotesk", sans-serif;
   --font-family-eighties: "Press Start 2P", system-ui;
 }
+
 body{
     background-color: #000000;
     color: #ffffff;
@@ -11,17 +12,12 @@ body{
 .boring-mode {
   font-family: var(--font-family-boring);
 }
-.bgReact{
-  background: radial-gradient(circle at 10% 4%, rgba(23, 148, 167, 1) 0%, rgba(7, 45, 60, 1) 50%, rgba(0, 0, 0, 1) 100%);
-}
 .eighties-mode {
   font-family: var(--font-family-eighties);
 }
-.pressNormal{
-    font-family: "Press Start 2P", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
+.bgReact{
+  background: radial-gradient(circle at 10% 4%, rgba(23, 148, 167, 1) 0%, rgba(7, 45, 60, 1) 50%, rgba(0, 0, 0, 1) 100%);
+}
 
   .infiniteScroll {
     animation: scroll infinite 13s ease;
