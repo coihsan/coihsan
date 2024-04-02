@@ -4,6 +4,12 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
 	theme: {
 		extend: {
+			theme: {
+				fontFamily: {
+					'SpaceGrotesk' : ["SpaceGrotesk"],
+					'PressStart2P' : ["PressStart2P"],
+				}
+			},
 			animation: {
 				'spin-slow': 'spin 12s linear infinite',
 			}
