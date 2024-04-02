@@ -23,18 +23,16 @@ const month = [
     "November",
     "December",
   ];
-  interface Props {thisFormatDate : string;}
   const thisUpdate = 3 || 15;
   const currentMonth = month[today.getMonth()];
   const recentMonth = month[today.getMonth() - 1];
-  let thisFormatDate;
+  let thisFormatDate = "";
   if (thisDate < thisUpdate) {
     thisFormatDate = recentMonth;
   } else {
     thisFormatDate = currentMonth;
   }
-  const thisFormat = thisFormatDate + " " + thisYear;
-
+const thisFormat = thisFormatDate + " " + thisYear;
 ---
 <Section border="border-t-[1px] border-b-[1px]">
     <div class="flex flex-col items-center">

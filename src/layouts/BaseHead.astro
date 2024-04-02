@@ -4,7 +4,6 @@ import { SITE_TITLE } from "../const";
 interface Props {
 	title: string;
 	thisSite?: string;
-	theme: string;
 	description: string;
 	image?: string;
 }
@@ -12,7 +11,6 @@ const {
 	title,
 	description,
 	thisSite,
-	theme,
 	image = "/public/gue.webp",
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);

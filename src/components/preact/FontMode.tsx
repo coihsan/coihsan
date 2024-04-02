@@ -1,41 +1,43 @@
 import {useState, useEffect} from "preact/hooks"
 export default function BoringMode() {  
-    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'global'); // Initial theme from localStorage or default
+  const [theme, setTheme] = useState("global");
 
-useEffect(() => {
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-
-  if (localStorage.getItem(theme)) {
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme"); 
+  
+    if (storedTheme && ["global", "theme1", "theme2"].includes(storedTheme)) {
+      setTheme(storedTheme);
+    }
+  
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
     link.href = `./src/styles/${theme}.css`;
-  } else {
-    link.href = './src/styles/global.css';
-  }
-
-  document.head.appendChild(link);
-
-  return () => document.head.removeChild(link);
-}, [theme]);
-
-const setThemeWithStorage = (newTheme) => {
-  setTheme(newTheme);
-  localStorage.setItem('theme', newTheme);
-};
+    document.head.appendChild(link);
+  
+    return () => {
+      link.remove();
+    };
+  }, [theme]);
+  
+  const updateTheme = (newTheme) => {
+    localStorage.setItem("theme", newTheme); 
+    setTheme(newTheme); 
+  };
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full">
-            <button type="submit" onClick={() => setThemeWithStorage("global")}
-            className="bg-zinc-800 border border-zinc-50 rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12">
+            <button type="submit" onClick={() => updateTheme("global")}
+            className={`${updateTheme ? "bg-zinc-800 border border-zinc-50" : "bg-zinc-50 border border-white"} rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12`}>
                 {theme === "global" ? <ImageCheck /> : null}
-                <span className="textButtonMode">Boring Mode!</span>
+                <span className="font-boring">Boring Mode!</span>
             </button>
-            <button type="submit" onClick={() => setThemeWithStorage("eighties")}
+            <button type="submit" onClick={() => updateTheme("eighties")}
             className="bg-blue-500/10 border border-zinc-50 rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12">
                 {theme === "eighties" ? <ImageCheck /> : null}
-                <span className="textxs">Eighties Mode!</span>
+                <span className="text-xs font-eighties">Eighties Mode!</span>
             </button>
         </div>
     )
 }
 const ImageCheck = () =>{
-    return <img className="fill-white" src="src/assets/icons/check.svg" alt="" />
+    return <img className="fill-white transitionAll" src="src/assets/icons/check.svg" alt="" />
 }

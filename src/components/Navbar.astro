@@ -2,10 +2,10 @@
 import Pulse from "./ui/Pulse.astro"
 import { navlink } from "../const"
 ---
-    <header class="w-full max-w-screen-lg mx-auto border-x-[1px] border-b-[1px] border-zinc-900 py-4">
+    <header class="w-full max-w-screen-lg mx-auto border-x-[1px] border-b-[1px] border-zinc-900 py-4 z-50">
         <div class="flex items-center justify-between max-w-screen-md mx-auto w-full px-5">
             <Pulse />
-            <div class="flex items-center z-50">
+            <div class="flex items-center">
                 <nav id="navbar" class="flex lg:flex items-center gap-1 lg:gap-2">
                     {navlink.map((link)=>(
                         <a class="px-4 py-2 textxs bg-zinc-900 hover:bg-zinc-800 border hover:border-zinc-50 rounded-md border-zinc-900 transitionAll" href={link.href}>{link.text}</a>
