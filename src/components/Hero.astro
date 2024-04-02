@@ -2,7 +2,7 @@
 import Section from "./Section.astro";
 import LinkExt from "./ui/LinkExt.astro";
 import InfiniteScroll from "./ui/InfiniteScroll.astro";
-import { BoringMode, EightiesMode } from "./preact/FontMode";
+import BoringMode from "./preact/FontMode";
 import {Image} from "astro:assets"
 import gue from "../assets/gue.webp"
 ---
@@ -27,13 +27,7 @@ import gue from "../assets/gue.webp"
     </span>
    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
     <BoringMode client:visible />
-    <EightiesMode client:visible />
    </div>
-    <!-- <div class="grid grid-cols-3 gap-3 max-sm:grid-cols-1 w-full pt-6 md:pt-3 lg:pt-2">
-      <Telegram />
-      <ButtonCopy client:visible />
-      <GoogleLink />
-    </div> -->
   </div>
   </div>
   <InfiniteScroll />
