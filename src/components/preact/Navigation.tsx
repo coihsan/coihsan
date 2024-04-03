@@ -1,13 +1,9 @@
 import { useState, useRef } from "preact/hooks";
-import {navlink} from '../../const.ts';
+import {navlink} from '../../const';
 import { Icon } from 'astro-icon/components';
-import Pulse from '../ui/Pulse.astro';
+import Pulse from '@components/ui/Pulse.astro';
 export default function Navigation(){
     const [isOpen, setIsOpen] = useState(false)
-    const { pathname } = Astro.url;
-    const subpath = pathname.match(/[^\/]+/g);
-    const isActive = href === pathname || href === '/' + subpath?.[0];
-    const MobileView = window.innerWidth = "480px"
     console.log('ok')
     return(
         <header className="w-full max-w-screen-lg mx-auto border-x-[1px] border-b-[1px] border-zinc-900 py-4 z-[100]">
@@ -18,12 +14,9 @@ export default function Navigation(){
                         <a href={item.href}>{item.text}</a>
                     ))}
                 </nav>
-                {
-                    MobileView ?? 
-                    <button type="button" className="flex md:hidden lg:hidden">
-                        {isOpen ? <Icon name="hamburger" /> : <Icon name="close" />}
-                    </button>
-                }
+                <button type="button" className="flex md:hidden lg:hidden">
+                    {isOpen ? <Icon name="hamburger" /> : <Icon name="close" />}
+                 </button>
             </div>
         </header>
     )
