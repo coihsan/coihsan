@@ -8,6 +8,9 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: "https://coihsan.vercel.app/",
+  prefetch: {
+    prefetchAll: true
+  },
   // image: {
   //   service: passthroughImageService(),
   // },
@@ -18,7 +21,7 @@ export default defineConfig({
     }),
   preact({ 
     include: ['**/preact/*'],
-    compat: true,
+    // compat: true,
   }), 
   icon({
     iconDir: "src/assets/icons",

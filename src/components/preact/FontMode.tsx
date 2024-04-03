@@ -24,7 +24,7 @@ export default function BoringMode() {
     setTheme(newTheme); 
   };
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 w-full">
             <button type="submit" onClick={() => updateTheme("global")}
             className={`${updateTheme ? "bg-white text-black border border-zinc-50" : "bg-zinc-50 border border-white"} rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12`}>
                 {theme === "global" ? <ImageCheck width={24} height={24} /> : null}

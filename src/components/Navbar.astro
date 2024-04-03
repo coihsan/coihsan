@@ -2,14 +2,38 @@
 import Pulse from "./ui/Pulse.astro"
 import HeaderLink from "../components/HeaderLink.astro"
 import { navlink } from "../const"
+import { Icon } from "astro-icon/components"
+const isActive = false
 ---
     <header class="w-full max-w-screen-lg mx-auto border-x-[1px] border-b-[1px] border-zinc-900 py-4 z-[100]">
         <div class="flex items-center justify-between max-w-screen-md mx-auto w-full px-5">
             <Pulse />
-            <nav id="navbar" class="grid grid-cols-4 lg:flex items-center gap-1 lg:gap-2 z-50">
-                {navlink.map((link)=>(
-                    <HeaderLink href={link.href} text={link.text} />
-                ))}
+            <nav id="navbar" class="navbars hidden lg:flex items-center gap-1 lg:gap-2 z-50 bg-black w-full">
+                <HeaderLink href={'/'}>Home</HeaderLink>
+                <HeaderLink href={'/stack'}>Stack</HeaderLink>
+                <HeaderLink href={'/projects'}>Projects</HeaderLink>
+                <HeaderLink href={'/themes'}>Themes</HeaderLink>
             </nav>
+            <div class="relative left-0 flex md:hidden lg:hidden z-50 border border-zinc-600 p-1 rounded-lg ">
+                <input type="checkbox" name="menu navbar" id="menu-toggle" class="size-8 z-10 opacity-0 cursor-pointer">
+                <span class="absolute">{isActive ? <Icon name="close" width={32} height={32} /> : <Icon name="hamburger" width={32} height={32} />}</span>
+            </div>
         </div>
     </header>
+
+    <style>
+        .navbars.active{
+            display: flex;
+            align-items: start;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            padding: 1rem;
+            flex-direction: column;
+            z-index: 50;
+            background-color: black;
+        }
+    </style>
+    <script>
+        import "../scripts/menu.js"
+    </script>
