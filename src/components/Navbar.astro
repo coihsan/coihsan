@@ -6,12 +6,10 @@ import { navlink } from "../const"
     <header class="w-full max-w-screen-lg mx-auto border-x-[1px] border-b-[1px] border-zinc-900 py-4 z-[100]">
         <div class="flex items-center justify-between max-w-screen-md mx-auto w-full px-5">
             <Pulse />
-            <div class="flex items-center z-50">
-                <nav id="navbar" class="grid grid-cols-4 lg:flex items-center gap-1 lg:gap-2">
-                    {navlink.map((link)=>(
-                        <HeaderLink href={link.href} text={link.text} />
-                    ))}
-                </nav>
-            </div>
+            <nav id="navbar" class="grid grid-cols-4 lg:flex items-center gap-1 lg:gap-2 z-50">
+                {navlink.map((link)=>(
+                    <HeaderLink href={link.href} text={link.text} />
+                ))}
+            </nav>
         </div>
     </header>
