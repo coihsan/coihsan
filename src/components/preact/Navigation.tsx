@@ -1,7 +1,7 @@
 import { useState, useRef } from "preact/hooks";
 import {navlink} from '../../const';
 import { Icon } from 'astro-icon/components';
-import Pulse from '@components/ui/Pulse.astro';
+import Pulse from 'astro/components';
 export default function Navigation(){
     const [isOpen, setIsOpen] = useState(false)
     console.log('ok')
@@ -10,8 +10,8 @@ export default function Navigation(){
             <div className="flex items-center justify-between max-w-screen-md mx-auto w-full px-5">
                 <Pulse />
                 <nav className="grid grid-cols-4 lg:flex items-center gap-1 lg:gap-2 z-50">
-                    {navlink.map((item) =>(
-                        <a href={item.href}>{item.text}</a>
+                    {navlink.map((items) =>(
+                        <a className="px-3 lg:px-4 flex items-center justify-center py-2 textxs bg-zinc-900 hover:bg-zinc-800 border hover:border-zinc-50 rounded-md border-zinc-900 transitionAll" href={items.href}>{items.text}</a>
                     ))}
                 </nav>
                 <button type="button" className="flex md:hidden lg:hidden">

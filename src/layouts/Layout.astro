@@ -14,7 +14,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../const"
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} thisSite={"Frontend Developer"}/>
 	</head>
 	<body>
-		<Navigation />
+		<Navigation client:load />
 		<main>
 			<Overlay />
 			<slot />
