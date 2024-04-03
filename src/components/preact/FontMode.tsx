@@ -26,14 +26,14 @@ export default function BoringMode() {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full">
             <button type="submit" onClick={() => updateTheme("global")}
-            className={`${updateTheme ? "bg-zinc-800 border border-zinc-50" : "bg-zinc-50 border border-white"} rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12`}>
-                {theme === "global" ? <ImageCheck /> : null}
+            className={`${updateTheme ? "bg-white text-black border border-zinc-50" : "bg-zinc-50 border border-white"} rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12`}>
+                {theme === "global" ? <ImageCheck width={24} height={24} /> : null}
                 <span className="font-boring">Boring Mode!</span>
             </button>
             <button type="submit" onClick={() => updateTheme("eighties")}
-            className="bg-blue-500/10 border border-zinc-50 rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12">
-                {theme === "eighties" ? <ImageCheck /> : null}
-                <span className="text-xs font-eighties">Eighties Mode!</span>
+            className="bg-white text-black border border-zinc-50 rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12">
+                {theme === "eighties" ? <ImageCheck width={24} height={24}  /> : null}
+                <span className="text-xs font-eighties">Retro Mode!</span>
             </button>
         </div>
     )
