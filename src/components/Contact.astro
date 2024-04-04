@@ -48,7 +48,7 @@ const thisFormat = thisFormatDate + " " + thisYear;
             </div>
             <div class="grid grid-cols-4 gap-3 w-full md:max-w-[350px] lg:max-w-[350px]">
                 {sociallink.map((social) =>(
-                    <a class="p-3 flexJustifyCenter rounded-md componentStyle aspect-square" aria-label={social.icon} href={social.href}>
+                    <a class="p-3 flexJustifyCenter rounded-md componentStyle aspect-square" aria-label={social.alt} href={social.href}>
                         <Icon height={24} width={24} name={social.icon} />
                     </a>
                 ))}

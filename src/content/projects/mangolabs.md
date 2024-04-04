@@ -4,7 +4,7 @@ description: 'Your grandfather wants to teach about digital marketing such as SE
 pubDate: 'Jan 2023'
 logo: '/images/yourgrandpa.webp'
 logoAlt: 'yourgrandpa'
-heroImage: '/images/preview.png'
+heroImage: '/images/comingsoon.webp'
 heroImageAlt: 'mangolabs.app'
 usecase: 'SaaS'
 domainName: 'mangolabs.app'

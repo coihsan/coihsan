@@ -21,7 +21,7 @@ export default defineConfig({
     }),
   preact({ 
     include: ['**/preact/*'],
-    // compat: true,
+    compat: true,
   }), 
   icon({
     iconDir: "src/assets/icons",
