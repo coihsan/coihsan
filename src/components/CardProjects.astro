@@ -1,14 +1,15 @@
 ---
 import { Icon } from 'astro-icon/components';
+import {Image} from "astro:assets"
 const {link, src, alt, title, description, usecase, logo,logoAlt } = Astro.props;
 ---
 <a href={link} class="componentStyle rounded-lg cursor-pointer flex items-center max-sm:flex-col gap-6 w-full h-auto lg:min-h-32 p-5 group">
     <div class="w-full lg:max-w-[350px]">
-        <img 
+        <Image 
         width={300}
         height={300}
         class="rounded-lg w-auto"  
-        loading="lazy"
+        loading="eager"
         src={src} 
         alt={alt} />
     </div>

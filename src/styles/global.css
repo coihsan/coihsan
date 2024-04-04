@@ -28,16 +28,3 @@ body{
 .bgReact{
   background: radial-gradient(circle at 50% 50%, rgba(0, 138, 206, 1) 0%, rgba(0, 44, 65, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
-
-  .infiniteScroll {
-    animation: scroll infinite 13s ease;
-  }
-  @keyframes scroll {
-    0% {
-      left: 100%;
-    }
-  
-    100% {
-      left: -100%;
-    }
-  }

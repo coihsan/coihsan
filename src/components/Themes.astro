@@ -4,9 +4,7 @@ import TitleSection from "../components/ui/TitleSection.astro"
 import ViewMore from "./ui/ViewMore.astro";
 import CardThemes from "../components/CardThemes.astro"
 import { getCollection } from "astro:content";
-const posts = (await getCollection("themes")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
-);
+const posts = await getCollection("themes")
 ---
 
 <Section border="border-b-[1px]">

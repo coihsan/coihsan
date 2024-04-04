@@ -19,8 +19,8 @@ export default function BoringMode() {
     };
   }, [theme]);
   
-  const updateTheme = (newTheme) => {
-    localStorage.setItem("theme", newTheme); 
+  const updateTheme = ({newTheme}: any) => {
+    localStorage.setItem("eighties", newTheme); 
     setTheme(newTheme); 
   };
     return (

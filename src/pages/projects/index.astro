@@ -2,9 +2,7 @@
 import Layout from '../../layouts/Layout.astro'
 import Section from '@components/Section.astro';
 import { getCollection } from "astro:content";
-const posts = (await getCollection("projects")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
-);
+const posts = await getCollection("projects")
 import HeadingPages from "@components/HeadingPages.astro"
 import CardProjects from '@components/CardProjects.astro';
 ---

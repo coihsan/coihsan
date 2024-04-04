@@ -1,8 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-const posts = (await getCollection("themes")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
-	);
+const posts = await getCollection("themes")
 import Layout from '../../layouts/Layout.astro'
 import Section from "@components/Section.astro";
 import HeadingPages from "@components/HeadingPages.astro"
