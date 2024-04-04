@@ -1,5 +1,5 @@
 ---
-// import "../styles/global.css"
+import "../styles/global.css"
 import { SITE_TITLE } from "../const";
 interface Props {
 	title: string;
@@ -23,7 +23,7 @@ const currentPage = Astro.url.pathname.slice(1);
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 <ViewTransitions />
-<link rel="stylesheet" href="/src/styles/global.css">
+
 <link rel="canonical" href={canonicalURL} />
 <title>
 	{currentPage === ""

@@ -5,10 +5,7 @@
     src: url(/fonts/PressStart2P-Regular.woff2) format('woff2');
 }
 body{
-    background-color: #000000;
-    color: #ffffff;
     font-family: "PressStart2P";
-    overflow-x: hidden;
 }
 .textxs{
     font-size: 12px;
@@ -18,4 +15,10 @@ body{
 }
 .titleOnCard{
     font-size: 1rem;
+}
+.titleHeading{
+    font-size: 1.5rem;
+}
+.textOnPulse{
+    font-size:8px;
 }

@@ -1,17 +1,17 @@
 import {useState, useEffect} from "preact/hooks"
 export default function BoringMode() {  
-  const [theme, setTheme] = useState("global");
+  const [theme, setTheme] = useState("boring");
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme"); 
+    const storedTheme = localStorage.getItem("boring"); 
   
-    if (storedTheme && ["global", "theme1", "theme2"].includes(storedTheme)) {
+    if (storedTheme && ["boring", "eighties"].includes(storedTheme)) {
       setTheme(storedTheme);
     }
   
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = `./src/styles/${theme}.css`;
+    link.href = `/src/styles/${theme}.css`;
     document.head.appendChild(link);
   
     return () => {
@@ -25,9 +25,9 @@ export default function BoringMode() {
   };
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 w-full">
-            <button type="submit" onClick={() => updateTheme("global")}
+            <button type="submit" onClick={() => updateTheme("boring")}
             className={`${updateTheme ? "bg-white text-black border border-zinc-50" : "bg-zinc-50 border border-white"} rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12`}>
-                {theme === "global" ? <ImageCheck width={24} height={24} /> : null}
+                {theme === "boring" ? <ImageCheck width={24} height={24} /> : null}
                 <span className="font-boring">Boring Mode!</span>
             </button>
             <button type="submit" onClick={() => updateTheme("eighties")}
