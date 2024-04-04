@@ -18,10 +18,10 @@ import FontMode from "./preact/FontMode"
                     <FontMode client:load />
                 </div>
             </nav>
-            <div class="flex items-center gap-2 md:hidden lg:hidden">
+            <div class="flex items-center gap-2 md:hidden lg:hidden z-50">
                 <span class="z-10">menu</span>
                 <div class="relative left-0 flex z-50 border border-zinc-600 p-1 rounded-lg ">
-                    <input type="checkbox" name="menu navbar" id="menu-toggle" class="size-8 z-10 opacity-0 cursor-pointer" aria-checked="false" aria-label="menu" />
+                    <input type="checkbox" name="menu navbar" id="menu-toggle" class="size-8 z-50 opacity-0 cursor-pointer" aria-checked="false" aria-label="menu" />
                     <div class="absolute">
                         <Icon name="hamburger-2" width={32} height={32} />
                     </div>
@@ -31,5 +31,17 @@ import FontMode from "./preact/FontMode"
     </header>
 
     <script>
-        import "../scripts/menu.js"
+        const openNavbar = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+        const navlink = document.querySelector('.navlink')
+        const active = 'active'
+
+        openNavbar.addEventListener('click', function(){
+            if (openNavbar.checked){
+                navbar.classList.add(active)
+                navlink.classList.add(active)
+            } else{
+                navbar.classList.remove(active)
+            }
+        })
     </script>
