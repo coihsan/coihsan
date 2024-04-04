@@ -7,6 +7,7 @@ heroImageAlt: 'Zinc Design'
 tags: 
     - "Portfolios"
 techstack: "HTML Static"
+srcIcon: 'html'
 category: "Portfolios"
 source: 'https://github.com/coihsan/karsa-mahasura-template/archive/refs/heads/main.zip'
 preview: 'https://coihsan.github.io/karsa-mahasura-template/'

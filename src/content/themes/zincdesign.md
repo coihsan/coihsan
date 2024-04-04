@@ -7,6 +7,7 @@ heroImageAlt: 'Zinc Design'
 tags: 
     - "Portfolios"
 techstack: "Next.js"
+srcIcon: 'nextjs'
 category: "Landing Page"
 source: 'https://github.com/coihsan/zinc-starters-rgkhtp/archive/refs/heads/main.zip'
 preview: 'https://zinc-starter.vercel.app/'

@@ -7,6 +7,7 @@ heroImageAlt: 'Bhadrika Cipta.'
 tags: 
     - "Portfolios"
 techstack: "HTML Static"
+srcIcon: 'html'
 category: "Portfolios"
 source: 'https://github.com/coihsan/jhon-doe-template-pure-html/archive/refs/heads/main.zip'
 preview: 'https://coihsan.github.io/jhon-doe-template-pure-html/'

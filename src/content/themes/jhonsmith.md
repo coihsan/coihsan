@@ -7,6 +7,7 @@ heroImageAlt: 'jhonsmith.'
 tags: 
     - "Portfolios"
 techstack: "HTML Static"
+srcIcon: 'html'
 category: "Portfolios"
 source: 'https://macksmith-template.stackblitz.io/'
 preview: 'https://macksmith-template.stackblitz.io/'

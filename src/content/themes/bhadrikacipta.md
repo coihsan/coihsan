@@ -7,6 +7,7 @@ heroImageAlt: 'Bhadrika Cipta.'
 tags: 
     - "Portfolios"
 techstack: "Vite.js"
+srcIcon: 'vitejs'
 category: "Portfolios"
 source: 'https://github.com/coihsan/bhadrika-cipta-template/archive/refs/heads/main.zip'
 preview: 'https://coihsan.github.io/bhadrika-cipta-template/'

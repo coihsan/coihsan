@@ -26,6 +26,7 @@ const themes = defineCollection({
     heroImage: z.string(),
     heroImageAlt: z.string(),
     techstack: z.string(),
+    srcIcon: z.string(),
     usecase: z.string().optional(),
     category: z.string().optional(),
     canonicalURL: z.string().url().optional(),
