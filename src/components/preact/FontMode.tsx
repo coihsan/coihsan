@@ -11,7 +11,7 @@ export default function BoringMode() {
   
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = `/src/styles/${theme}.css`;
+    link.href = `../../src/styles/${theme}.css`;
     document.head.appendChild(link);
   
     return () => {
@@ -39,5 +39,5 @@ export default function BoringMode() {
     )
 }
 const ImageCheck = () =>{
-    return <img className="fill-white transitionAll" src="src/assets/icons/check.svg" alt="icon checked" width={24} height={24}/>
+    return <img className="fill-white transitionAll" src="/src/assets/icons/check.svg" alt="icon checked" width={24} height={24}/>
 }

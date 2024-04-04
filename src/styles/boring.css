@@ -24,9 +24,6 @@
   .eighties-mode {
     font-family: "PressStart2P";
   }
-  .bgReact{
-    background: radial-gradient(circle at 10% 4%, rgba(23, 148, 167, 1) 0%, rgba(7, 45, 60, 1) 50%, rgba(0, 0, 0, 1) 100%);
-  }
   
     .infiniteScroll {
       animation: scroll infinite 13s ease;
