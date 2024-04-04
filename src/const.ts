@@ -1,11 +1,6 @@
 export const SITE_TITLE = "˗ˏˋIhsanˎˊ";
 export const SITE_DESCRIPTION = 'Frontend developer and digital marketing enthusiast | This is my personal web';
-export const navlink = [
-    { href: "/", text: "Home" },
-    { href: "/stack", text: "Stack" },
-    { href: "/projects", text: "Projects" },
-    { href: "/themes", text: "Themes" },
-];
+
   export const sociallink = [
     {icon: "x-twitter", href: "/", alt: "twitter app"},
     {icon: "instagram", href: "https://www.instagram.com/co.ihsan/", alt: "instagram "},

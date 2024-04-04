@@ -10,6 +10,6 @@ const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + subpath?.[0];
 ---
 
-<a data-astro-prefetch href={href} class:list={[{active : isActive && 'text-lime-400' },'px-3 lg:px-4 flex items-center justify-center py-2 textxs bg-zinc-900 hover:bg-zinc-800 border hover:border-zinc-50 rounded-md border-zinc-900 transitionAll']} {...props}>
+<a data-astro-prefetch href={href} class:list={[{active : isActive && "text-[#24E2FF]"}, "max-sm:text-2xl px-3 lg:px-4 flex font-bold items-center justify-center py-2 max-sm:py-6 textxs hover:text-[#24E2FF] transitionAll"]} {...props}>
 	<slot />
 </a>

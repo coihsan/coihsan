@@ -16,22 +16,22 @@ const {link, src, alt, title, techstack, category, source, preview} = Astro.prop
             alt={alt}
         />
         <div class="p-5 ">
-            <span class="text-[1.2rem] leading-6 pb-3">{title}</span>
+            <span class="text-[1.2rem] leading-6 pb-3 titleOnCard">{title}</span>
             <div class="flex items-center justify-between border-y-[1px] border-zinc-900 py-3 transitionAll">
-                <span class="text-[14px] leading-none border border-zinc-700 transitionAll px-3 py-2 rounded-md">
+                <span class="text-[14px] textxs leading-none border border-zinc-700 transitionAll px-3 py-2 rounded-md">
                     {techstack}
                 </span>
-                <span class="text-[14px] text-zinc-400 leading-none">
+                <span class="text-[14px] textxs text-zinc-400 leading-none">
                     {category}
                 </span>
             </div>
             <div class="flex items-center pt-3">
                 <a class="buttonLink transitionAll" href={preview} target="_blank" rel="noopener noreferrer" aria-label="View project preview">
-                    <span>Preview</span>
+                    <span class="textxs">Preview</span>
                     <Icon width={14} height={14} name="boxlink" />
                 </a>
                 <a class="buttonLink ml-3 transitionAll" href={source} target="_blank" rel="noopener noreferrer" aria-label="View project source code">
-                    <span>Source</span>
+                    <span class="textxs">Source</span>
                     <Icon width={14} height={14} name="boxlink" />
                 </a>
             </div>
