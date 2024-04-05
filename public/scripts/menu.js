@@ -5,9 +5,14 @@ const active = 'active'
 
 openNavbar.addEventListener('click', function(){
     if (openNavbar.checked){
-        navbar.classList.add(active)
-        navlink.classList.add(active)
-    } else{
-        navbar.classList.remove(active)
+        navbar.classList.add(active);
+        if(navlink) {
+            navlink.classList.add(active);
+        }
+    } else {
+        navbar.classList.remove(active);
+        if(navlink) {
+            navlink.classList.remove(active);
+        }
     }
-})
+});
