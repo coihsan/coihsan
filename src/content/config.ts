@@ -6,7 +6,7 @@ const projects = defineCollection({
     description: z.string(),
     logo: z.string().optional(),
     logoAlt: z.string().optional(),
-    pubDate: z.coerce.date().optional(),
+    pubDate: z.string().optional(),
     heroImage: z.string(),
     heroImageAlt: z.string(),
     techstack: z.string(),
@@ -21,7 +21,7 @@ const themes = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    pubDate: z.coerce.date().optional(),
+    pubDate: z.string().optional(),
     description: z.string().optional(),
     heroImage: z.string(),
     heroImageAlt: z.string(),

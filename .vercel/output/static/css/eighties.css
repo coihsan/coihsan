@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "PressStart2P";
+    font-weight: 400;
+    font-style: normal;
+    src: url(/fonts/PressStart2P-Regular.woff2) format('woff2');
+}
+body{
+    font-family: "PressStart2P";
+}
+.textxs{
+    font-size: 12px;
+}
+.titleEighties{
+    font-size: 18px;
+}
+.titleOnCard{
+    font-size: 1rem;
+}
+.titleHeading{
+    font-size: 1.5rem;
+}
+.textOnPulse{
+    font-size:8px;
+}
