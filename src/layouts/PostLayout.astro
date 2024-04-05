@@ -13,7 +13,7 @@ const {pubDate, heroImage, heroImageAlt, title, description, source, preview } =
 	Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} image={heroImage} thisSite={''}/>
@@ -55,6 +55,7 @@ const {pubDate, heroImage, heroImageAlt, title, description, source, preview } =
 		</Section>
 	<Contact />
 	<Footer />
+	<script is:inline src="../scripts/menu.js"></script>
 </body>
 </html>
 

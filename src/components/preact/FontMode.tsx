@@ -13,7 +13,7 @@ export default function BoringMode() {
 
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = `/src/styles/${theme}.css`;
+    link.href = `/css/${theme}.css`;
     document.head.appendChild(link);
 
     return () => {
