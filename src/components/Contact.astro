@@ -38,12 +38,12 @@ const thisFormat = thisFormatDate + " " + thisYear;
     <div class="flex flex-col items-center">
         <div class="flex flex-col items-center mb-6">
             <TitleSection className="flex-col text-center" title="I love to here for you" icon="kontak"/>
-            <span class="text-center mx-auto text-zinc-400">Connect with me today! Let's create something amazing together.</span>
+            <span class="text-center mx-auto text-zinc-400 textxs">Connect with me today! Let's create something amazing together.</span>
         </div>
         <div class="w-full lg:max-w-[550px] mx-auto flex flex-col items-center gap-3">
             <div class="grid grid-cols-3 max-sm:grid-cols-1 gap-3 w-full">
                 <Telegram />
-                <ButtonCopy client:visible />
+                <ButtonCopy client:load />
                 <GoogleLink />
             </div>
             <div class="grid grid-cols-4 gap-3 w-full md:max-w-[350px] lg:max-w-[350px]">

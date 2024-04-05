@@ -9,14 +9,14 @@ const { gridClass } = Astro.props as Props
 <div 
   class={`${gridClass} flex flex-col items-center justify-center drop-shadow-xl w-full lg:h-full h-72 relative border border-zinc-900 rounded-lg p-5 group mx-auto group overflow-hidden bgReact`}>
     <div class="flex items-center justify-center w-full max-sm:size-16">
-      <Image src={ReactDesign} width={96} height={96} alt={'react design'} />
+      <Image src={ReactDesign} width={96} height={96} alt={'react design'} loading="eager" />
     </div>
     <span
       class="flex items-end justify-between mt-3"
     >
       <div class="flex flex-col items-center w-full lg:w-[80%] mx-auto">
         <h2 class="text-[1.5rem] font-bold">React JS</h2>
-        <p class="text-zinc-200 text-center">
+        <p class="text-zinc-200 text-center textxs">
           The library for web and native user interfaces
         </p>
         <a class="py-2 px-4 font-semibold bg-white hover:bg-zinc-200 transitionAll text-zinc-700 rounded-full mt-3" href="https://react.dev/" target="_blank" rel="noopener noreferrer">Get Started</a>

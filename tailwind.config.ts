@@ -20,10 +20,10 @@ export default {
 					"@apply max-w-[1024px] mx-auto px-5 md:px-10 lg:px-16 xl:max-w-[87.5rem]": {},
 				},
 				".boxShadow": {
-					"@apply shadow-[0_0_7px_2px_rgba(69,107,12,42)]": {},
+					"@apply shadow-[0_0_7px_2px_rgba(12,74,110,13)]": {},
 				},
 				".dotHover": {
-					"@apply group-hover:w-[2px] group-hover:h-[2px] group-hover:bg-lime-400 transition-all ease-linear duration-500 delay-0 rounded-full group-hover:boxShadow": {},
+					"@apply group-hover:w-[2px] group-hover:h-[2px] group-hover:bg-sky-400 transition-all ease-linear duration-500 delay-0 rounded-full group-hover:boxShadow": {},
 				},
 				".flexJustifyCenter" :{
 					"@apply flex items-center justify-center": {},

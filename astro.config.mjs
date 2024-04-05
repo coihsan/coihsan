@@ -11,9 +11,9 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true
   },
-  // image: {
-  //   service: passthroughImageService(),
-  // },
+  image: {
+    service: passthroughImageService(),
+  },
   integrations: [
     tailwind({
       applyBaseStyles: true,
