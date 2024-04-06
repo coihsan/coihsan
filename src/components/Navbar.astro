@@ -18,10 +18,10 @@ import FontMode from '@components/preact/FontMode'
                     <FontMode client:load />
                 </div>
             </nav>
-            <div class="flex items-center gap-2 md:hidden lg:hidden z-50">
+            <div class="flex items-center md:hidden lg:hidden z-50">
                 <span class="z-10">menu</span>
                 <div class="relative left-0 flex z-50 hover:bg-zinc-800 p-1 rounded-full transitionAll ">
-                    <input type="checkbox" name="menu navbar" id="menu-toggle" class="size-8 z-50 opacity-0 cursor-pointer" aria-checked="false" aria-label="menu" />
+                    <input type="checkbox" id="menu-toggle" class="size-8 z-50 opacity-0 cursor-pointer" aria-checked="false" aria-label="menu" />
                     <div class="absolute">
                         <Icon name="hamburger-2" width={32} height={32} />
                     </div>
@@ -29,4 +29,3 @@ import FontMode from '@components/preact/FontMode'
             </div>
         </div>
     </header>
-    <script is:inline src="/scripts/menu.js"></script>
