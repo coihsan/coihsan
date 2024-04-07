@@ -1,0 +1,29 @@
+  @font-face {
+    font-family: "SpaceGrotesk";
+    src: url(/fonts/SpaceGrotesk-VariableFont_wght.woff2) format('woff2');
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  body{
+      font-family: "SpaceGrotesk";
+      overflow-x: hidden;
+  }
+  .boring-mode {
+    font-family: "SpaceGrotesk";
+  }
+  .eighties-mode {
+    font-family: "PressStart2P";
+  }
+  
+    .infiniteScroll {
+      animation: scroll infinite 13s ease;
+    }
+    @keyframes scroll {
+      0% {
+        left: 100%;
+      }
+    
+      100% {
+        left: -100%;
+      }
+    }
