@@ -40,12 +40,6 @@ export default {
 				".transitionAll": {
 					"@apply transition-all duration-150 ease-in-out":{},
 				},
-				".navbars.active":{
-					"@apply absolute top-[70px] left-0 grid p-[1rem] bg-zinc-950 w-full":{}
-				},
-				".navlinkActive.active":{
-					"@apply text-4xl w-full":{}
-				}
 			})
 		}),
 	],

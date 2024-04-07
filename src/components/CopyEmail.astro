@@ -1,17 +1,18 @@
 ---
+import { Icon } from "astro-icon/components"
 ---
-<div x-data="{ copyEmail: 'co.ihsan@gmail.com', isCopied: false }">
-    <button id="buttonCopy" x-on:click="handleCopy" x-text="isCopied ? 'Copied!' : 'E-Mail'" x-bind:data-copy="copyEmail"></button>
+  
+  <div x-data="{ input: 'coihsan@gmail.com', showMsg: false }" class="bg-zinc-950 border border-zinc-900 hover:border-zinc-800 rounded-md hover:bg-zinc-900 transition-all">              
+    <div class="w-full overflow-hidden">
+        <a type="button" @click="navigator.clipboard.writeText(input), showMsg = true, setTimeout(() => showMsg = false, 1500)" class="group inline-flex w-full items-center justify-center cursor-copy">
+        <button  class="relative cursor-copy font-medium flex items-center gap-3 px-4 py-3">
+            <Icon name="copy-alt" width={24} height={24} title="icon copy" />
+            <span>E-Mail</span>
+        </button>
+            <div x-show="showMsg" @click.away="showMsg = false" class="fixed top-3 right-3 z-20 max-w-sm overflow-hidden bg-green-500/30 border border-green-300 rounded-full flex items-center gap-3 px-4 py-2" style="display: none;">
+                <Icon name="check" width={24} height={24} title="icon copy" />
+                <p class="text-green-300">Yay! Copied success</p>
+            </div>
+        </a>
+    </div>
 </div>
-
-<script>
-    function handleCopy() {
-        const copyEmail = this.getAttribute('data-copy');
-        navigator.clipboard.writeText(copyEmail).then(() => {
-            this.__x.$data.isCopied = true;
-            setTimeout(() => {
-                this.__x.$data.isCopied = false;
-            }, 1000);
-        });
-    }
-</script>

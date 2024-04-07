@@ -4,28 +4,43 @@ import HeaderLink from "@components/HeaderLink.astro"
 import { Icon } from "astro-icon/components"
 import ModeChanger from "./ModeChanger.astro"
 ---
-    <header class="w-full max-w-screen-lg mx-auto border-x-[1px] border-b-[1px] border-zinc-900 py-4 z-[100]">
+    <header x-data="{active: false}" x-init="active=window.innerWidth > 768" class="w-full max-w-screen-lg mx-auto border-x-[1px] border-b-[1px] border-zinc-900 py-4 z-[100]">
         <div class="flex items-center justify-between max-w-screen-md mx-auto w-full px-5">
             <Pulse />
-            <nav id="navbar" 
-            class="navbars hidden md:flex lg:flex items-center z-50 lg:justify-end divide-dashed divide-y-[1px] last:divide-y-0 md:divide-x-[1px] md:divide-y-0 lg:divide-x-[1px] lg:divide-y-0 divide-zinc-800"
-            >
-                <HeaderLink href={'/'}>Home</HeaderLink>
-                <HeaderLink href={'/stack'}>Stack</HeaderLink>
-                <HeaderLink href={'/projects'}>Projects</HeaderLink>
-                <HeaderLink href={'/themes'}>Themes</HeaderLink>
-                <div class="grid gap-3 md:hidden lg:hidden xl:hidden pt-3">
-                    <ModeChanger />
-                </div>
-            </nav>
-            <div class="flex items-center md:hidden lg:hidden z-50">
-                <span class="z-10">menu</span>
-                <div class="relative left-0 flex z-50 hover:bg-zinc-800 p-1 rounded-full transitionAll ">
-                    <input type="checkbox" id="menu-toggle" class="size-8 z-50 opacity-0 cursor-pointer" aria-checked="false" aria-label="menu" />
-                    <div class="absolute">
-                        <Icon name="hamburger-2" width={32} height={32} />
+            <nav :class="{'flex': active, 'hidden': !active}">
+                <div 
+                    class="navbar grid md:flex lg:flex items-center z-50 lg:justify-end divide-dashed divide-y-[1px] md:divide-y-0 lg:divide-y-0 divide-zinc-800"
+                    x-transition:enter.duration.500ms
+                    x-show="active"
+                    x-init={`() => {
+                        const path = $el.getAttribute('data-path');
+                        const checkPath = () => {
+                            isActive = window.location.pathname === path ||
+                                        window.location.pathname === path + '/' ||
+                                        window.location.pathname === '/it' + path ||
+                                        window.location.pathname === '/it' + path + '/';
+                        };
+                        document.removeEventListener('astro:page-load', checkPath);
+                        document.addEventListener('astro:page-load', checkPath);
+                    }`}>
+                    <HeaderLink href={'/'}>Home</HeaderLink>
+                    <HeaderLink href={'/stack'}>Stack</HeaderLink>
+                    <HeaderLink href={'/projects'}>Projects</HeaderLink>
+                    <HeaderLink href={'/themes'}>Themes</HeaderLink>
+                    <div class="grid gap-3 md:hidden lg:hidden xl:hidden pt-3">
+                        <ModeChanger />
                     </div>
                 </div>
+            </nav>
+            <div class="flex items-center gap-1 z-50 md:hidden lg:hidden">
+                <span class="z-10">menu</span>
+                <button class="hover:bg-zinc-800 p-1 rounded-full transitionAll" @click="active = ! active" >
+                    <Icon name="hamburger-2" width={32} height={32} />
+                </button>
             </div>
+
         </div>
     </header>
+
+
+    
