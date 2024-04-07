@@ -34,7 +34,7 @@ import ModeChanger from "./ModeChanger.astro"
             </nav>
             <div class="flex items-center gap-1 z-50 md:hidden lg:hidden">
                 <span class="z-10">menu</span>
-                <button class="hover:bg-zinc-800 p-1 rounded-full transitionAll" @click="active = ! active" >
+                <button type="button" aria-label="button menu" class="hover:bg-zinc-800 p-1 rounded-full transitionAll" @click="active = ! active" >
                     <Icon name="hamburger-2" width={32} height={32} />
                 </button>
             </div>

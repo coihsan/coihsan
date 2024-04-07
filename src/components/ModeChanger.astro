@@ -9,14 +9,14 @@ const styleButton = "bg-zinc-800/30 text-white border border-zinc-800/80 rounded
             class={styleButton}
         >
             <template x-if="theme === 'boring'">
-                <img src="/src/assets/icons/check.svg" width={24} height={24} alt="icon checkmark" />
+                <img src="/check.svg" width={24} height={24} alt="icon checkmark" />
             </template>
             <span class="font-boring">Boring Mode!</span>
         </button>
         <button
             type="button" @click="localStorage.setItem('boring', 'eighties'); theme = 'eighties'; loadThemeCSS('eighties.css')" class={styleButton}>
             <template x-if="theme === 'eighties'">
-                <img src="/src/assets/icons/check.svg" width={24} height={24} alt="icon checkmark" />
+                <img src="/check.svg" width={24} height={24} alt="icon checkmark" />
             </template>
             <span class="text-xs font-eighties">Retro Mode!</span>
         </button>
