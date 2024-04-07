@@ -1,15 +1,47 @@
 ---
 import { Icon } from "astro-icon/components"
+const styleButton = "bg-zinc-800/30 text-white border border-zinc-800/80 rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12"
 ---
-<div x-data="{ theme: 'boring', updateTheme: function(newTheme) {localStorage.setItem('boring', newTheme); this.theme = newTheme;} }" x-init="theme = localStorage.getItem('boring') || 'boring';$watch('theme', value == {localStorage.setItem('boring', value); const link = document.createElement('link'); link.rel = 'stylesheet'; link.href = `/css/${value}.css`; document.head.appendChild(link); Alpine.bind(document.body);})">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 w-full">
-    <button type="button" @click="updateTheme('boring')" class="bg-zinc-800/30 text-white border border-zinc-800/80 rounded-md font-bold flex items-center justify-center gap-3 px-4 h-12 transition-all" :class="{true, : theme === 'boring'}">
-        <template x-if="theme === 'boring'"><Icon name="check" title="icon checked" width={24} height={24} /></template>
-        <span :class="{ 'font-boring': true, 'text-xs': theme === 'boring' }">Boring Mode!</span>
-    </button>
-    <button type="button" @click="updateTheme('eighties')" class="bg-zinc-800/30 text-white border border-zinc-800/80 rounded-md font-bold flex items-center  justify-center gap-3 px-4 h-12 transition-all" :class="{'theme === 'eighties'}">
-        <template x-if="theme === 'eighties'"><Icon name="check" title="icon checked" width={24} height={24} /></template>
-        <span :class="{ 'font-eighties': true, 'text-xs': theme === 'eighties' }">Retro Mode!</span>
-    </button>
+<div x-data="{ theme: 'boring' }" x-init="
+    const storedTheme = localStorage.getItem('boring');
+    if (storedTheme && ['boring', 'eighties'].includes(storedTheme)) {
+        theme = storedTheme;
+    }"
+>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 w-full">
+        <button
+            type="button"
+            @click="localStorage.setItem('boring', 'boring'); theme = 'boring'; loadThemeCSS('boring.css')"
+            class="bg-zinc-800/30 text-white border border-zinc-800/80 rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12"
+        >
+            <template x-if="theme === 'boring'">
+                <img
+                    class="transition-all"
+                    src="/check.svg"
+                    alt="icon checked"
+                    width="24"
+                    height="24"
+                />
+            </template>
+            <span class="font-boring">Boring Mode!</span>
+        </button>
+        <button
+            type="button"
+            @click="localStorage.setItem('boring', 'eighties'); theme = 'eighties'; loadThemeCSS('eighties.css')"
+            class="bg-zinc-800/30 text-white border border-zinc-800/80 rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12"
+        >
+            <template x-if="theme === 'eighties'">
+                <img
+                    class="transition-all"
+                    src="/check.svg"
+                    alt="icon checked"
+                    width="24"
+                    height="24"
+                />
+            </template>
+            <span class="text-xs font-eighties">Retro Mode!</span>
+        </button>
+    </div>
 </div>
+
 

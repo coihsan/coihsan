@@ -2,7 +2,7 @@
 import Pulse from "@components/ui/Pulse.astro"
 import HeaderLink from "@components/HeaderLink.astro"
 import { Icon } from "astro-icon/components"
-import FontMode from '@components/preact/FontMode'
+import ModeChanger from "./ModeChanger.astro"
 ---
     <header class="w-full max-w-screen-lg mx-auto border-x-[1px] border-b-[1px] border-zinc-900 py-4 z-[100]">
         <div class="flex items-center justify-between max-w-screen-md mx-auto w-full px-5">
@@ -15,7 +15,7 @@ import FontMode from '@components/preact/FontMode'
                 <HeaderLink href={'/projects'}>Projects</HeaderLink>
                 <HeaderLink href={'/themes'}>Themes</HeaderLink>
                 <div class="grid gap-3 md:hidden lg:hidden xl:hidden pt-3">
-                    <FontMode client:load />
+                    <ModeChanger />
                 </div>
             </nav>
             <div class="flex items-center md:hidden lg:hidden z-50">
