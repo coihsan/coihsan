@@ -1,0 +1,19 @@
+---
+---
+<div x-data="{ copyEmail: 'co.ihsan@gmail.com', isCopied: false }">
+    <button id="buttonCopy" x-on:click="handleCopy" x-text="isCopied ? 'Copied!' : 'E-Mail'" x-bind:data-copy="copyEmail"></button>
+</div>
+
+<script>
+    function handleCopy() {
+        const copyEmail = this.getAttribute('data-copy');
+        navigator.clipboard.writeText(copyEmail).then(() => {
+            this.__x.$data.isCopied = true;
+            setTimeout(() => {
+                this.__x.$data.isCopied = false;
+            }, 1000);
+        });
+    }
+
+    Alpine.data('handleCopy', handleCopy);
+</script>

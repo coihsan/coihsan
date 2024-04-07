@@ -2,8 +2,9 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import preact from "@astrojs/preact";
 import vercel from "@astrojs/vercel/static";
-
 import icon from "astro-icon";
+
+import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,19 +12,15 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true
   },
-  integrations: [
-    tailwind({
-      applyBaseStyles: true,
-      nesting: true
-    }),
-  preact({ 
+  integrations: [tailwind({
+    applyBaseStyles: true,
+    nesting: true
+  }), preact({
     include: ['**/preact/*'],
-    compat: true,
-  }), 
-  icon({
-    iconDir: "src/assets/icons",
-  }),
-],
+    compat: true
+  }), icon({
+    iconDir: "src/assets/icons"
+  }), alpinejs()],
   output: "static",
   adapter: vercel()
 });

@@ -5,6 +5,7 @@ import Section from "./Section.astro"
 import Telegram from "./ui/Telegram.astro"
 import GoogleLink from "./ui/GoogleLink.astro";
 import ButtonCopy from "./preact/ButtonCopy"
+import CopyEmail from "./CopyEmail.astro";
 import { sociallink } from "../const"
 const today = new Date();
 const thisDate = today.getDate();
@@ -43,7 +44,7 @@ const thisFormat = thisFormatDate + " " + thisYear;
         <div class="w-full lg:max-w-[550px] mx-auto flex flex-col items-center gap-3">
             <div class="grid grid-cols-3 max-sm:grid-cols-1 gap-3 w-full">
                 <Telegram />
-                <ButtonCopy client:load />
+                <CopyEmail />
                 <GoogleLink />
             </div>
             <div class="grid grid-cols-4 gap-3 w-full md:max-w-[350px] lg:max-w-[350px]">
