@@ -18,10 +18,11 @@ export const SITE_DESCRIPTION = 'Frontend developer and digital marketing enthus
     { title: "Next.js", icon: "nextjs", alt: "next.js framework", href: "https://nextjs.org/" },
     { title: "GitHub", icon: "github", alt: "github control version", href: "https://github.com/" },
     { title: "Node.js", icon: "nodejs", alt: "node.js env", href: "https://nodejs.org/en" },
-    { title: "Redux", icon: "redux", alt: "redux state management", href: "https://redux.js.org/" },
+    { title: "Alpine.js", icon: "alpinejs", alt: "alpinejs icon", href: "https://alpinejs.dev/" },
     { title: "Jest", icon: "jest", alt: "jest testing", href: "https://jestjs.io/" },
     { title: "MongoDB", icon: "mongodb", alt: "mongodb database", href: "https://www.mongodb.com/developer/" },
     { title: "Figma", icon: "figma", alt: "icon figma design", href: "https://www.mongodb.com/developer/" },
+    { title: "More", icon: "more", alt: "icon more design", href: "javacript:void(0)" },
   ];
   export const otherstack =[
     { title: "Gemini", icon: "gemini", alt: "icon gemini app", href: "https://gemini.google.com/app" },
@@ -31,5 +32,6 @@ export const SITE_DESCRIPTION = 'Frontend developer and digital marketing enthus
     { title: "Search Console", icon: "search-console", alt: "icon google search console", href: "https://search.google.com/" },
     { title: "Google Analytics", icon: "analytics", alt: "google analytics", href: "https://analytics.google.com/" },
     { title: "Tag Manager", icon: "tagmanager", alt: "google tag manager", href: "https://tagmanager.google.com/" },
+    { title: "More", icon: "more", alt: "icon more design", href: "javacript:void(0)" }
   ]
   
