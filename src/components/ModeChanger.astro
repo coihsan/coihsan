@@ -1,43 +1,24 @@
 ---
-import { Icon } from "astro-icon/components"
+import { Image } from "astro:content"
+import CheckMark from "@assets/icons/check.svg"
 const styleButton = "bg-zinc-800/30 text-white border border-zinc-800/80 rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12"
 ---
-<div x-data="{ theme: 'boring' }" x-init="
-    const storedTheme = localStorage.getItem('boring');
-    if (storedTheme && ['boring', 'eighties'].includes(storedTheme)) {
-        theme = storedTheme;
-    }"
->
+<div x-data="{ theme: 'boring' }" x-init="const storedTheme = localStorage.getItem('boring');if (storedTheme && ['boring', 'eighties'].includes(storedTheme)) {theme = storedTheme;}">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 w-full">
         <button
             type="button"
             @click="localStorage.setItem('boring', 'boring'); theme = 'boring'; loadThemeCSS('boring.css')"
-            class="bg-zinc-800/30 text-white border border-zinc-800/80 rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12"
+            class={styleButton}
         >
             <template x-if="theme === 'boring'">
-                <img
-                    class="transition-all"
-                    src="/check.svg"
-                    alt="icon checked"
-                    width="24"
-                    height="24"
-                />
+                <Image src={CheckMark} width={24} height={24} alt="icon checkmark" />
             </template>
             <span class="font-boring">Boring Mode!</span>
         </button>
         <button
-            type="button"
-            @click="localStorage.setItem('boring', 'eighties'); theme = 'eighties'; loadThemeCSS('eighties.css')"
-            class="bg-zinc-800/30 text-white border border-zinc-800/80 rounded-md font-bold flex items-center w-full justify-center gap-3 px-4 h-12"
-        >
+            type="button" @click="localStorage.setItem('boring', 'eighties'); theme = 'eighties'; loadThemeCSS('eighties.css')" class={styleButton}>
             <template x-if="theme === 'eighties'">
-                <img
-                    class="transition-all"
-                    src="/check.svg"
-                    alt="icon checked"
-                    width="24"
-                    height="24"
-                />
+                <Image src={CheckMark} width={24} height={24} alt="icon checkmark" />
             </template>
             <span class="text-xs font-eighties">Retro Mode!</span>
         </button>
