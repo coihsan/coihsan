@@ -18,5 +18,5 @@ export default defineConfig({
     iconDir: "src/assets/icons"
   }), alpinejs()],
   output: "static",
-  adapter: vercel()
+  adapter: vercel(),
 });

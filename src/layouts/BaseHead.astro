@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css"
-import "../../public/css/boring.css"
 import { SITE_TITLE } from "../const";
 interface Props {
 	title: string;
@@ -12,12 +11,13 @@ const {
 	title,
 	description,
 	thisSite,
-	image = "/public/gue.webp",
+	image = "/gue.webp",
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 import { ViewTransitions } from "astro:transitions";
 const currentPage = Astro.url.pathname.slice(1);
 ---
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 <meta charset="utf-8" />
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width,initial-scale=1" />
