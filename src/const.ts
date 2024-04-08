@@ -1,5 +1,5 @@
 export const SITE_TITLE = "˗ˏˋIhsanˎˊ";
-export const SITE_DESCRIPTION = 'Frontend developer and digital marketing enthusiast | This is my personal web';
+export const SITE_DESCRIPTION = 'Frontend Web Developer and Digital Marketing Enthusiast | This is my personal web';
 
   export const sociallink = [
     {icon: "x-twitter", href: "/", alt: "twitter app"},
