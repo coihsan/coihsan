@@ -10,7 +10,7 @@ import ModeChanger from "./ModeChanger.astro"
             <nav :class="{'flex': active, 'hidden': !active}">
                 <div 
                     class="navbar grid md:flex lg:flex items-center z-50 lg:justify-end divide-dashed divide-y-[1px] md:divide-y-0 lg:divide-y-0 divide-zinc-800"
-                    x-transition:enter.duration.500ms
+                    x-transition:enter.duration.100ms
                     x-show="active"
                     x-init={`() => {
                         const path = $el.getAttribute('data-path');
