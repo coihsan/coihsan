@@ -23,18 +23,3 @@ const styleButton = "bg-zinc-800/30 text-white border border-zinc-800/80 rounded
     </div>
 </div>
 
-<script is:inline>
-    function loadThemeCSS(themeFileName) {
-    const existingLink = document.querySelector('link[rel="stylesheet"]');
-    const switcher = document.getElementById('themeSwitcher')
-    if (existingLink) {
-        existingLink.remove()
-    }
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = `/css/${themeFileName}`;
-    document.head.appendChild((link.l))
-}
-</script>
-
-
