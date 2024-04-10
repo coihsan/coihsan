@@ -7,12 +7,13 @@ import Overlay from "@components/ui/Overlay.astro"
 import { SITE_TITLE, SITE_DESCRIPTION } from "../const"
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} thisSite={"Frontend Developer"}/>
 	</head>
 	<body>
+		<script is:inline src="../scripts/fontchanger.js"></script>
 		<Navbar />
 		<main>
 			<Overlay />
@@ -20,6 +21,5 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../const"
 		</main>
 		<Contact />
 		<Footer />
-		<script is:inline src="/scripts/fontchanger.js"></script>
 	</body>
 </html>

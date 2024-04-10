@@ -2,6 +2,7 @@
   --font-family-boring: "Space Grotesk", sans-serif;
   --font-family-eighties: "Press Start 2P", system-ui;
 }
+
 @font-face {
   font-family: "SpaceGrotesk";
   src: url(/fonts/SpaceGrotesk-VariableFont_wght.woff2) format('woff2');

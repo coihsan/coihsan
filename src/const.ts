@@ -6,6 +6,7 @@ export const SITE_DESCRIPTION = 'Frontend Web Developer and Digital Marketing En
     {icon: "instagram", href: "https://www.instagram.com/co.ihsan/", alt: "instagram "},
     {icon: "github", href: "https://github.com/coihsan", alt: "github app"},
     {icon: "codepen", href: "https://codepen.io/coihsan", alt: "codepen app"},
+    {icon: "linkedin", href: "/", alt: "linkedin app"},
   ]
   export const nextjs = ["Landing Page", "Blog", "Portfolios", "Company Profile"];
   export const techstack = [
