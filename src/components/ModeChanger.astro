@@ -5,7 +5,6 @@ const styleButton = "bg-zinc-800/30 text-white border border-zinc-800/80 rounded
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 w-full">
         <button
             type="button"
-            @click="localStorage.setItem('boring', 'boring'); theme = 'boring'; loadThemeCSS('boring.css'),console.log('Boring Success!')"
             class={styleButton}
         >
             <template x-if="theme === 'boring'">
@@ -14,7 +13,7 @@ const styleButton = "bg-zinc-800/30 text-white border border-zinc-800/80 rounded
             <span class="font-boring">Boring Mode!</span>
         </button>
         <button
-            type="button" @click="localStorage.setItem('boring', 'eighties'); theme = 'eighties'; loadThemeCSS('eighties.css'),console.log('Eighties Success!')" class={styleButton}>
+            type="button" class={styleButton}>
             <template x-if="theme === 'eighties'">
                 <img src="/check.svg" width={24} height={24} alt="icon checkmark" />
             </template>
