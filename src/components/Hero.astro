@@ -3,32 +3,24 @@ import Section from "./Section.astro";
 import LinkExt from "./ui/LinkExt.astro";
 import InfiniteScroll from "./ui/InfiniteScroll.astro";
 import {Image} from "astro:assets"
-import gue from "../assets/gue.webp"
+import minion from "../assets/minion.gif"
 import ModeChanger from "./ModeChanger.astro";
 ---
 
 <Section border="border-b-[1px]">
-  <div class="flex items-center max-sm:flex-col max-sm:items-start gap-9 will-change-auto">
+  <div class="flex items-center flex-col max-sm:items-start gap-9 will-change-auto">
+    <h1 class="text-6xl font-bold text-center max-sm:text-2xl">Frontend Developer & Digital Marketing Enthusiast</h1>
     <Image
     loading="eager"
-      class="hidden md:flex lg:flex rounded-md w-auto max-md:h-[174px] lg:w-[220px] object-contain aspect-[3/4]"
-      width={300}
+      class="bg-white flex rounded-md w-auto object-contain"
+      width={400}
       height={274}
-      src={gue}
+      src={minion}
       alt="gue"
     />
-  <div class={`flex flex-col gap-3`}>
-    <h3 class="font-bold text-4xl ">˗ˏˋIhsanˎˊ</h3>
-    <!-- <span class="textxs">
-      I'm Frontend Developer <LinkExt href="/">@Kaisar.id</LinkExt>
-    </span> -->
-    <span class="text-zinc-400 textxs leading-relaxed pb-3">
+    <span class="text-[#595959] mx-auto text-center leading-relaxed pb-3">
       I'm a frontend web developer and digital marketing enthusiast especially with a primary focus on SEM, SEO and Web Development using JavaScript framework.
     </span>
-    <>
-      <ModeChanger />
-    </>
-  </div>
   </div>
   <InfiniteScroll />
   </Section>

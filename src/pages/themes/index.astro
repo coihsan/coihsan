@@ -2,9 +2,9 @@
 import { getCollection } from "astro:content";
 const posts = await getCollection("themes")
 import Layout from '../../layouts/Layout.astro'
-import Section from "@components/Section.astro";
-import HeadingPages from "@components/HeadingPages.astro"
-import CardThemes from "@components/CardThemes.astro";
+import Section from "../../components/Section.astro";
+import HeadingPages from "../../components/HeadingPages.astro"
+import CardThemes from "../../components/CardThemes.astro";
 ---
 
 <Layout title='Theme Collections'>

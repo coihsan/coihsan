@@ -35,7 +35,7 @@ export default {
 					"@apply border flex items-center justify-center gap-3 px-4 py-3 rounded-md transition-colors ease-linear duration-150": {},
 				},
 				".componentStyle": {
-					"@apply bg-zinc-950 hover:bg-zinc-950 border border-zinc-900 hover:border-zinc-50 transition-all duration-150 ease-in-out":{},
+					"@apply bg-[#919598] hover:bg-zinc-950 border border-zinc-900 hover:border-zinc-50 transition-all duration-150 ease-in-out":{},
 				},
 				".transitionAll": {
 					"@apply transition-all duration-150 ease-in-out":{},
