@@ -4,16 +4,10 @@
 }
 
 @font-face {
-  font-family: "SpaceGrotesk";
-  src: url(/fonts/SpaceGrotesk-VariableFont_wght.woff2) format('woff2');
+  font-family: "ClashDisplay-regular";
+  src: url(/fonts/ClashDisplay-Variable.ttf) format('ttf');
   font-optical-sizing: auto;
   font-style: normal;
-}
-@font-face {
-  font-family: "PressStart2P";
-  font-weight: 400;
-  font-style: normal;
-  src: url(/fonts/PressStart2P-Regular.woff2) format('woff2');
 }
 body{
     background-color: #D9D9D9;
