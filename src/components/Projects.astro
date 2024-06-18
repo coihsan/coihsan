@@ -9,7 +9,7 @@ const posts = await getCollection("projects")
 
 <Section border="border-b-[1px]">
     <TitleSection title="Projects" icon="terminal"/>
-    <div class="grid gap-3">
+    <div class="grid grid-cols-2 gap-3">
         {posts.slice(0, 2).map((post) =>(
             <CardProjects 
             link={`/projects/${post.slug}/`}

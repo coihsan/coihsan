@@ -8,6 +8,15 @@ export default {
 			'eighties' : ['PressStart2P'],
 		},
 		extend: {
+			colors: {
+				darks: {
+					'background': "#101216",
+					'foreground': "#262B34",
+					'foreground2': "#3B4351",
+					'lightgray': "#9C9FA6",
+					'lights': "#F2F2F2",
+				},
+			},	
 			animation: {
 				'spin-slow': 'spin 12s linear infinite',
 			}
@@ -29,13 +38,13 @@ export default {
 					"@apply flex items-center justify-center": {},
 				},
 				".buttonLink" :{
-					"@apply flex items-center gap-2 bg-zinc-900 group-hover:bg-zinc-800 rounded-md border border-zinc-800 group-hover:border-zinc-700 px-3 py-1": {},
+					"@apply flex items-center gap-2 rounded-md border border-darks-lights/10 group-hover:border-darks-lights/40 px-3 py-1": {},
 				},
 				".buttonUtils" :{
 					"@apply border flex items-center justify-center gap-3 px-4 py-3 rounded-md transition-colors ease-linear duration-150": {},
 				},
 				".componentStyle": {
-					"@apply bg-[#919598] hover:bg-zinc-950 border border-zinc-900 hover:border-zinc-50 transition-all duration-150 ease-in-out":{},
+					"@apply bg-darks-foreground hover:bg-darks-foreground2 border border-darks-lights/10 hover:border-darks-lights transition-all duration-150 ease-in-out":{},
 				},
 				".transitionAll": {
 					"@apply transition-all duration-150 ease-in-out":{},

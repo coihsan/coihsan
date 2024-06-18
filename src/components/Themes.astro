@@ -10,7 +10,7 @@ const posts = await getCollection("themes")
 <Section border="border-b-[1px]">
     <TitleSection title="Themes" icon="layout"/>
     <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-3">
-        {posts.slice(0, 2).map((post) =>(
+        {posts.slice(0, 4).map((post) =>(
             <CardThemes 
             link={`/themes/${post.slug}/`}
             src={post.data.heroImage} 

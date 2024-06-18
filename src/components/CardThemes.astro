@@ -9,7 +9,7 @@ import { Image } from 'astro:assets';
         href={`${link}`}
         aria-label={alt}
     >
-        <div class="h-[200px]">
+        <div class="">
             <Image
             class="rounded-t-lg w-full object-cover"
             width={370}
@@ -21,7 +21,7 @@ import { Image } from 'astro:assets';
         </div>
         <div class="p-5 ">
             <h3 class="text-[1.2rem] leading-6 pb-3 titleOnCard">{title}</h3>
-            <div class="flex items-center justify-between border-y-[1px] border-zinc-900 py-3 transitionAll">
+            <div class="flex items-center justify-between border-y-[1px] border-darks-lights/10 py-3 transitionAll">
                 <span class="text-[14px] text-zinc-400 textxs leading-none flex items-center gap-2">
                     <Icon name={srcIcon} width={22} height={22} title={techstack} /> 
                     {techstack}

@@ -7,25 +7,26 @@ import minion from "../assets/minion.gif"
 import ModeChanger from "./ModeChanger.astro";
 ---
 
-<Section border="border-b-[1px] bg-[#262626]">
+<Section border="border-b-[1px]">
   <div class="flex items-center flex-col max-sm:items-start gap-9 will-change-auto">
-    <div class="">
+    <div class="flex flex-col">
       <h1 class="text-6xl font-bold text-center max-sm:text-2xl ClashDisplay-regular">COIHSAN</h1>
-      <Image
+      
+      <div class="flex flex-col items justify-center mx-auto w-full">
+        <h1 class="text-2xl font-bold ClashDisplay-regular text-center">Frontend Web Developer</h1>
+        <span class="text-darks-lightgray leading-relaxed pb-3 text-center">
+          I'm a frontend web developer and digital marketing enthusiast especially with a primary focus on SEM, SEO and Web Development using JavaScript framework.
+        </span>
+      </div>
+    </div>
+    <Image
       loading="eager"
-        class="flex rounded-md w-auto object-cover"
+        class="flex rounded-md w-auto aspect-square object-cover"
         width={400}
         height={274}
         src={minion}
         alt="gue"
         />
-    </div>
-      <div class="max-w-[400px]">
-        <h1 class="text-2xl font-bold ClashDisplay-regular">Frontend Web Developer</h1>
-      <span class="text-[#595959] leading-relaxed pb-3">
-        I'm a frontend web developer and digital marketing enthusiast especially with a primary focus on SEM, SEO and Web Development using JavaScript framework.
-      </span>
-      </div>
   </div>
   <InfiniteScroll />
   </Section>
