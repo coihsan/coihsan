@@ -3,16 +3,7 @@ import { Icon } from 'astro-icon/components';
 import {Image} from "astro:assets"
 const {link, src, alt, title, description, usecase, logo,logoAlt } = Astro.props;
 ---
-<a href={link} class="componentStyle rounded-lg cursor-pointer grid gap-6 w-full h-full min-h-44 p-5 group">
-    <!-- <div class="w-full object-cover rounded-lg overflow-hidden">
-        <Image 
-        width={300}
-        height={300}
-        class="rounded-lg w-auto"  
-        loading="eager"
-        src={src} 
-        alt={alt} />
-    </div> -->
+<a href={link} class="componentStyle rounded-lg cursor-pointer grid gap-6 w-full h-full min-h-44 p-5 group drop-shadow-lg">
     <div class="relative h-full w-full">
         <div class="h-40">
             <div class="flex items-center gap-3 mb-3">

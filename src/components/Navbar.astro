@@ -12,7 +12,7 @@ import ModeChanger from "./ModeChanger.astro"
                 <span class="text-2xl font-bold text-[#D9D9D9]">˗ˏˋIhsanˎˊ</span>
             </div>
             <nav :class="{'flex': active, 'hidden': !active}">
-                <div 
+                <div
                     class="navbar grid md:flex lg:flex items-center z-50 lg:justify-end divide-dashed divide-y-[1px] md:divide-y-0 lg:divide-y-0 divide-zinc-800"
                     x-transition:enter.duration.100ms
                     x-show="active"
@@ -30,7 +30,6 @@ import ModeChanger from "./ModeChanger.astro"
                     <HeaderLink href={'/'}>Home</HeaderLink>
                     <HeaderLink href={'/stack'}>Stack</HeaderLink>
                     <HeaderLink href={'/projects'}>Projects</HeaderLink>
-                    <HeaderLink href={'/themes'}>Themes</HeaderLink>
                     <div class="grid gap-3 md:hidden lg:hidden xl:hidden pt-3">
                         <ModeChanger />
                     </div>

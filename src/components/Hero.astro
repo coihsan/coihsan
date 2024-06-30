@@ -9,24 +9,26 @@ import ModeChanger from "./ModeChanger.astro";
 
 <Section border="border-b-[1px]">
   <div class="flex items-center flex-col max-sm:items-start gap-9 will-change-auto">
-    <div class="flex flex-col">
-      <h1 class="text-6xl font-bold text-center max-sm:text-2xl ClashDisplay-regular">COIHSAN</h1>
-      
-      <div class="flex flex-col items justify-center mx-auto w-full">
-        <h1 class="text-2xl font-bold ClashDisplay-regular text-center">Frontend Web Developer</h1>
-        <span class="text-darks-lightgray leading-relaxed pb-3 text-center">
+    <div class="flex flex-col items-start ">
+      <div class="w-full md:w-2/4">
+        <h1 class="text-3xl ClashDisplay-regular pb-3">Frontend Web Developer</h1>
+        <span class="text-darks-lightgray leading-relaxed pb-3">
           I'm a frontend web developer and digital marketing enthusiast especially with a primary focus on SEM, SEO and Web Development using JavaScript framework.
         </span>
       </div>
     </div>
-    <Image
+    <!-- Balloon 'is-dark'  -->
+    <div class="w-full flex justify-center">
+      <Image
+      draggable="true"
       loading="eager"
-        class="flex rounded-md w-auto aspect-square object-cover"
-        width={400}
+        class="flex rounded-md aspect-square object-cover "
+        width={300}
         height={274}
         src={minion}
         alt="gue"
         />
+    </div>
   </div>
   <InfiniteScroll />
   </Section>

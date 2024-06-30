@@ -44,7 +44,7 @@ export default {
 					"@apply border flex items-center justify-center gap-3 px-4 py-3 rounded-md transition-colors ease-linear duration-150": {},
 				},
 				".componentStyle": {
-					"@apply bg-darks-foreground hover:bg-darks-foreground2 border border-darks-lights/10 hover:border-darks-lights transition-all duration-150 ease-in-out":{},
+					"@apply border border-darks-lights/30 hover:border-darks-lights transition-all duration-150 ease-in-out":{},
 				},
 				".transitionAll": {
 					"@apply transition-all duration-150 ease-in-out":{},

@@ -11,4 +11,5 @@ srcIcon: 'nextjs'
 category: "Landing Page"
 source: 'https://github.com/coihsan/berrynet-starters-rgkhtp/archive/refs/heads/main.zip'
 preview: 'https://berrynet-starter.vercel.app/'
+
 ---

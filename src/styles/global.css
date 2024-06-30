@@ -2,7 +2,7 @@
   --font-family-boring: "Space Grotesk", sans-serif;
   --font-family-eighties: "Press Start 2P", system-ui;
 }
-
+@import "./node_modules/nes.css/css/nes.css";
 @font-face {
   font-family: "ClashDisplay-regular";
   src: url(/fonts/ClashDisplay-Variable.ttf) format('ttf');
