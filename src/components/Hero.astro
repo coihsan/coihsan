@@ -5,8 +5,12 @@ import InfiniteScroll from "./ui/InfiniteScroll.astro";
 import {Image} from "astro:assets"
 import minion from "../assets/minion.gif"
 import ModeChanger from "./ModeChanger.astro";
----
+import { DndContext } from '@dnd-kit/core';
+import {Draggable} from "./ui/draggable/Draggable.jsx"
+import { useState } from "react";
 
+---
+<DndContext>
 <Section border="border-b-[1px]">
   <div class="flex items-center flex-col max-sm:items-start gap-9 will-change-auto">
     <div class="flex flex-col items-start ">
@@ -32,3 +36,4 @@ import ModeChanger from "./ModeChanger.astro";
   </div>
   <InfiniteScroll />
   </Section>
+</DndContext>

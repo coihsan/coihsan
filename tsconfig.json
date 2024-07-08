@@ -11,6 +11,10 @@
         "src/assets/*"
       ]
     },
-    "exclude": ["dist"],
-  },
+    "exclude": [
+      "dist"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
 }

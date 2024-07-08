@@ -2,8 +2,9 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/static";
 import icon from "astro-icon";
-
 import alpinejs from "@astrojs/alpinejs";
+
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +17,7 @@ export default defineConfig({
     nesting: true
   }), icon({
     iconDir: "src/assets/icons"
-  }), alpinejs()],
+  }), alpinejs(), react()],
   output: "static",
-  adapter: vercel(),
+  adapter: vercel()
 });
