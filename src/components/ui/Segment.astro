@@ -1,0 +1,14 @@
+---
+interface Props {
+    title: string
+    border?: string
+}
+
+const { title, border } = Astro.props;
+---
+
+<div class={`flex items-center justify-center min-h-24 ${border}`}>
+    <div>
+        <h2 class="uppercase text-4xl font-bold bg-clip-text text-transparent text-stroke stroke-green-300">{title}</h2>
+    </div>
+</div>

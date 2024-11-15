@@ -1,0 +1,24 @@
+---
+import Segment from "../primitive/Segment.astro";
+import data from "@/lib/data/data.json";
+import Card from "../primitive/Card.astro";
+---
+
+<div>
+    <Segment border="border-x-[1px] border-t-[1px] border-zinc-700 bg-zinc-900" title="reposiory" />
+    <div class="grid md:grid-cols-2 border-x-[1px] border-zinc-700 divide-x-[1px] divide-zinc-700">
+        {data.datague.map((list) => (
+            <Card client:idle href={list.urlSource}>
+                <div class="grid">
+                    <h3 class="font-bold text-2xl pb-4">{list.title}</h3>
+                    <p>{list.description}</p>
+                    <ul class="flex flex-wrap gap-2 pt-4">
+                        {list.techStack.map((stack) => (
+                            <li class="px-4 py-2 border border-zinc-600 text-sm text-zinc-300">{stack}</li>
+                        ))}
+                    </ul>
+                </div>
+            </Card>
+        ))}
+    </div>
+</div>

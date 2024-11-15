@@ -1,0 +1,48 @@
+---
+import { cva } from "class-variance-authority";
+import type { HTMLAttributes } from "astro/types";
+
+const linkVariants = cva(
+    "flex items-center justify-center gap-2 whitespace-nowrap transitionSetting",
+    {
+        variants:{
+            variant:{
+                default: 
+                    "bg-white hover:bg-zinc-200 text-black font-semibold",
+                destructive:
+                    "bg-red-900 text-red-400 hover:bg-red-800 hover:text-red-300",
+                outline:
+                    "border border-zinc-800 bg-transparent hover:bg-zinc-900 hover:text-zinc-100 shadow-sm hover:bg-accent hover:text-accent-foreground",
+                secondary:
+                    "bg-zinc-900 hover:bg-zinc-800 border border-zinc-700",
+                ghost:
+                    "hover:bg-zinc-800",
+                link:
+                    "text-primary underline-offset-4 hover:underline",
+            },
+            size: {
+                default: "h-9 px-4 py-2 rounded-2xl",
+                sm: "h-8 rounded-xl px-3 text-sm",
+                lg: "h-11 rounded-2xl px-4 py-2",
+                icon: "aspect-square size-11 rounded-lg",
+            },
+            defaultVariants: {
+                variant: "default",
+                size: "default",
+            }
+        },
+    }
+)
+
+interface Props extends HTMLAttributes<"a"> {
+    href: string
+    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+    size?: "default" | "sm" | "lg" | "icon";
+    target?: string;
+}
+const { href, variant, target, size, ...props } = Astro.props as Props
+---
+
+<a target={target} class={(linkVariants({variant, size}))} {...props} href={href}>
+    <slot />
+</a>

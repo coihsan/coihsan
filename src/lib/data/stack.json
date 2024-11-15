@@ -1,0 +1,100 @@
+{
+    "stack":[
+        {
+            "icon": "html",
+            "name": "HTML 5",
+            "target": "_blank",
+            "url": "#"
+        },
+        {
+            "icon": "css",
+            "name": "CSS 3",
+            "target": "_blank",
+            "url": "#"
+        },
+        {
+            "icon": "javascript",
+            "name": "Javascript",
+            "target": "_blank",
+            "url": "https://javascript.info/"
+        },
+        {
+            "icon": "reactjs",
+            "name": "React.js",
+            "target": "_blank",
+            "url": "https://react.dev/"
+        },
+        {
+            "icon": "typescript",
+            "name": "Typescript",
+            "target": "_blank",
+            "url": "https://www.typescriptlang.org/"
+        },
+        {
+            "icon": "tailwind",
+            "name": "Tailwind",
+            "target": "_blank",
+            "url": "https://tailwindcss.com/"
+        },
+        {
+            "icon": "next",
+            "name": "Next.js",
+            "target": "_blank",
+            "url": "https://nextjs.org/"
+        },
+        {
+            "icon": "astro",
+            "name": "Astro.js",
+            "target": "_blank",
+            "url": "https://astro.build/"
+        },
+        {
+            "icon": "prisma",
+            "name": "Prisma",
+            "target": "_blank",
+            "url": "https://prisma.io/"
+        },
+        {
+            "icon": "jest",
+            "name": "Jest",
+            "target": "_blank",
+            "url": "https://jestjs.io/"
+        },
+        {
+            "icon": "redux",
+            "name": "Redux",
+            "target": "_blank",
+            "url": "https://redux.js.org/"
+        },
+        {
+            "icon": "figma",
+            "name": "Figma",
+            "target": "_blank",
+            "url": "https://figma.com/"
+        },
+        {
+            "icon": "photoshop",
+            "name": "Photoshop",
+            "target": "_blank",
+            "url": "https:adobe.com"
+        },
+        {
+            "icon": "googleanalytics",
+            "name": "Analytics",
+            "target": "_blank",
+            "url": "https://analytics.google.com/"
+        },
+        {
+            "icon": "googleads",
+            "name": "Ads",
+            "target": "_blank",
+            "url": "https://ads.google.com/"
+        },
+        {
+            "icon": "github",
+            "name": "GitHub",
+            "target": "_blank",
+            "url": "https://github.com/"
+        }
+    ]
+}

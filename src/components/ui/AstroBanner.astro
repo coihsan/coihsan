@@ -1,0 +1,12 @@
+---
+import {Image} from 'astro:assets'
+import houston from '../../assets/houston.webp'
+import {Icon} from "astro-icon/components"
+---
+<a href="https://astro.build/" target="_blank" class={`bg-zinc-950 overflow-hidden group relative w-full h-72 lg:h-auto py-5 px-9 border border-white/20 rounded-lg mx-auto flex items-center justify-center`}>
+    <div class="flex flex-col items-center justify-center">
+        <Icon name="astro-logo-light" width={120} height={50} />
+        <span class="font-semibold text-2xl text-center textxs">Start building<br>with Astro today</span>
+        <Image loading="eager" src={houston} width={85} height={85} alt="houston logo" />
+    </div>
+</a>

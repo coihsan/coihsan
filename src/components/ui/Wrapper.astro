@@ -1,0 +1,23 @@
+---
+interface Props {
+	border?: string;
+	paddingY?: boolean;
+	paddingYCustom?: string;
+	className?: string
+}
+
+const { border, paddingY, paddingYCustom, className } = Astro.props;
+---
+
+<div
+	class:list={[
+		'border-zinc-700 w-full h-full flex items-center justify-center px-12',
+		`${className}`,
+		`${paddingYCustom}`,
+		paddingY ? 'py-12' : null,
+		`${border}`,
+	]}>
+	<div>
+		<slot />
+	</div>
+</div>

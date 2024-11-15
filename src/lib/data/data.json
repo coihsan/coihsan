@@ -1,0 +1,36 @@
+{
+    "datague" : [
+        {
+            "title": "NulihApp",
+            "logoUrl": "/",
+            "description": "A free, open source notes app for the everyone.",
+            "urlDemo": "https://nulihapp.vercel.app/",
+            "urlSource": "https://github.com/coihsan/nulihapp",
+            "techStack":["React.js", "Tiptap", "TypeScript", "Redux", "Vite"]
+        },
+        {
+            "title": "coihsan",
+            "logoUrl": null,
+            "description": "The source of this website.",
+            "urlDemo": null,
+            "urlSource": "https://github.com/",
+            "techStack":["Astro.js", "TypeScript", "GSAP"]
+        },
+        {
+            "title": "TaskyApp",
+            "logoUrl": "/",
+            "description": "A free, open source kanban app for the web.",
+            "urlDemo": null,
+            "urlSource": "https://github.com/coihsan/taskyapp",
+            "techStack":["Next.js 14", "Prisma", "NextAuth", "Redux"]
+        },
+        {
+            "title": "authjs-starter v5",
+            "logoUrl": null,
+            "description": "Auth.js v5 Starter with credentials, google & github provider",
+            "urlDemo": null,
+            "urlSource": "https://github.com/",
+            "techStack":["Next.js 14", "Prisma"]
+        }
+    ]
+}
