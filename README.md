@@ -1,4 +1,4 @@
-# Hi there, I'm Coihsan! 👋
+# Hi there, I'm Ihsan! 👋
 
 Welcome to my GitHub profile! I'm a passionate developer who loves to create and contribute to open-source projects. Here you'll find a variety of repositories that showcase my skills and interests.
 
